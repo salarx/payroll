@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <hr class="my-4">
   <p>To login, click on the buttons below. Happy Coding</p>
   <p class="lead">
-  <button type="button" class="btn btn-primary">Admin</button>
+  <a href="<?php echo base_url(); ?>admin/login.html"><button type="button" class="btn btn-primary">Admin</button></a>
   <button type="button" class="btn btn-primary">HOD</button>
   <button type="button" class="btn btn-primary">Employee</button>
   </p>

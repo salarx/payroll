@@ -23,7 +23,7 @@ class Site extends CI_Controller {
         $data['message'] = 'You are successfully logged out';
         $this->session->set_userdata($data);
 
-        redirect('admin','refresh');
+        $this->load->view('login');
     }
 
     public function index(){
