@@ -56,6 +56,27 @@ class Site extends CI_Controller {
         $this->load->view('master',$data);
     }
 
+    public function hod(){
+
+        $data = array();
+        $data["title"] = "Department";
+        $data["heading"] = "Department Head Details";
+        $data["base_url"] = base_url() . "site/hod";
+        $data["total_rows"] = $this->hod_model->record_count();
+        $data["per_page"] = 20;
+        $data["uri_segment"] = 3;
+
+        $this->pagination->initialize($data);
+        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+
+        $data["results"] = $this->hod_model->fetch_hod($data["per_page"], $page);
+
+        $data["links"] = $this->pagination->create_links();
+
+        $data["content"] = $this->load->view('hod',$data,true);
+        $this->load->view('master',$data);
+    }
+
     public function salary(){
 
         $data = array();
