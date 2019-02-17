@@ -48,7 +48,7 @@
                     <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
                 </div>
                 <!--logo start-->
-                <a href="<?php echo base_url(); ?>site" class="logo">KAIZ<span class="lite">ENS</span></a>
+                <a href="<?php echo base_url(); ?>site" class="logo">6KAIZ<span class="lite">ENS</span></a>
                 <!--logo end-->
 
                 <div class="nav search-row" id="top_menu">
