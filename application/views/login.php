@@ -9,6 +9,7 @@
         <link rel="shortcut icon" href="<?php echo base_url(); ?>img/favicon.png">
 
         <title>Login</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
 
         <!-- Bootstrap CSS -->
         <link href="<?php echo base_url(); ?>css/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +30,27 @@
         <![endif]-->
     </head>
     <body class="login-img3-body">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">6 KAI ZENS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+            <div class="container">
             <form class="login-form" action="<?php echo base_url(); ?>admin/authentication.html" method="post">
                 <div class="login-wrap">
                     <p class="login-img"><i class="icon_lock_alt"></i></p>

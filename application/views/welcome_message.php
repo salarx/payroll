@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">6 KAI ZEN</a>
+  <a class="navbar-brand" href="#">6 KAI ZENS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
