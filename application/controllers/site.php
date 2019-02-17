@@ -130,7 +130,6 @@ class Site extends CI_Controller {
         $data['admin_password'] = hash("SHA512",$this->input->post('password',true));
         $options = [
             'cost' => 11,
-            'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
         ];
         $data['admin_salt'] = password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
         $this->admin_model->save_admin($data);
