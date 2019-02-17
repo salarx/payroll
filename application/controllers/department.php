@@ -59,6 +59,6 @@ class Department extends CI_Controller {
         $data['employee_address'] = $this->input->post('address',true);
         $this->employee_model->update_employee_by_id($employee_id,$data);
 
-        redirect('site/employee');
+        redirect('site/hod');
     }
 }
