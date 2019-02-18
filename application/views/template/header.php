@@ -80,6 +80,10 @@
                                 <li>
                                     <a href="<?php echo base_url(); ?>site_emp/logout.html"><i class="icon_key_alt"></i>Log Out</a>
                                 </li> <?php } ?>
+                                <?php if($category==2) { ?>
+                                <li>
+                                    <a href="<?php echo base_url(); ?>site_emp/logout.html"><i class="icon_key_alt"></i>Log Out</a>
+                                </li> <?php } ?>
                             </ul>
                         </li>
                         <!-- user login dropdown end -->
