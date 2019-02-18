@@ -71,9 +71,15 @@
                                 <li class="eborder-top">
                                     <a href="<?php echo base_url(); ?>site/profile.html"><i class="icon_profile"></i>Profile</a>
                                 </li>
+                                <?php $category=$this->session->userdata('category'); ?>
+                                <?php if($category==1) { ?>
                                 <li>
                                     <a href="<?php echo base_url(); ?>site/logout.html"><i class="icon_key_alt"></i>Log Out</a>
-                                </li>
+                                </li> <?php } ?>
+                                <?php if($category==3) { ?>
+                                <li>
+                                    <a href="<?php echo base_url(); ?>site_emp/logout.html"><i class="icon_key_alt"></i>Log Out</a>
+                                </li> <?php } ?>
                             </ul>
                         </li>
                         <!-- user login dropdown end -->
