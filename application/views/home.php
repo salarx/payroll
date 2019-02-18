@@ -1,4 +1,6 @@
 <div class="row">
+  <?php $category=$this->session->userdata('category')
+  if($category==1){?>
     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
         <a href="<?php echo  base_url(); ?>site/employee.html">
             <div class="info-box blue-bg">
@@ -7,7 +9,8 @@
             </div><!--/.info-box-->
         </a>
     </div><!--/.col-->
-
+    <?php}?>
+    <?php if($category==1){?>
     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
         <a href="<?php echo  base_url(); ?>site/hod.html">
             <div class="info-box blue-bg">
@@ -16,7 +19,8 @@
             </div><!--/.info-box-->
         </a>
     </div><!--/.col-->
-
+    <?php}?>
+     <?php if($category==1){?>
     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
         <a href="<?php echo  base_url(); ?>site/salary.html">
             <div class="info-box blue-bg">
@@ -25,7 +29,8 @@
             </div><!--/.info-box-->
         </a>
     </div><!--/.col-->
-
+     <?php}?>
+     <?php if($category==1){?>
     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
         <a href="<?php echo  base_url(); ?>site/settings.html">
             <div class="info-box blue-bg">
@@ -34,5 +39,5 @@
             </div><!--/.info-box-->
         </a>
     </div><!--/.col-->
-
+    <?php}?>
 </div>
