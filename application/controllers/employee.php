@@ -29,6 +29,7 @@ class Employee extends CI_Controller {
 
             $data['flag'] = $result->employee_id;
             $data['username'] = $result->employee_id;
+            $data['category'] = 3;
             $this->session->set_userdata($data);
 
             redirect('site_emp');

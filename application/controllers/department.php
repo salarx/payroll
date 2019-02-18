@@ -26,6 +26,7 @@ class Department extends CI_Controller {
       if($result){
         $data['flag'] = $result->hod_id;
         $data['username'] = $result->hod_username;
+        $data['category'] = 2;
         $this->session->set_userdata($data);
         redirect('site');
       }
