@@ -18,7 +18,7 @@ class Department extends CI_Controller {
       $this->load->view('hod_login');
     }
 
-    public function authentication(){
+    public function hod_authentication(){
 
       $username = $this->input->post('username',true);
       $password = hash("SHA512",$this->input->post('password',true));

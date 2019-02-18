@@ -12,16 +12,16 @@ class Department_model extends CI_Model{
     }
     function login($username, $password){
 
-        $query = $this->db->get_where('department',array('admin_username' => $username));
+        $query = $this->db->get_where('departments',array('hod_username' => $username));
         $result = $query->row();
 
-        $admin_password = $result->admin_password;
-        $salt = $result->admin_salt;
+        $hod_password = $result->hod_password;
+        $salt = $result->hod_salt;
 
         $password .= $salt;
-        $admin_password .= $salt;
+        $hod_password .= $salt;
 
-        if(!strcmp($password,$admin_password)){
+        if(!strcmp($password,$hod_password)){
 
             return $result;
         }

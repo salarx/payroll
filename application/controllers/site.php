@@ -41,7 +41,7 @@ class Site extends CI_Controller {
         $data["heading"] = "Employee Details";
         $data["base_url"] = base_url() . "site/employee";
         $data["total_rows"] = $this->employee_model->record_count();
-        $data["per_page"] = 20;
+        $data["per_page"] = 10;
         $data["uri_segment"] = 3;
 
         $this->pagination->initialize($data);
@@ -61,8 +61,8 @@ class Site extends CI_Controller {
         $data["title"] = "Department";
         $data["heading"] = "Department Head Details";
         $data["base_url"] = base_url() . "site/hod";
-        $data["total_rows"] = $this->hod_model->record_count();
-        $data["per_page"] = 20;
+        $data["total_rows"] = $this->department_model->record_count();
+        $data["per_page"] = 10;
         $data["uri_segment"] = 3;
 
         $this->pagination->initialize($data);
@@ -83,7 +83,7 @@ class Site extends CI_Controller {
         $data["heading"] = "Salary Details";
         $data["base_url"] = base_url() . "site/salary";
         $data["total_rows"] = $this->salary_model->record_count();
-        $data["per_page"] = 20;
+        $data["per_page"] = 10;
         $data["uri_segment"] = 3;
 
         $this->pagination->initialize($data);

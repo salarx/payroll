@@ -13,17 +13,13 @@
                     <?php foreach($results as $list){ ?>
                         <tr>
                             <td>
-                                <a href="<?php echo base_url(); ?>employee/view_employee/<?php echo $list->employee_id; ?>"><?php echo $list->employee_name; ?></a>
+                              <?php echo $list->dep_name;?>
                             </td>
-                            <td><?php echo $list->employee_designation; ?></td>
-                            <td><?php echo $list->employee_department; ?></td>
                             <td>
-                                <a href="<?php echo base_url(); ?>employee/update_employee/<?php echo $list->employee_id; ?>">Edit</a>
-                                <?php if($list->employee_salary == 0 ) {?>
-                                | <a href="<?php echo base_url(); ?>salary/add_salary/<?php echo $list->employee_id; ?>">Salary</a>
-                                <?php }?>
-								|
-								<a href="<?php echo base_url(); ?>employee/delete_employee/<?php echo $list->employee_id; ?>">Delete</a>
+                              <?php echo $list->employee_name;?>
+                            </td>
+                            <td>
+                                <a href="<?php echo base_url(); ?>department/update_department/<?php echo $list->dep_id; ?>">Edit</a>
                             </td>
                         </tr>
                     <?php } ?>

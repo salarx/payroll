@@ -16,7 +16,7 @@ class Admin extends CI_Controller {
 
 	public function login(){
 
-		$this->load->view('login');
+		$this->load->view('admin_login');
 	}
 
     public function authentication(){
