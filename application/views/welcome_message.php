@@ -37,8 +37,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <p>To login, click on the buttons below. Happy Coding</p>
   <p class="lead">
   <a href="<?php echo base_url(); ?>admin/login.html"><button type="button" class="btn btn-primary">Admin</button></a>
-  <button type="button" class="btn btn-primary">HOD</button>
-  <button type="button" class="btn btn-primary">Employee</button>
+  <a href="<?php echo base_url(); ?>department/hod_login.html"><button type="button" class="btn btn-primary">HOD</button></a>
+  <a href="<?php echo base_url(); ?>employee/login_emp.html"><button type="button" class="btn btn-primary">Employee</button></a>
   </p>
 </div>
 
