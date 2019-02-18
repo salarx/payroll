@@ -5,6 +5,7 @@ class Department extends CI_Controller {
     function __construct(){
 
         parent::__construct();
+        $this->load->model('department_model');
 
         $flag = $this->session->userdata('flag');
 
@@ -21,11 +22,11 @@ class Department extends CI_Controller {
     public function hod_authentication(){
 
       $username = $this->input->post('username',true);
-      $password = hash("SHA512",$this->input->post('password',true));
+      $password = $this->input->post('password',true);
       $result = $this->department_model->login($username,$password);
       if($result){
-        $data['flag'] = $result->hod_id;
-        $data['username'] = $result->hod_username;
+        $data['flag'] = $result->dep_id;
+        $data['username'] = $result->dep_id;
         $data['category'] = 2;
         $this->session->set_userdata($data);
         redirect('site');

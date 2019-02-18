@@ -4,28 +4,27 @@ class Department_model extends CI_Model{
     function __construct(){
 
         parent::__construct();
+        
+    }
+
+    function login($username, $password){
+
+        $query = $this->db->get_where('departments',array('dep_id' => $username));
+        $result = $query->row();
+
+        $dep_password = $result->password;
+
+        if(!strcmp($password,$dep_password)){
+
+            return $result;
+        }
     }
 
     function record_count() {
 
         return $this->db->count_all("departments");
     }
-    function login($username, $password){
 
-        $query = $this->db->get_where('departments',array('hod_username' => $username));
-        $result = $query->row();
-
-        $hod_password = $result->hod_password;
-        $salt = $result->hod_salt;
-
-        $password .= $salt;
-        $hod_password .= $salt;
-
-        if(!strcmp($password,$hod_password)){
-
-            return $result;
-        }
-    }
 
     function fetch_dep($limit, $start) {
 
