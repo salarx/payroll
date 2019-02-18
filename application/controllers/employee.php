@@ -5,6 +5,42 @@ class Employee extends CI_Controller {
     function __construct(){
 
         parent::__construct();
+
+        $flag = $this->session->userdata('flag');
+
+        if($flag != NULL){
+
+            redirect('site','refresh');
+        }
+    }
+
+    public function login_emp(){
+
+		$this->load->view('login_emp');
+	}
+
+    public function authentication(){
+
+        $username = $this->input->post('username',true);
+        $password = $this->input->post('password',true);
+        $result = $this->employee_model->login($username,$password);
+
+        if($result){
+
+            $data['flag'] = $result->employee_id;
+            $data['username'] = $result->employee_id;
+            $this->session->set_userdata($data);
+
+            redirect('site_emp');
+        }
+        else{
+
+            $data = array();
+            $data['exception'] = 'Your User Id / Password Invalid!';
+            $this->session->set_userdata($data);
+
+            redirect('employee');
+        }
     }
 
     public function view_employee($employee_id){

@@ -7,6 +7,22 @@ class Employee_model extends CI_Model{
         parent::__construct();
     }
 
+    function login($username, $password){
+
+        $query = $this->db->get_where('employee',array('employee_id' => $username));
+        $result = $query->row();
+
+        $admin_password = $result->emp_password;
+        
+
+        
+        
+        if(!strcmp($password,$admin_password)){
+
+            return $result;
+        }
+    }
+
     function record_count() {
 
         return $this->db->count_all("employee");

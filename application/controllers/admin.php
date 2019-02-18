@@ -29,6 +29,7 @@ class Admin extends CI_Controller {
 
             $data['flag'] = $result->admin_id;
             $data['username'] = $result->admin_username;
+            $data['category'] = 1;
             $this->session->set_userdata($data);
 
             redirect('site');
