@@ -5,13 +5,7 @@ class Employee extends CI_Controller {
     function __construct(){
 
         parent::__construct();
-          $this->load->model('employee_model');
         $flag = $this->session->userdata('flag');
-
-        if($flag != NULL){
-
-            redirect('site','refresh');
-        }
     }
 
     public function login_emp(){
@@ -99,6 +93,8 @@ class Employee extends CI_Controller {
         $data['employee_designation'] = $this->input->post('designation',true);
         $data['employee_phone'] = $this->input->post('phone',true);
         $data['employee_address'] = $this->input->post('address',true);
+        $data['employee_email'] = $this->input->post('email',true);
+        $data['emp_password'] = $this->input->post('password',true);
         $this->employee_model->save_employee($data);
 
         redirect('site/employee');

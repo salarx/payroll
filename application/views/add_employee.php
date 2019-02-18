@@ -52,6 +52,18 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="email" class="control-label col-lg-2">E-mail</label>
+                            <div class="col-lg-10">
+                                <textarea class="form-control" name="email"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="control-label col-lg-2">Password</label>
+                            <div class="col-lg-10">
+                                <textarea class="form-control" name="password"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="type" class="control-label col-lg-2">Payment Type</label>
                             <div class="col-lg-10">
                                 <select class="form-control" name="type">

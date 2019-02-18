@@ -7,9 +7,8 @@ class Site extends CI_Controller {
     function __construct(){
 
         parent::__construct();
-
+        $this->load->model('Department_model');
         $flag = $this->session->userdata('flag');
-
         if($flag == NULL){
 
             redirect('admin','refresh');
@@ -55,20 +54,20 @@ class Site extends CI_Controller {
         $this->load->view('master',$data);
     }
 
-    public function hod(){
+    public function department(){
 
         $data = array();
         $data["title"] = "Department";
         $data["heading"] = "Department Head Details";
-        $data["base_url"] = base_url() . "site/hod";
-        $data["total_rows"] = $this->department_model->record_count();
+        $data["base_url"] = base_url() . "site/department";
+        $data["total_rows"] = $this->Department_model->record_count();
         $data["per_page"] = 10;
         $data["uri_segment"] = 3;
 
         $this->pagination->initialize($data);
         $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-        $data["results"] = $this->hod_model->fetch_hod($data["per_page"], $page);
+        $data["results"] = $this->Department_model->fetch_dep($data["per_page"], $page);
 
         $data["links"] = $this->pagination->create_links();
 
