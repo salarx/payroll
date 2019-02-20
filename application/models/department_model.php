@@ -4,7 +4,7 @@ class Department_model extends CI_Model{
     function __construct(){
 
         parent::__construct();
-        
+
     }
 
     function login($username, $password){
@@ -29,8 +29,8 @@ class Department_model extends CI_Model{
     function fetch_dep($limit, $start) {
 
         $this->db->limit($limit, $start);
-        $query = $this->db->get("departments");
-
+        $this->db->join("departments",'departments.emp_id = employee.employee_id','left outer');
+        $query =   $this->db->get("employee");
         if ($query->num_rows() > 0) {
 
             foreach ($query->result() as $row) {
@@ -46,7 +46,6 @@ class Department_model extends CI_Model{
 
     function fetch_dep_by_id($dep_id) {
 
-        $this->db->join('employee', 'employee.employee_id = departments.payment_id');
         $query = $this->db->get_where('departments',array('dep_id'=>$dep_id));
         return $query->row();
     }

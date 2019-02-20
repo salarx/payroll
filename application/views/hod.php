@@ -19,7 +19,7 @@
                               <?php echo $list->employee_name;?>
                             </td>
                             <td>
-                                <a href="<?php echo base_url(); ?>department/update_department/<?php echo $list->dep_id; ?>">Edit</a>
+                                <a href="<?php echo base_url(); ?>department/update_dep/<?php echo $list->dep_id; ?>">Edit</a>
                             </td>
                         </tr>
                     <?php } ?>

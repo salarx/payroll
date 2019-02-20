@@ -7,11 +7,6 @@ class Department extends CI_Controller {
         parent::__construct();
         $this->load->model('department_model');
 
-        $flag = $this->session->userdata('flag');
-
-        if($flag != NULL){
-            redirect('site','refresh');
-        }
     }
 
     public function hod_login(){
