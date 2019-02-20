@@ -14,7 +14,7 @@
                         <div class="form-group">
                             <label for="department" class="control-label col-lg-2">HOD</label>
                             <div class="col-lg-10">
-                                <input class="form-control" type="text" name="department" value="<?php echo $result->employee_name; ?>"/>
+                                <input class="form-control" type="text" name="department" value="<?php echo $result->emp_id; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
