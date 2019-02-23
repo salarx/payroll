@@ -31,6 +31,9 @@ class Employee_model extends CI_Model{
     function fetch_employee($limit, $start) {
 
         $this->db->limit($limit, $start);
+        
+        $this->db->join('departments', 'employee.employee_department = departments.dep_id');
+        $this->db->join('designation', 'employee.employee_designation = designation.id');
         $query = $this->db->get("employee");
 
         if ($query->num_rows() > 0) {
@@ -50,8 +53,8 @@ class Employee_model extends CI_Model{
 
         $this->db->join('payment', 'employee.payment_id = payment.payment_id');
         $this->db->join('status', 'employee.status_id = status.status_id');
-        $this->db->join('departments', 'employee.employee_designation = departments.dep_id');
-        $this->db->join('designation', 'employee.employee_department = designation.id');
+        $this->db->join('departments', 'employee.employee_department = departments.dep_id');
+        $this->db->join('designation', 'employee.employee_designation = designation.id');
         $query = $this->db->get_where('employee',array('employee_id'=>$employee_id));
 
         return $query->row();

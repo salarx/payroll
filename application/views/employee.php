@@ -25,8 +25,8 @@
                             <td>
                                 <a href="<?php echo base_url(); ?>employee/view_employee/<?php echo $list->employee_id; ?>"><?php echo $list->employee_name; ?></a>
                             </td>
-                            <td><?php echo $list->employee_designation; ?></td>
-                            <td><?php echo $list->employee_department; ?></td>
+                            <td><?php echo $list->designation; ?></td>
+                            <td><?php echo $list->dep_name; ?></td>
                             <td>
                                 <a href="<?php echo base_url(); ?>employee/update_employee/<?php echo $list->employee_id; ?>">Edit</a>
                                 <?php if($list->employee_salary == 0 ) {?>
