@@ -111,7 +111,7 @@
                     </li>
                     <li class="<?php if($title=='Department'){ echo 'active';}?>">
                         <a href="<?php echo base_url(); ?>site/department.html">
-                            <i class="icon_id"></i>
+                            <i class="icon_datareport"></i>
                             <span>Department</span>
                         </a>
                     </li>
