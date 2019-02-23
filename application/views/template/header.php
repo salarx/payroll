@@ -109,6 +109,12 @@
                             <span>Employee</span>
                         </a>
                     </li>
+                    <li class="<?php if($title=='Department'){ echo 'active';}?>">
+                        <a href="<?php echo base_url(); ?>site/department.html">
+                            <i class="icon_id"></i>
+                            <span>Department</span>
+                        </a>
+                    </li>
                     <li class="<?php if($title=='Salary'){ echo 'active';}?>">
                         <a href="<?php echo base_url(); ?>site/salary.html">
                             <i class="icon_clipboard"></i>
