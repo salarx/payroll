@@ -15,7 +15,7 @@ class Employee_model extends CI_Model{
         $salt = $result->emp_salt;
 
         $password .= $salt;
-        $admin_password .= $salt;
+        $emp_password .= $salt;
 
         if(!strcmp($password,$emp_password)){
 
