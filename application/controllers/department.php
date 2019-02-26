@@ -5,7 +5,7 @@ class Department extends CI_Controller {
     function __construct(){
 
         parent::__construct();
-        $this->load->model('department_model');
+        $this->load->model('Department_model');
 
     }
 
@@ -24,15 +24,14 @@ class Department extends CI_Controller {
 
         $data = array();
         $dep_id = $this->input->post('id',true);
-        $data['payment_id'] = $this->input->post('type',true);
-        $data['status_id'] = $this->input->post('status',true);
-        $data['employee_name'] = $this->input->post('name',true);
-        $data['employee_department'] = $this->input->post('department',true);
-        $data['employee_designation'] = $this->input->post('designation',true);
-        $data['employee_phone'] = $this->input->post('phone',true);
-        $data['employee_address'] = $this->input->post('address',true);
-        $this->employee_model->update_employee_by_id($employee_id,$data);
-
-        redirect('site/hod');
+        $data['dep_name'] = $this->input->post('name',true);
+        $data['emp_id'] = $this->input->post('emp_id',true);
+        $data['password'] = hash("SHA512",$this->input->post('password',true));
+        $options = [
+            'cost' => 11,
+        ];
+        $data['dep_salt'] = password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
+        $this->department_model->update_dep_by_id($dep_id,$data);
+        redirect('site/department');
     }
 }

@@ -46,7 +46,7 @@ class Authentication_login extends CI_Controller {
     public function hod_authentication(){
 
       $username = $this->input->post('username',true);
-      $password = $this->input->post('password',true);
+        $password = hash("SHA512",$this->input->post('password',true));
       $result = $this->department_model->login($username,$password);
       if($result){
         $data['flag'] = $result->dep_id;

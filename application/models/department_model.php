@@ -11,8 +11,11 @@ class Department_model extends CI_Model{
 
         $query = $this->db->get_where('departments',array('dep_id' => $username));
         $result = $query->row();
-
         $dep_password = $result->password;
+        $salt = $result->dep_salt;
+
+        $password .= $salt;
+        $dep_password .= $salt;
 
         if(!strcmp($password,$dep_password)){
 
