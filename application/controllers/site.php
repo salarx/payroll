@@ -7,7 +7,6 @@ class Site extends CI_Controller {
     function __construct(){
 
         parent::__construct();
-        $this->load->model("department_model");
         $flag = $this->session->userdata('flag');
         if($flag == NULL){
 
