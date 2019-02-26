@@ -8,20 +8,6 @@ class Authentication_login extends CI_Controller {
         $this->load->model("department_model");
         $flag = $this->session->userdata('flag');
         $category = $this->session->userdata('category');
-        if($flag != NULL){
-          if($category==1)
-          {
-            redirect('site','refresh');
-          }
-          if($category==2)
-          {
-            redirect('site_hod','refresh');
-          }
-          if($category==3)
-          {
-            redirect('site_emp','refresh');
-          }
-        }
     }
 
 	public function admin_login(){

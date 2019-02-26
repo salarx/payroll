@@ -10,8 +10,7 @@ class Site extends CI_Controller {
         $this->load->model('Department_model');
         $flag = $this->session->userdata('flag');
         if($flag == NULL){
-
-            redirect('department','refresh');
+            redirect('authentication_login/hod_login','refresh');
         }
     }
 
@@ -29,7 +28,7 @@ class Site extends CI_Controller {
         $data = array();
         $data['title'] = "Home";
         $data['heading'] = "Main Menu";
-        $data['content'] = $this->load->view('home_admin',$data,true);
+        $data['content'] = $this->load->view('home_hod',$data,true);
         $this->load->view('master',$data);
     }
 

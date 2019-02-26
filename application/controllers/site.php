@@ -7,11 +7,10 @@ class Site extends CI_Controller {
     function __construct(){
 
         parent::__construct();
-        $this->load->model('Department_model');
         $flag = $this->session->userdata('flag');
         if($flag == NULL){
 
-            redirect('admin','refresh');
+            redirect('authentication_login/admin_login','refresh');
         }
     }
 

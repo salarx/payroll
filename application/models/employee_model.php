@@ -13,10 +13,10 @@ class Employee_model extends CI_Model{
         $result = $query->row();
 
         $admin_password = $result->emp_password;
-        
 
-        
-        
+
+
+
         if(!strcmp($password,$admin_password)){
 
             return $result;
@@ -31,7 +31,7 @@ class Employee_model extends CI_Model{
     function fetch_employee($limit, $start) {
 
         $this->db->limit($limit, $start);
-        
+
         $this->db->join('departments', 'employee.employee_department = departments.dep_id');
         $this->db->join('designation', 'employee.employee_designation = designation.id');
         $query = $this->db->get("employee");
@@ -96,4 +96,4 @@ class Employee_model extends CI_Model{
         }
     }
 
-} 
+}

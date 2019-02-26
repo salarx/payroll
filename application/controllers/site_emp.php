@@ -12,7 +12,7 @@ class Site_emp extends CI_Controller {
 
         if($flag == NULL){
 
-            redirect('employee','refresh');
+            redirect('authentication_login/emp_login','refresh');
         }
     }
 
