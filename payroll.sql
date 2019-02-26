@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 26, 2019 at 09:23 PM
+-- Generation Time: Feb 26, 2019 at 10:22 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `admin_username`, `admin_password`, `admin_salt`) VALUES
-(1, 'admin', 'c7ad44cbad762a5da0a452f9e854fdc1e0e7a52a38015f23f3eab1d80b931dd472634dfac71cd34ebc35d16ab7fb8a90c81f975113d6c7538dc69dd8de9077ec', '$2y$11$.phSWInHPAB17yH6u3kY/eWuhfJQq/9lB1lInx98fnUb6R.2t.U6S'),
+(1, 'admin', '58b5444cf1b6253a4317fe12daff411a78bda0a95279b1d5768ebf5ca60829e78da944e8a9160a0b6d428cb213e813525a72650dac67b88879394ff624da482f', '$2y$11$fWB3uwd.rC3X0EhGQDBsveHGwdy4Q8dL7hJeOZ6Czyyltlw3NZL9K'),
 (2, 'merababy', '05ec7b787a9ec3560b31d701a0b425b86f283983b17da63065284c0bfdca3a84311ca6f14641a693e046d20fe454c92ef3a8edc9e887757399c7347175cdd713', '$2y$11$DEdhgv1NltvvyttHWRWGFu66CW0fe0vi/one2LYDhhY396laZDiS6');
 
 -- --------------------------------------------------------
@@ -53,6 +53,7 @@ CREATE TABLE `departments` (
   `dep_id` int(11) NOT NULL,
   `dep_name` text NOT NULL,
   `password` varchar(128) DEFAULT NULL,
+  `dep_salt` varchar(60) NOT NULL,
   `emp_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -60,12 +61,12 @@ CREATE TABLE `departments` (
 -- Dumping data for table `departments`
 --
 
-INSERT INTO `departments` (`dep_id`, `dep_name`, `password`, `emp_id`) VALUES
-(1, 'Production', 'manav', 102),
-(2, 'Research and Development', 'sahil', 103),
-(3, 'Marketing', NULL, 104),
-(4, 'Purchasing', NULL, NULL),
-(5, 'Human Resource Management', NULL, NULL);
+INSERT INTO `departments` (`dep_id`, `dep_name`, `password`, `dep_salt`, `emp_id`) VALUES
+(1, 'Production', '', '', 102),
+(2, 'Research and Development', '', '', 103),
+(3, 'Marketing', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$np0eeiW/afJOka3tC3YKpuWqYuNk0/K7bzH8swaxzpBLhoLtVnnCO', 104),
+(4, 'Purchasing', NULL, '', NULL),
+(5, 'Human Resource Management', NULL, '', NULL);
 
 -- --------------------------------------------------------
 
@@ -122,8 +123,7 @@ CREATE TABLE `employee` (
 INSERT INTO `employee` (`employee_id`, `payment_id`, `status_id`, `employee_name`, `employee_department`, `employee_designation`, `employee_phone`, `employee_address`, `employee_salary`, `emp_password`, `emp_salt`, `employee_email`) VALUES
 (102, 1, 1, 'Manav Goyal', 1, 1, '+91-84493924', 'sfb', 1, 'asd123', '', NULL),
 (103, 1, 1, 'Sahil Kumar', 1, 1, '+91-94670173', 'PDPM IIITDMJ', 0, 'sahil', '', 'salarx.gm@gmail.com'),
-(104, 1, 1, 'Harshit', 1, 1, '9694445402', 'PDPM IIITDMJ', 0, '', '', '2017222@iiitdmj.ac.in'),
-(105, 1, 1, 'Kanishk', 1, 1, '9694445402', 'PDPM IIITDMJ', 0, '8bb5431bf35bbd885fc99b7773db852331e46c3271566fc200fd7a1149d6b56d4a5985343a1866c280563eddc604e8a5ade89d31b8a0598fa04961d88aec8c95', '$2y$11$hwISbY6dbPoaL40KfE1d1.wI7/LYc/0BDm.Xp8Z9cTBzyXpKnqRhW', '2017117@iiitdmj.ac.in');
+(104, 1, 1, 'Harshit', 1, 1, '9694445402', 'PDPM IIITDMJ', 0, '', '', '2017222@iiitdmj.ac.in');
 
 -- --------------------------------------------------------
 
