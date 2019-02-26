@@ -35,7 +35,7 @@ class Site_emp extends CI_Controller {
     }
 
     public function salary(){
-
+if($this->session->userdata('category')==3){
         $data = array();
         $data["title"] = "Salary";
         $data["heading"] = "Salary Details";
@@ -51,7 +51,7 @@ class Site_emp extends CI_Controller {
         $data["links"] = $this->pagination->create_links();
 
         $data["content"] = $this->load->view('salary',$data,true);
-        $this->load->view('master',$data);
+        $this->load->view('master',$data);}
     }
 
     public function profile(){
