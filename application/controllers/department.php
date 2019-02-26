@@ -9,30 +9,7 @@ class Department extends CI_Controller {
 
     }
 
-    public function hod_login(){
 
-      $this->load->view('hod_login');
-    }
-
-    public function hod_authentication(){
-
-      $username = $this->input->post('username',true);
-      $password = $this->input->post('password',true);
-      $result = $this->department_model->login($username,$password);
-      if($result){
-        $data['flag'] = $result->dep_id;
-        $data['username'] = $result->dep_id;
-        $data['category'] = 2;
-        $this->session->set_userdata($data);
-        redirect('site');
-      }
-      else{
-      $data = array();
-      $data['exception'] = 'Your User Id / Password Invalid!';
-      $this->session->set_userdata($data);
-      redirect('admin');
-      }
-    }
     public function update_dep($dep_id){
 
         $data = array();

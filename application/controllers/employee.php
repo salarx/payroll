@@ -7,8 +7,6 @@ class Employee extends CI_Controller {
         parent::__construct();
     }
 
-
-
     public function view_employee($employee_id){
 
         $data = array();
