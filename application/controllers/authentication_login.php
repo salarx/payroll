@@ -5,6 +5,7 @@ class Authentication_login extends CI_Controller {
     function __construct(){
 
         parent::__construct();
+        $this->load->model("department_model");
         $flag = $this->session->userdata('flag');
         $category = $this->session->userdata('category');
     }
@@ -70,7 +71,7 @@ class Authentication_login extends CI_Controller {
     public function emp_authentication(){
 
         $username = $this->input->post('username',true);
-        $password = $this->input->post('password',true);
+        $password = hash("SHA512",$this->input->post('password',true));
         $result = $this->employee_model->login($username,$password);
 
         if($result){
