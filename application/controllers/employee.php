@@ -63,7 +63,11 @@ class Employee extends CI_Controller {
         $data['employee_phone'] = $this->input->post('phone',true);
         $data['employee_address'] = $this->input->post('address',true);
         $data['employee_email'] = $this->input->post('email',true);
-        $data['emp_password'] = $this->input->post('password',true);
+        $data['emp_password'] = hash("SHA512",$this->input->post('password',true));
+        $options = [
+            'cost' => 11,
+        ];
+        $data['emp_salt'] = password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
         $this->employee_model->save_employee($data);
 
         redirect('site/employee');

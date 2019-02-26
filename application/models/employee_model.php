@@ -11,13 +11,13 @@ class Employee_model extends CI_Model{
 
         $query = $this->db->get_where('employee',array('employee_id' => $username));
         $result = $query->row();
+        $emp_password = $result->emp_password;
+        $salt = $result->emp_salt;
 
-        $admin_password = $result->emp_password;
+        $password .= $salt;
+        $admin_password .= $salt;
 
-
-
-
-        if(!strcmp($password,$admin_password)){
+        if(!strcmp($password,$emp_password)){
 
             return $result;
         }
