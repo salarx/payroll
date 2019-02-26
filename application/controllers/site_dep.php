@@ -62,7 +62,7 @@ class Site extends CI_Controller {
         $data["base_url"] = base_url() . "site/salary";
         $data["total_rows"] = $this->salary_model->record_count();
         $data["per_page"] = 10;
-        $data["uri_segment"] = 3
+        $data["uri_segment"] = 3;
         $this->pagination->initialize($data);
         $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
         $data["results"] = $this->salary_model->fetch_salary($data["per_page"], $page);
@@ -79,3 +79,4 @@ class Site extends CI_Controller {
         $data['content'] = $this->load->view('profile',$data,true);
         $this->load->view('master',$data);
         }
+}

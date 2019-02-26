@@ -5,7 +5,7 @@ class Authentication_login extends CI_Controller {
     function __construct(){
 
         parent::__construct();
-
+        $this->load->model("department_model");
         $flag = $this->session->userdata('flag');
         $category = $this->session->userdata('category');
         if($flag != NULL){
