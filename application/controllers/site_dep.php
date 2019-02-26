@@ -2,7 +2,7 @@
 session_start();
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Site extends CI_Controller {
+class Site_dep extends CI_Controller {
 
     function __construct(){
 
@@ -28,7 +28,7 @@ class Site extends CI_Controller {
         $data = array();
         $data['title'] = "Home";
         $data['heading'] = "Main Menu";
-        $data['content'] = $this->load->view('home_hod',$data,true);
+        $data['content'] = $this->load->view('home_admin',$data,true);
         $this->load->view('master',$data);
     }
 
