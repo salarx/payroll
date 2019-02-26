@@ -22,7 +22,7 @@ class Site_emp extends CI_Controller {
         $this->session->unset_userdata('username');
         $data['message'] = 'You are successfully logged out';
         $this->session->set_userdata($data);
-        redirect('employee/login_emp',"refresh");
+        redirect('authentication_login/emp_authentication',"refresh");
     }
 
     public function index(){
