@@ -51,7 +51,7 @@
   </div>
 </nav>
             <div class="container">
-            <form class="login-form" action="<?php echo base_url(); ?>admin/authentication.html" method="post">
+            <form class="login-form" action="<?php echo base_url(); ?>authentication_login/admin_authentication.html" method="post">
                 <div class="login-wrap">
                     <p class="login-img"><i class="icon_lock_alt"></i></p>
                     <?php

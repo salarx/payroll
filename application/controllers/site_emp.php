@@ -30,7 +30,7 @@ class Site_emp extends CI_Controller {
         $data = array();
         $data['title'] = "Home";
         $data['heading'] = "Main Menu";
-        $data['content'] = $this->load->view('home',$data,true);
+        $data['content'] = $this->load->view('home_emp',$data,true);
         $this->load->view('master',$data);
     }
 
