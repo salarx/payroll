@@ -14,7 +14,13 @@
                         <div class="form-group">
                             <label for="department" class="control-label col-lg-2">HOD</label>
                             <div class="col-lg-10">
-                                <input class="form-control" type="text" name="department" value="<?php echo $result->emp_id; ?>"/>
+                                <input class="form-control" type="number" name="emp_id" value="<?php echo $result->emp_id; ?>"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="department" class="control-label col-lg-2">Password</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" type="text" name="password" />
                             </div>
                         </div>
                         <div class="form-group">
@@ -22,6 +28,7 @@
                                 <button class="btn btn-primary" type="submit">Update</button>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>
