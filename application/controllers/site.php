@@ -20,7 +20,7 @@ class Site extends CI_Controller {
         $this->session->unset_userdata('username');
         $data['message'] = 'You are successfully logged out';
         $this->session->set_userdata($data);
-        redirect('authentication_login/admin_login',"refresh");
+        redirect('authentication_login/admin_login');
     }
 
     public function index(){
