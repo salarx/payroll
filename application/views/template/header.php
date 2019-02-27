@@ -1,3 +1,4 @@
+<?php $category=$this->session->userdata('category'); ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -48,7 +49,15 @@
                     <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
                 </div>
                 <!--logo start-->
+                <?php if($category==1) { ?>
                 <a href="<?php echo base_url(); ?>site" class="logo">6KAIZ<span class="lite">ENS</span></a>
+                <?php } ?>
+                <?php if($category==2) { ?>
+                <a href="<?php echo base_url(); ?>site_dep" class="logo">6KAIZ<span class="lite">ENS</span></a>
+                <?php } ?>
+                <?php if($category==3) { ?>
+                <a href="<?php echo base_url(); ?>site_emp" class="logo">6KAIZ<span class="lite">ENS</span></a>
+                <?php } ?>
                 <!--logo end-->
 
                 <div class="nav search-row" id="top_menu">
@@ -69,18 +78,25 @@
                             <ul class="dropdown-menu extended logout">
                                 <div class="log-arrow-up"></div>
                                 <li class="eborder-top">
+                                    <?php if($category==1) { ?>
                                     <a href="<?php echo base_url(); ?>site/profile.html"><i class="icon_profile"></i>Profile</a>
+                                    <?php } ?>
+                                    <?php if($category==2) { ?>
+                                    <a href="<?php echo base_url(); ?>site_dep/profile.html"><i class="icon_profile"></i>Profile</a>
+                                    <?php } ?>
+                                    <?php if($category==3) { ?>
+                                    <a href="<?php echo base_url(); ?>site_emp/profile.html"><i class="icon_profile"></i>Profile</a>
+                                    <?php } ?>
                                 </li>
-                                <?php $category=$this->session->userdata('category'); ?>
                                 <?php if($category==1) { ?>
                                 <li>
                                     <a href="<?php echo base_url(); ?>site/logout.html"><i class="icon_key_alt"></i>Log Out</a>
                                 </li> <?php } ?>
-                                <?php if($category==3) { ?>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>site_emp/logout.html"><i class="icon_key_alt"></i>Log Out</a>
-                                </li> <?php } ?>
                                 <?php if($category==2) { ?>
+                                <li>
+                                    <a href="<?php echo base_url(); ?>site_dep/logout.html"><i class="icon_key_alt"></i>Log Out</a>
+                                </li> <?php } ?>
+                                <?php if($category==3) { ?>
                                 <li>
                                     <a href="<?php echo base_url(); ?>site_emp/logout.html"><i class="icon_key_alt"></i>Log Out</a>
                                 </li> <?php } ?>
@@ -98,31 +114,54 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu">
                     <li class="<?php if($title=='Home'){ echo 'active';}?>">
+                    <?php if($category==1) { ?>
                         <a href="<?php echo base_url(); ?>site">
+                        <?php } ?>
+                        <?php if($category==2) { ?>
+                        <a href="<?php echo base_url(); ?>site_dep">
+                        <?php } ?>
+                        <?php if($category==3) { ?>
+                        <a href="<?php echo base_url(); ?>site_emp">
+                        <?php } ?>
                             <i class="icon_house_alt"></i>
                             <span>Home</span>
                         </a>
                     </li>
-                    <li class="<?php if($title=='Employee'){ echo 'active';}?>">
-                        <a href="<?php echo base_url(); ?>site/employee.html">
-                            <i class="icon_id"></i>
-                            <span>Employee</span>
-                        </a>
-                    </li>
+                    <?php if($category==1) { ?>
                     <li class="<?php if($title=='Department'){ echo 'active';}?>">
                         <a href="<?php echo base_url(); ?>site/department.html">
                             <i class="icon_datareport"></i>
                             <span>Department</span>
                         </a>
-                    </li>
+                    </li><?php } ?>
+                    <?php if($category==1 || $category==2) { ?>
+                    <li class="<?php if($title=='Employee'){ echo 'active';}?>">
+                    <?php if($category==1) { ?>
+                        <a href="<?php echo base_url(); ?>site/employee.html"><?php } ?>
+                        <?php if($category==2) { ?>
+                        <a href="<?php echo base_url(); ?>site_dep/employee.html"><?php } ?>
+                            <i class="icon_id"></i>
+                            <span>Employee</span>
+                        </a>
+                    </li><?php } ?>
                     <li class="<?php if($title=='Salary'){ echo 'active';}?>">
-                        <a href="<?php echo base_url(); ?>site/salary.html">
+                    <?php if($category==1) { ?>
+                        <a href="<?php echo base_url(); ?>site/salary.html"><?php } ?>
+                        <?php if($category==2) { ?>
+                        <a href="<?php echo base_url(); ?>site_dep/salary.html"><?php } ?>
+                        <?php if($category==3) { ?>
+                        <a href="<?php echo base_url(); ?>site_emp/salary.html"><?php } ?>
                             <i class="icon_clipboard"></i>
                             <span>Salary</span>
                         </a>
                     </li>
                     <li class="<?php if($title=='Settings'){ echo 'active';}?>">
-                        <a href="<?php echo base_url(); ?>site/settings.html">
+                    <?php if($category==1) { ?>
+                        <a href="<?php echo base_url(); ?>site/settings.html"><?php } ?>
+                        <?php if($category==2) { ?>
+                        <a href="<?php echo base_url(); ?>site_dep/settings.html"><?php } ?>
+                        <?php if($category==3) { ?>
+                        <a href="<?php echo base_url(); ?>site_emp/settings.html"><?php } ?>
                             <i class="icon_cog"></i>
                             <span>Settings</span>
                         </a>
