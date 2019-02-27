@@ -38,7 +38,6 @@ class Site extends CI_Controller {
         $data["title"] = "Employee";
         $data["heading"] = "Employee Details";
         $data["base_url"] = base_url() . "site/employee";
-        $data["total_rows"] = $this->employee_model->record_count();
         $data["per_page"] = 10;
         $data["uri_segment"] = 3;
 

@@ -49,6 +49,26 @@ class Employee_model extends CI_Model{
         return false;
     }
 
+
+    function fetch_employee_by_dep_id($limit, $start,$dep_id) {
+
+        $this->db->limit($limit, $start);
+        $this->db->join('departments', 'employee.employee_department = departments.dep_id');
+        $this->db->join('designation', 'employee.employee_designation = designation.id');
+        $query = $this->db->get_where('employee',array('employee_department'=>$dep_id));
+        if ($query->num_rows() > 0) {
+
+                foreach ($query->result() as $row) {
+
+                    $data[] = $row;
+                }
+
+                return $data;
+            }
+
+            return false;
+        }
+
     function fetch_employee_by_id($employee_id) {
 
         $this->db->join('payment', 'employee.payment_id = payment.payment_id');
@@ -59,6 +79,8 @@ class Employee_model extends CI_Model{
 
         return $query->row();
     }
+
+
 
     function employee_existence($employee_id) {
 
