@@ -28,7 +28,7 @@ class Department extends CI_Controller {
         $emp_id = $this->input->post('emp_id',true);
         $result = $this->employee_model->fetch_employee_by_id($emp_id);
         $emp_dep = $result->employee_department;
-        if($dep_id!=$emp_id)
+        if($dep_id!=$emp_dep)
         {
           $message = "Please enter an employee number of the same department not of another department";
           show_error($message);
