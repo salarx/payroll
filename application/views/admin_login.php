@@ -31,7 +31,7 @@
     </head>
     <body class="login-img3-body">
       <nav class="navbar navbar-expand-lg navbar-dark " style="color: #01013D">
-    <a class="navbar-brand" href="<?php echo base_url(); ?>"><b>6 KA <span class="lite" style="color: white">I </span> <span class="lite" style="color: #76FF0D">ZENS</span></a>
+    <a class="navbar-brand" href="<?php echo base_url(); ?>"><b>6 KA <span class="lite" style="color: white">I </span> <span class="lite" style="color: #76FF0D">ZENS</span></b></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -45,12 +45,12 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
-&nbsp &nbsp &nbsp &nbsp &nbsp
+          &nbsp &nbsp &nbsp &nbsp &nbsp
           Features</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
-&nbsp &nbsp &nbsp &nbsp &nbsp
+          &nbsp &nbsp &nbsp &nbsp &nbsp
           About</a>
       </li>
     </ul>
