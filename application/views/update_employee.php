@@ -152,7 +152,7 @@
                                       <option value="8">Program Manager</option>
                                       <option value="9" selected>Architect</option>
                                       <option value="10">Technical Specialist</option>
-                                    <?php } else if($result->employee_designation == 9){ ?>
+                                    <?php } else if($result->employee_designation == 10){ ?>
                                       <option value="1">Business Analyst</option>
                                       <option value="2" >Software Engineer</option>
                                       <option value="3">System Analyst</option>
