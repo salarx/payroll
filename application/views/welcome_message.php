@@ -11,27 +11,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="container-fluid">
 
 <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D">
-  <a class="navbar-brand" href="<?php echo base_url(); ?>"><b>6 KAI ZENS</b></a>
+
+	<a class="navbar-brand" href="<?php echo base_url(); ?>"><b>6 KAI ZENS</b></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarColor01">
-    <ul class="navbar-nav mr-auto nav-pills">
+		<b>
+    <ul class="navbar-nav mr-auto nav-pills" style="font-size: 17px">
       <li class="nav-item active" >
-        <a class="nav-link" href="<?php echo base_url(); ?>">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo base_url(); ?>">
+						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">
+						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					Features</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#">
+					&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					About</a>
       </li>
-		<li>
-
-
+		<li>15
 		</li>
     </ul>
+	</b>
   </div>
 
 
@@ -51,21 +58,25 @@ LOGIN
 </nav>
 
 <div class="jumbotron">
-<h1 style="color: #01013D "> <center> 6 KAIZENS </center></h1><br><br>
+<h1 style="color: #01013D "> <center> 6 KAizENs </center></h1><br><br>
 
-	<h4 >Hello,</h4>
+
   <p class="lead">The approach for our project is to create a portal which will comprise of all the details of MSME, their departments and their respective employees. It will contain the details of the payments made to each department and also the salary payments made by each department to the employees. Employees will have their unique ID at the MSME level. Hence, even after shifting to another department, the employee data will be accessible from the company’s database as it will be department independent. Each department will also have their own database which will contain necessary information about the employee, like their PF and Pension accounts, their salaries and any other relevant data which the department requires. Employees will be able to view their past salaries, make rebate/allowance claim. All Employee fund accounts are associated with the Employee ID, and this information is available to their respective department. The salary is given to the employees after deduction, and the deduction data is stored in Department Database and synced with MSME main database.</p>
 	<br><br><br><br>
 
 	<hr class="my-4">
-	<p><center>
-		Contact Us: 1234567890<br>
-		Email: 6kaizens@gmail.com<br>
-		Fax Number: 579412562<br>
-	</center></p>
-</div>
+
+	<footer class="page-footer" style="background:  #01013D; color:white; height: 150px; padding:5px">
+		<p><center><br>
+			Contact Us: 1234567890<br>
+			Email: 6kaizens@gmail.com<br>
+			Fax Number: 579412562<br>
+		</center></p>
+	</footer>
 
 </div>
+</div>
+
 </body>
 
 <!-- jQuery library -->
