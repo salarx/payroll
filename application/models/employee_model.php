@@ -113,9 +113,8 @@ class Employee_model extends CI_Model{
 
     function erase_employee($employee_id) {
 
-        foreach ($employee_id as $id) {
-            $this->db->delete('employee', array('employee_id' => $id));
-        }
+    
+            $this->db->delete('employee', array('employee_id' => $employee_id));
     }
 
 }

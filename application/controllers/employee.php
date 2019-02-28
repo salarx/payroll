@@ -82,8 +82,7 @@ class Employee extends CI_Controller {
     public function delete_employee_commit(){
 
         $employee_id = $this->input->post('id',true);
-
-        $this->employee_model->erase_employee($employee_id);
+$this->db->delete('employee', array('employee_id' => $employee_id));
 		$this->salary_model->delete_salary_by_id($employee_id);
 
         redirect('site/employee');
