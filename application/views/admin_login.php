@@ -75,10 +75,12 @@ body
                     ?>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="icon_profile"></i></span>
+                        <label class="mr-sm-2">Username</label>
                         <input type="text" name="username" class="form-control" placeholder="Username" autofocus>
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+                        <label class="mr-sm-2">Password</label>
                         <input type="password" name="password" class="form-control" placeholder="Password">
                     </div>
                     <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
