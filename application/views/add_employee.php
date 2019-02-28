@@ -11,7 +11,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="type" class="control-label col-lg-2">Department</label>
+                            <label for="department" class="control-label col-lg-2">Department</label>
                             <div class="col-lg-10">
                                 <select class="form-control" name="department">
                                         <option value="1">Production</option>
@@ -23,7 +23,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="type" class="control-label col-lg-2">Designation</label>
+                            <label for="designation" class="control-label col-lg-2">Designation</label>
                             <div class="col-lg-10">
                                 <select class="form-control" name="designation">
                                         <option value="1">Trainee Engineer</option>
