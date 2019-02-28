@@ -28,12 +28,8 @@
                             <td><?php echo $list->designation; ?></td>
                             <td><?php echo $list->dep_name; ?></td>
                             <td>
-                                <a href="<?php echo base_url(); ?>employee/update_employee/<?php echo $list->employee_id; ?>">Edit</a>
-                                <?php if($list->employee_salary == 0 ) {?>
-                                | <a href="<?php echo base_url(); ?>salary/add_salary/<?php echo $list->employee_id; ?>">Salary</a>
-                                <?php }?>
-                                |
-                                
+                                <a href="<?php echo base_url(); ?>employee/update_employee/<?php echo $list->employee_id; ?>">Edit</a>|
+
 								<a href="<?php echo base_url(); ?>employee/delete_employee_commit/<?php echo $list->employee_id; ?>">Delete</a>
                             </td>
                         </tr>
