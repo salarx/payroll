@@ -107,7 +107,7 @@ class Site extends CI_Controller {
         $data = array();
         $data['title'] = "Settings";
         $data['heading'] = "System Management";
-        $data['content'] = $this->load->view('settings',$data,true);
+        $data['content'] = $this->load->view('profile',$data,true);
         $this->load->view('master',$data);
     }
 
