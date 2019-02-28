@@ -69,12 +69,35 @@ class Site_dep extends CI_Controller {
         $this->load->view('master',$data);
     }
 
-    public function profile(){
+    public function settings(){
 
         $data = array();
-        $data['title'] = "Profile";
-        $data['heading'] = "Admin Details";
+        $data['title'] = "Settings";
+        $data['heading'] = "System Management";
         $data['content'] = $this->load->view('profile',$data,true);
         $this->load->view('master',$data);
-        }
+    }
+
+    public function reset(){
+
+        $data = array();
+        $data['title'] = "Reset Password";
+        $data['heading'] = "Reset HOD Password";
+        $data['content'] = $this->load->view('reset',$data,true);
+        $this->load->view('master',$data);
+    }
+
+    public function reset_password(){
+
+        $data = array();
+        $dep_id = $this->session->userdata('flag');
+        $data['hod_password'] = hash("SHA512",$this->input->post('password',true));
+        $options = [
+            'cost' => 11,
+        ];
+        $data['admin_salt'] = password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
+        $this->admin_model->update_password_by_id($dep_id,$data);
+
+        redirect('site_dep');
+    }
 }

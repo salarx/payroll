@@ -93,15 +93,6 @@ class Site extends CI_Controller {
         $this->load->view('master',$data);
     }
 
-    public function profile(){
-
-        $data = array();
-        $data['title'] = "Profile";
-        $data['heading'] = "Admin Details";
-        $data['content'] = $this->load->view('profile',$data,true);
-        $this->load->view('master',$data);
-    }
-
     public function settings(){
 
         $data = array();
@@ -155,11 +146,5 @@ class Site extends CI_Controller {
         $this->admin_model->update_password_by_id($admin_id,$data);
 
         redirect('site');
-    }
-
-    public function search(){
-
-        $term = $this->input->get('search',true);
-        $this->employee_model->search_employee($term);
     }
 }
