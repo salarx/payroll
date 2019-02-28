@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 28, 2019 at 06:32 PM
+-- Generation Time: Feb 28, 2019 at 07:19 PM
 -- Server version: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -21,6 +21,18 @@ SET time_zone = "+00:00";
 --
 -- Database: `payroll`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `account_types`
+--
+
+DROP TABLE IF EXISTS `account_types`;
+CREATE TABLE IF NOT EXISTS `account_types` (
+  `type_id` int(1) NOT NULL,
+  `type_name` varchar(20) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -53,11 +65,14 @@ INSERT INTO `admin` (`admin_id`, `admin_username`, `admin_password`, `admin_salt
 
 DROP TABLE IF EXISTS `admin_department_transactions`;
 CREATE TABLE IF NOT EXISTS `admin_department_transactions` (
-  `admin_id` varchar(20) NOT NULL,
-  `dep_id` int(20) NOT NULL,
-  `amount` int(15) NOT NULL,
-  `transaction_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `from_admin` int(10) NOT NULL,
+  `to_dep` int(11) NOT NULL,
+  `amount` int(11) NOT NULL,
+  `transaction_id` int(11) NOT NULL,
+  PRIMARY KEY (`transaction_id`),
+  KEY `from_admin` (`from_admin`),
+  KEY `to_dep` (`to_dep`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -86,6 +101,25 @@ INSERT INTO `departments` (`dep_id`, `dep_name`, `password`, `dep_salt`, `emp_id
 (3, 'Marketing', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$RV9/0HKBPky/rWe06zML6efhuBFN/RMr2sza6v8FZ7e7RwwYyo9.W', 104),
 (4, 'Purchasing', 'cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e', '$2y$11$Zl5MwEjsyEjHGFNSn2vCEunoqWcD8k4YAojRzmrMAk.POtSZT85z.', NULL),
 (5, 'Human Resource Management', NULL, '', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `department_employee_transactions`
+--
+
+DROP TABLE IF EXISTS `department_employee_transactions`;
+CREATE TABLE IF NOT EXISTS `department_employee_transactions` (
+  `from_dep` int(11) NOT NULL,
+  `to_emp` int(11) NOT NULL,
+  `amount` int(11) NOT NULL,
+  `transaction_id` int(11) NOT NULL,
+  `account_type` int(11) NOT NULL,
+  PRIMARY KEY (`transaction_id`),
+  KEY `account_type` (`account_type`),
+  KEY `from_dep` (`from_dep`),
+  KEY `to_emp` (`to_emp`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -141,7 +175,7 @@ CREATE TABLE IF NOT EXISTS `employee` (
   KEY `payment_id` (`payment_id`),
   KEY `employee_department` (`employee_department`),
   KEY `employee_designation` (`employee_designation`)
-) ENGINE=InnoDB AUTO_INCREMENT=105 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `employee`
@@ -150,7 +184,8 @@ CREATE TABLE IF NOT EXISTS `employee` (
 INSERT INTO `employee` (`employee_id`, `payment_id`, `status_id`, `employee_name`, `employee_department`, `employee_designation`, `employee_phone`, `employee_address`, `employee_salary`, `emp_password`, `emp_salt`, `employee_email`) VALUES
 (102, 1, 1, 'Manav Goyal', 1, 1, '+91-84493924', 'sfb', 1, 'asd123', '', NULL),
 (103, 1, 1, 'Sahil Kumar', 2, 1, '+91-94670173', 'PDPM IIITDMJ', 1, 'sahil', '', 'salarx.gm@gmail.com'),
-(104, 1, 1, 'Harshit', 3, 1, '9694445402', 'PDPM IIITDMJ', 0, '', '', '2017222@iiitdmj.ac.in');
+(104, 1, 1, 'Harshit', 3, 1, '9694445402', 'PDPM IIITDMJ', 0, '', '', '2017222@iiitdmj.ac.in'),
+(105, 2, 1, 'Aman', 5, 8, 'number', 'A201', 0, 'ffe55fac4119143ad22e3f4927211f82b65e7609fc90960ba6ba526723c1b7fd38d2348706cd4f7845e155c59e1184c2cef228afaadd7c9029d0760d14475cde', '$2y$11$M4jVz6qWU45lmPnoVGUIL.gYb8nxeFexQWjXvcxvfIYYwBb2fP17.', 'singhal.com');
 
 -- --------------------------------------------------------
 
