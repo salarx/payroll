@@ -14,13 +14,13 @@
                         <div class="form-group">
                             <label for="department" class="control-label col-lg-2">Department</label>
                             <div class="col-lg-10">
-                                <input class="form-control" type="text" name="department" value="<?php echo $result->employee_department; ?>"/>
+                                <input class="form-control" type="text" name="department" value="<?php echo $result->dep_name; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="designation" class="control-label col-lg-2">Designation</label>
                             <div class="col-lg-10">
-                                <input class="form-control" type="text" name="designation" value="<?php echo $result->employee_designation; ?>" />
+                                <input class="form-control" type="text" name="designation" value="<?php echo $result->designation; ?>" />
                             </div>
                         </div>
                         <div class="form-group">
