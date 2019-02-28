@@ -18,24 +18,7 @@ body
 
         <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
 
-        <!-- Bootstrap CSS -->
-        <link href="<?php echo base_url(); ?>css/bootstrap.min.css" rel="stylesheet">
-        <!-- bootstrap theme -->
-        <link href="<?php echo base_url(); ?>css/bootstrap-theme.css" rel="stylesheet">
-        <!--external css-->
-        <!-- font icon -->
-        <link href="<?php echo base_url(); ?>css/elegant-icons-style.css" rel="stylesheet" />
-        <link href="<?php echo base_url(); ?>css/font-awesome.css" rel="stylesheet" />
-        <!-- Custom styles -->
-        <link href="<?php echo base_url(); ?>css/style.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>css/style-responsive.css" rel="stylesheet" />
-
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
-        <!--[if lt IE 9]>
-        <script src="<?php echo base_url(); ?>js/html5shiv.js"></script>
-        <script src="<?php echo base_url(); ?>js/respond.min.js"></script>
-        <![endif]-->
-    </head>
+            </head>
     <body >
       <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D">
 
