@@ -32,7 +32,7 @@ class Department_model extends CI_Model{
     function fetch_dep($limit, $start) {
 
         $this->db->limit($limit, $start);
-        $this->db->join("departments",'departments.emp_id = employee.employee_id','left outer');
+        $this->db->join("departments",'departments.emp_id = employee.employee_id','right outer');
         $query =   $this->db->get("employee");
         if ($query->num_rows() > 0) {
 

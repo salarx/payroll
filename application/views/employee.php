@@ -32,8 +32,9 @@
                                 <?php if($list->employee_salary == 0 ) {?>
                                 | <a href="<?php echo base_url(); ?>salary/add_salary/<?php echo $list->employee_id; ?>">Salary</a>
                                 <?php }?>
-								|
-								<a href="<?php echo base_url(); ?>employee/delete_employee/<?php echo $list->employee_id; ?>">Delete</a>
+                                |
+                                
+								<a href="<?php echo base_url(); ?>employee/delete_employee_commit/<?php echo $list->employee_id; ?>">Delete</a>
                             </td>
                         </tr>
                     <?php } ?>
