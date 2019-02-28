@@ -9,6 +9,12 @@
         <link rel="shortcut icon" href="<?php echo base_url(); ?>img/abc.jpg">
 
         <title>Login</title>
+        <style>
+        body
+        {
+            background-image: url(img/abc.jpg);
+        }
+        </style>
         <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
 
         <!-- Bootstrap CSS -->
@@ -29,12 +35,13 @@
         <script src="<?php echo base_url(); ?>js/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body class="login-img3-body">
-    <nav class="navbar navbar-expand-lg navbar-dark " style="color: #01013D">
-    <a class="navbar-brand" href="<?php echo base_url(); ?>"><b>6 KA <span class="lite" style="color: white">I </span> <span class="lite" style="color: #76FF0D">ZENS</span></b></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D">
+
+      	<a class="navbar-brand" href="<?php echo base_url(); ?>" style="color: #FFC70D"><b>6 KA <span class="lite" style="color: white">I </span><span class="lite" style="color: #76FF0D">ZENS</span></b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
