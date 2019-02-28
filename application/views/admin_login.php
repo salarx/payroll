@@ -6,7 +6,7 @@
         <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
         <meta name="author" content="GeeksLabs">
         <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
-        <link rel="shortcut icon" href="<?php echo base_url(); ?>img/favicon.png">
+        <link rel="shortcut icon" href="<?php echo base_url(); ?>img/abc.jpg">
 
         <title>Login</title>
         <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
@@ -30,8 +30,8 @@
         <![endif]-->
     </head>
     <body class="login-img3-body">
-      <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D">
-    <a class="navbar-brand" href="<?php echo base_url(); ?>"><b>6 KA <span class="lite" style="color: white">I </span><span class="lite" style="color: #76FF0D">ZENS</span></a>
+      <nav class="navbar navbar-expand-lg navbar-dark " style="color: #01013D">
+    <a class="navbar-brand" href="<?php echo base_url(); ?>"><b>6 KA <span class="lite" style="color: white">I </span> <span class="lite" style="color: #76FF0D">ZENS</span></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
