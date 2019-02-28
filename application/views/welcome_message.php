@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D">
 
-	<a class="navbar-brand" href="<?php echo base_url(); ?>" style="color: #FFC70D"><b>6 KAI <span class="lite" style="color: #76FF0D">ZENS</span></b></a>
+	<a class="navbar-brand" href="<?php echo base_url(); ?>" style="color: #FFC70D"><b>6 KA <span class="lite" style="color: white">I </span><span class="lite" style="color: #76FF0D">ZENS</span></b></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
