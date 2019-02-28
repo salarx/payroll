@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 28, 2019 at 01:01 PM
+-- Generation Time: Feb 28, 2019 at 06:32 PM
 -- Server version: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -84,7 +84,7 @@ INSERT INTO `departments` (`dep_id`, `dep_name`, `password`, `dep_salt`, `emp_id
 (1, 'Production', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$27yhrM05NDQnO1TdDZcY2OAw7StvLytOOrhh0358wPjEIwHFRfU02', 102),
 (2, 'Research and Development', '', '', 103),
 (3, 'Marketing', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$RV9/0HKBPky/rWe06zML6efhuBFN/RMr2sza6v8FZ7e7RwwYyo9.W', 104),
-(4, 'Purchasing', 'cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e', '$2y$11$Zl5MwEjsyEjHGFNSn2vCEunoqWcD8k4YAojRzmrMAk.POtSZT85z.', 109),
+(4, 'Purchasing', 'cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e', '$2y$11$Zl5MwEjsyEjHGFNSn2vCEunoqWcD8k4YAojRzmrMAk.POtSZT85z.', NULL),
 (5, 'Human Resource Management', NULL, '', NULL);
 
 -- --------------------------------------------------------
@@ -141,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `employee` (
   KEY `payment_id` (`payment_id`),
   KEY `employee_department` (`employee_department`),
   KEY `employee_designation` (`employee_designation`)
-) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=105 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `employee`
@@ -150,10 +150,7 @@ CREATE TABLE IF NOT EXISTS `employee` (
 INSERT INTO `employee` (`employee_id`, `payment_id`, `status_id`, `employee_name`, `employee_department`, `employee_designation`, `employee_phone`, `employee_address`, `employee_salary`, `emp_password`, `emp_salt`, `employee_email`) VALUES
 (102, 1, 1, 'Manav Goyal', 1, 1, '+91-84493924', 'sfb', 1, 'asd123', '', NULL),
 (103, 1, 1, 'Sahil Kumar', 2, 1, '+91-94670173', 'PDPM IIITDMJ', 1, 'sahil', '', 'salarx.gm@gmail.com'),
-(104, 1, 1, 'Harshit', 3, 1, '9694445402', 'PDPM IIITDMJ', 0, '', '', '2017222@iiitdmj.ac.in'),
-(105, 1, 1, 'Aman', 3, 3, '', 'A201', 0, '636fe6e6295255057db44997999fd1c6969b50d05209a6b47134177efe4d1b92630e7075eaf6635a751500733dd517ab3b705b2f0a455e56b1cd0649055ed25d', '$2y$11$7SgpL1MGj6MZ0GYnX3OqjO2jbRacCbIhZ5ghk6FqL.xY5sYma0V9G', 'blabla@gmail.com'),
-(109, 3, 1, 'Kartik', 4, 9, '', 'IIITDMJ', 0, '740879064bb7029fb66d7f22533ebf9b73f66b8c5a86e90088b390287ee5e5daa153242eaf5cccf6b9de38eb9f817dfc55321bef8c99134e34f1d3b5485c6faf', '$2y$11$7f1Gc0OUIi89ghx98hESEebsTSZrwg8aUQuVvJAP4Ma30ZZCLYLX6', 'kartik@gmail.com'),
-(110, 1, 1, 'Palak', 5, 2, '', 'H1', 0, 'b099440606e82257dcb488378055a012e474e13c638d42e9f1410a66bb7f1cc9219ec63b6e8610aa8d19b115692df265340ba9847182bf965a09e0e9b1504cd8', '$2y$11$r9OEkT7JggsIrH.3y2.Bh..zm5IP2GM8sT31EDb32pY7z4FtvvP7S', 'palak.com');
+(104, 1, 1, 'Harshit', 3, 1, '9694445402', 'PDPM IIITDMJ', 0, '', '', '2017222@iiitdmj.ac.in');
 
 -- --------------------------------------------------------
 
@@ -200,7 +197,7 @@ CREATE TABLE IF NOT EXISTS `salary` (
 
 INSERT INTO `salary` (`salary_id`, `employee_id`, `salary_basic`, `salary_overtime`, `salary_other`) VALUES
 (2, 102, '32132', '65456', '23'),
-(3, 103, '.10', '1', 'null');
+(3, 103, '-15168', '1', 'kuch bhi');
 
 -- --------------------------------------------------------
 
@@ -232,7 +229,7 @@ INSERT INTO `status` (`status_id`, `status_name`) VALUES
 -- Constraints for table `departments`
 --
 ALTER TABLE `departments`
-  ADD CONSTRAINT `departments_ibfk_1` FOREIGN KEY (`emp_id`) REFERENCES `employee` (`employee_id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `departments_ibfk_1` FOREIGN KEY (`emp_id`) REFERENCES `employee` (`employee_id`) ON DELETE SET NULL;
 
 --
 -- Constraints for table `employee`
