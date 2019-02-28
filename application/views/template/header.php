@@ -76,18 +76,7 @@
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu extended logout">
-                                <div class="log-arrow-up"></div>
-                                <li class="eborder-top">
-                                    <?php if($category==1) { ?>
-                                    <a href="<?php echo base_url(); ?>site/profile.html"><i class="icon_profile"></i>Profile</a>
-                                    <?php } ?>
-                                    <?php if($category==2) { ?>
-                                    <a href="<?php echo base_url(); ?>site_dep/profile.html"><i class="icon_profile"></i>Profile</a>
-                                    <?php } ?>
-                                    <?php if($category==3) { ?>
-                                    <a href="<?php echo base_url(); ?>site_emp/profile.html"><i class="icon_profile"></i>Profile</a>
-                                    <?php } ?>
-                                </li>
+
                                 <?php if($category==1) { ?>
                                 <li>
                                     <a href="<?php echo base_url(); ?>site/logout.html"><i class="icon_key_alt"></i>Log Out</a>
