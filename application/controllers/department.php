@@ -33,13 +33,18 @@ class Department extends CI_Controller {
           $message = "Please enter an employee number of the same department not of another department";
           show_error($message);
         }
+        else {
         $data['emp_id'] = $emp_id;
-        $data['password'] = hash("SHA512",$this->input->post('password',true));
+        $password = $this->input->post('password',true);
+        if($password != '')
+        {
+          $data['password'] = hash("SHA512",$password);
+        }
         $options = [
             'cost' => 11,
         ];
         $data['dep_salt'] = password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
         $this->department_model->update_dep_by_id($dep_id,$data);
         redirect('site/department');
-    }
+    }}
 }
