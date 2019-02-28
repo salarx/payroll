@@ -31,11 +31,11 @@
                                         <option value="3">System Analyst</option>
                                         <option value="4">Programmer Analyst</option>
                                         <option value="5">Senior Software Engineer</option>
-                                        <option value="5">Project Lead</option>
-                                        <option value="5">Project Manager</option>
-                                        <option value="5">Program Manager</option>
-                                        <option value="5">Architect</option>
-                                        <option value="5">Technical Specialist</option>
+                                        <option value="6">Project Lead</option>
+                                        <option value="7">Project Manager</option>
+                                        <option value="8">Program Manager</option>
+                                        <option value="9">Architect</option>
+                                        <option value="10">Technical Specialist</option>
                                 </select>
                             </div>
                         </div>

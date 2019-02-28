@@ -14,13 +14,157 @@
                         <div class="form-group">
                             <label for="department" class="control-label col-lg-2">Department</label>
                             <div class="col-lg-10">
-                                <input class="form-control" type="text" name="department" value="<?php echo $result->dep_name; ?>"/>
+                                <select class="form-control" name="department">
+                                    <?php if($result->employee_department == 1){ ?>
+                                        <option value="1" selected>Production</option>
+                                        <option value="2">Research and Development</option>
+                                        <option value="3">Marketing</option>
+                                        <option value="4">Purchasing</option>
+                                        <option value="5">Human Resource Management</option>
+                                    <?php } else if($result->employee_department == 2){ ?>
+                                      <option value="1">Production</option>
+                                      <option value="2" selected>Research and Development</option>
+                                      <option value="3">Marketing</option>
+                                      <option value="4">Purchasing</option>
+                                      <option value="5">Human Resource Management</option>
+                                    <?php } else if($result->employee_department == 3){ ?>
+                                      <option value="1">Production</option>
+                                      <option value="2">Research and Development</option>
+                                      <option value="3" selected>Marketing</option>
+                                      <option value="4">Purchasing</option>
+                                      <option value="5">Human Resource Management</option>
+                                    <?php } else if($result->employee_department == 4){ ?>
+                                      <option value="1">Production</option>
+                                      <option value="2">Research and Development</option>
+                                      <option value="3">Marketing</option>
+                                      <option value="4" selected>Purchasing</option>
+                                      <option value="5">Human Resource Management</option>
+                                    <?php } else if($result->employee_department == 5){ ?>
+                                      <option value="1">Production</option>
+                                      <option value="2">Research and Development</option>
+                                      <option value="3">Marketing</option>
+                                      <option value="4">Purchasing</option>
+                                      <option value="5" selected>Human Resource Management</option>
+                                    <?php } ?>
+                                </select>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="designation" class="control-label col-lg-2">Designation</label>
                             <div class="col-lg-10">
-                                <input class="form-control" type="text" name="designation" value="<?php echo $result->designation; ?>" />
+                                <select class="form-control" name="designation">
+                                    <?php if($result->employee_designation == 1){ ?>
+                                      <option value="1" selected>Business Analyst</option>
+                                      <option value="2" >Software Engineer</option>
+                                      <option value="3">System Analyst</option>
+                                      <option value="4">Programmer Analyst</option>
+                                      <option value="5">Senior Software Engineer</option>
+                                      <option value="6">Project Lead</option>
+                                      <option value="7">Project Manager</option>
+                                      <option value="8">Program Manager</option>
+                                      <option value="9">Architect</option>
+                                      <option value="10">Technical Specialist</option>
+                                    <?php } else if($result->employee_designation == 2){ ?>
+                                      <option value="1">Business Analyst</option>
+                                      <option value="2"selected>Software Engineer</option>
+                                      <option value="3">System Analyst</option>
+                                      <option value="4">Programmer Analyst</option>
+                                      <option value="5">Senior Software Engineer</option>
+                                      <option value="6">Project Lead</option>
+                                      <option value="7">Project Manager</option>
+                                      <option value="8">Program Manager</option>
+                                      <option value="9">Architect</option>
+                                      <option value="10">Technical Specialist</option>
+                                    <?php } else if($result->employee_designation == 3){ ?>
+                                      <option value="1">Business Analyst</option>
+                                      <option value="2" >Software Engineer</option>
+                                      <option value="3" selected>System Analyst</option>
+                                      <option value="4">Programmer Analyst</option>
+                                      <option value="5">Senior Software Engineer</option>
+                                      <option value="6">Project Lead</option>
+                                      <option value="7">Project Manager</option>
+                                      <option value="8">Program Manager</option>
+                                      <option value="9">Architect</option>
+                                      <option value="10">Technical Specialist</option>
+                                    <?php } else if($result->employee_designation == 4){ ?>
+                                      <option value="1">Business Analyst</option>
+                                      <option value="2" >Software Engineer</option>
+                                      <option value="3">System Analyst</option>
+                                      <option value="4" selected>Programmer Analyst</option>
+                                      <option value="5">Senior Software Engineer</option>
+                                      <option value="6">Project Lead</option>
+                                      <option value="7">Project Manager</option>
+                                      <option value="8">Program Manager</option>
+                                      <option value="9">Architect</option>
+                                      <option value="10">Technical Specialist</option>
+                                    <?php } else if($result->employee_designation == 5){ ?>
+                                      <option value="1">Business Analyst</option>
+                                      <option value="2" >Software Engineer</option>
+                                      <option value="3">System Analyst</option>
+                                      <option value="4">Programmer Analyst</option>
+                                      <option value="5" selected>Senior Software Engineer</option>
+                                      <option value="6">Project Lead</option>
+                                      <option value="7">Project Manager</option>
+                                      <option value="8">Program Manager</option>
+                                      <option value="9">Architect</option>
+                                      <option value="10">Technical Specialist</option>
+                                    <?php } else if($result->employee_designation == 6){ ?>
+                                      <option value="1">Business Analyst</option>
+                                      <option value="2" >Software Engineer</option>
+                                      <option value="3">System Analyst</option>
+                                      <option value="4">Programmer Analyst</option>
+                                      <option value="5">Senior Software Engineer</option>
+                                      <option value="6" selected>Project Lead</option>
+                                      <option value="7">Project Manager</option>
+                                      <option value="8">Program Manager</option>
+                                      <option value="9">Architect</option>
+                                      <option value="10">Technical Specialist</option>
+                                    <?php } else if($result->employee_designation == 7){ ?>
+                                      <option value="1">Business Analyst</option>
+                                      <option value="2" >Software Engineer</option>
+                                      <option value="3">System Analyst</option>
+                                      <option value="4">Programmer Analyst</option>
+                                      <option value="5">Senior Software Engineer</option>
+                                      <option value="6">Project Lead</option>
+                                      <option value="7" selected>Project Manager</option>
+                                      <option value="8">Program Manager</option>
+                                      <option value="9">Architect</option>
+                                      <option value="10">Technical Specialist</option>
+                                    <?php } else if($result->employee_designation == 8){ ?>
+                                      <option value="1">Business Analyst</option>
+                                      <option value="2" >Software Engineer</option>
+                                      <option value="3">System Analyst</option>
+                                      <option value="4">Programmer Analyst</option>
+                                      <option value="5">Senior Software Engineer</option>
+                                      <option value="6">Project Lead</option>
+                                      <option value="7">Project Manager</option>
+                                      <option value="8" selected>Program Manager</option>
+                                      <option value="9">Architect</option>
+                                      <option value="10">Technical Specialist</option>
+                                    <?php } else if($result->employee_designation == 9){ ?>
+                                      <option value="1">Business Analyst</option>
+                                      <option value="2" >Software Engineer</option>
+                                      <option value="3">System Analyst</option>
+                                      <option value="4">Programmer Analyst</option>
+                                      <option value="5">Senior Software Engineer</option>
+                                      <option value="6">Project Lead</option>
+                                      <option value="7">Project Manager</option>
+                                      <option value="8">Program Manager</option>
+                                      <option value="9" selected>Architect</option>
+                                      <option value="10">Technical Specialist</option>
+                                    <?php } else if($result->employee_designation == 9){ ?>
+                                      <option value="1">Business Analyst</option>
+                                      <option value="2" >Software Engineer</option>
+                                      <option value="3">System Analyst</option>
+                                      <option value="4">Programmer Analyst</option>
+                                      <option value="5">Senior Software Engineer</option>
+                                      <option value="6">Project Lead</option>
+                                      <option value="7">Project Manager</option>
+                                      <option value="8">Program Manager</option>
+                                      <option value="9">Architect</option>
+                                      <option value="10" selected>Technical Specialist</option>
+                                    <?php } ?>
+                                </select>
                             </div>
                         </div>
                         <div class="form-group">

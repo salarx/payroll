@@ -41,13 +41,14 @@ class Employee extends CI_Controller {
           $message = "This employee is HOD of a department. You cannot shift him to another department";
           show_error($message);
         }
+        else{
         $data['employee_designation'] = $this->input->post('designation',true);
         $data['employee_phone'] = $this->input->post('phone',true);
         $data['employee_address'] = $this->input->post('address',true);
         $this->employee_model->update_employee_by_id($employee_id,$data);
 
         redirect('site/employee');
-    }
+    }}
 
 
     public function add_employee(){
