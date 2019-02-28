@@ -183,11 +183,11 @@
                             <label for="type" class="control-label col-lg-2">Payment Type</label>
                             <div class="col-lg-10">
                                 <select class="form-control" name="type">
-                                    <?php if($result->status_id == 1){ ?>
+                                    <?php if($result->payment_id == 1){ ?>
                                         <option value="1" selected>Hourly</option>
                                         <option value="2">Contractual</option>
                                         <option value="3">Daily</option>
-                                    <?php } else if($result->status_id == 2){ ?>
+                                    <?php } else if($result->payment_id == 2){ ?>
                                         <option value="1">Hourly</option>
                                         <option value="2" selected>Contractual</option>
                                         <option value="3">Daily</option>
@@ -203,9 +203,19 @@
                             <label for="status" class="control-label col-lg-2">Payment Status</label>
                             <div class="col-lg-10">
                                 <select class="form-control" name="status">
-                                    <option value="1">Permanent</option>
-                                    <option value="2">Temporary</option>
-                                    <option value="3">Probation</option>
+                                  <?php if($result->status_id == 1){ ?>
+                                      <option value="1" selected>Permanent</option>
+                                      <option value="2">Temporary</option>
+                                      <option value="3">Probation</option>
+                                  <?php } else if($result->status_id == 2){ ?>
+                                      <option value="1">Permanent</option>
+                                      <option value="2" selected>Temporary</option>
+                                      <option value="3">Probation</option>
+                                  <?php } else { ?>
+                                      <option value="1">Permanent</option>
+                                      <option value="2">Temporary</option>
+                                      <option value="3" selected>Probation</option>
+                                  <?php } ?>
                                 </select>
                             </div>
                         </div>
