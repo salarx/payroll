@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 26, 2019 at 10:22 PM
+-- Generation Time: Feb 28, 2019 at 09:49 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -40,8 +40,21 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `admin_username`, `admin_password`, `admin_salt`) VALUES
-(1, 'admin', '58b5444cf1b6253a4317fe12daff411a78bda0a95279b1d5768ebf5ca60829e78da944e8a9160a0b6d428cb213e813525a72650dac67b88879394ff624da482f', '$2y$11$fWB3uwd.rC3X0EhGQDBsveHGwdy4Q8dL7hJeOZ6Czyyltlw3NZL9K'),
+(1, 'admin', 'c7ad44cbad762a5da0a452f9e854fdc1e0e7a52a38015f23f3eab1d80b931dd472634dfac71cd34ebc35d16ab7fb8a90c81f975113d6c7538dc69dd8de9077ec', '$2y$11$72pLW2ECNjPQOMTGXV1v/.vQ0e8Ln8VgIruW3wn59j81.dHjWQ/T.'),
 (2, 'merababy', '05ec7b787a9ec3560b31d701a0b425b86f283983b17da63065284c0bfdca3a84311ca6f14641a693e046d20fe454c92ef3a8edc9e887757399c7347175cdd713', '$2y$11$DEdhgv1NltvvyttHWRWGFu66CW0fe0vi/one2LYDhhY396laZDiS6');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_department_transactions`
+--
+
+CREATE TABLE `admin_department_transactions` (
+  `admin_id` varchar(20) NOT NULL,
+  `dep_id` int(20) NOT NULL,
+  `amount` int(15) NOT NULL,
+  `transaction_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -64,7 +77,7 @@ CREATE TABLE `departments` (
 INSERT INTO `departments` (`dep_id`, `dep_name`, `password`, `dep_salt`, `emp_id`) VALUES
 (1, 'Production', '', '', 102),
 (2, 'Research and Development', '', '', 103),
-(3, 'Marketing', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$np0eeiW/afJOka3tC3YKpuWqYuNk0/K7bzH8swaxzpBLhoLtVnnCO', 104),
+(3, 'Marketing', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$DhxTZ703JWRAsLbvTZRNC.OaopNX/ryVfArKcGSbSg9/X7ARf/tU6', 104),
 (4, 'Purchasing', NULL, '', NULL),
 (5, 'Human Resource Management', NULL, '', NULL);
 
@@ -84,7 +97,7 @@ CREATE TABLE `designation` (
 --
 
 INSERT INTO `designation` (`id`, `designation`) VALUES
-(1, 'Trainee Engineer'),
+(1, 'Business Analyst'),
 (2, 'Software Engineer'),
 (3, 'System Analyst'),
 (4, 'Programmer Analyst'),
@@ -123,7 +136,7 @@ CREATE TABLE `employee` (
 INSERT INTO `employee` (`employee_id`, `payment_id`, `status_id`, `employee_name`, `employee_department`, `employee_designation`, `employee_phone`, `employee_address`, `employee_salary`, `emp_password`, `emp_salt`, `employee_email`) VALUES
 (102, 1, 1, 'Manav Goyal', 1, 1, '+91-84493924', 'sfb', 1, 'asd123', '', NULL),
 (103, 1, 1, 'Sahil Kumar', 1, 1, '+91-94670173', 'PDPM IIITDMJ', 0, 'sahil', '', 'salarx.gm@gmail.com'),
-(104, 1, 1, 'Harshit', 1, 1, '9694445402', 'PDPM IIITDMJ', 0, '', '', '2017222@iiitdmj.ac.in');
+(104, 1, 1, 'Harshit', 3, 1, '9694445402', 'PDPM IIITDMJ', 0, '', '', '2017222@iiitdmj.ac.in');
 
 -- --------------------------------------------------------
 
@@ -252,7 +265,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
+  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
 -- AUTO_INCREMENT for table `payment`
