@@ -91,13 +91,12 @@ class Site_dep extends CI_Controller {
 
         $data = array();
         $dep_id = $this->session->userdata('flag');
-        $data['hod_password'] = hash("SHA512",$this->input->post('password',true));
+        $data['password'] = hash("SHA512",$this->input->post('password',true));
         $options = [
             'cost' => 11,
         ];
-        $data['admin_salt'] = password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
-        $this->admin_model->update_password_by_id($dep_id,$data);
-
+        $data['dep_salt'] = password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
+        $this->department_model->update_dep_by_id($dep_id,$data);
         redirect('site_dep');
     }
 }

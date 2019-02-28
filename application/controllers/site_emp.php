@@ -81,8 +81,7 @@ if($this->session->userdata('category')==3){
             'cost' => 11,
         ];
         $data['emp_salt'] = password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
-        $this->employee_model->update_password_by_id($employee_id,$data);
-
+        $this->employee_model->update_employee_by_id($employee_id,$data);
         redirect('site_emp');
     }
 }

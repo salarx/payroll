@@ -26,7 +26,7 @@
                             <label for="designation" class="control-label col-lg-2">Designation</label>
                             <div class="col-lg-10">
                                 <select class="form-control" name="designation">
-                                        <option value="1">Trainee Engineer</option>
+                                        <option value="1">Business Analyst</option>
                                         <option value="2" >Software Engineer</option>
                                         <option value="3">System Analyst</option>
                                         <option value="4">Programmer Analyst</option>
