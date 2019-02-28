@@ -33,7 +33,7 @@ class CI_DB_driver {
 
 	var $username = "root";
 	var $password = "";
-	var $hostname = "localhost";
+	var $hostname = "192.168.43.251";
 	var $database = "payroll";
 	var $dbdriver		= 'mysqli';
 	var $dbprefix		= '';
