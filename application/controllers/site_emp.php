@@ -54,35 +54,35 @@ if($this->session->userdata('category')==3){
         $this->load->view('master',$data);}
     }
 
-    public function profile(){
-
-        $data = array();
-        $data['title'] = "Profile";
-        $data['heading'] = "Admin Details";
-        $data['content'] = $this->load->view('profile',$data,true);
-        $this->load->view('master',$data);
-    }
-
     public function settings(){
 
         $data = array();
         $data['title'] = "Settings";
         $data['heading'] = "System Management";
-        $data['content'] = $this->load->view('settings',$data,true);
+        $data['content'] = $this->load->view('profile',$data,true);
+        $this->load->view('master',$data);
+    }
+
+    public function reset(){
+
+        $data = array();
+        $data['title'] = "Reset Password";
+        $data['heading'] = "Reset HOD Password";
+        $data['content'] = $this->load->view('reset',$data,true);
         $this->load->view('master',$data);
     }
 
     public function reset_password(){
 
         $data = array();
-        $admin_id = $this->session->userdata('flag');
+        $employee_id = $this->session->userdata('flag');
         $data['emp_password'] = hash("SHA512",$this->input->post('password',true));
         $options = [
             'cost' => 11,
         ];
         $data['emp_salt'] = password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
-        $this->employee_model->update_password_by_id($admin_id,$data);
+        $this->employee_model->update_password_by_id($employee_id,$data);
 
-        redirect('site');
+        redirect('site_emp');
     }
 }
