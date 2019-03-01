@@ -17,6 +17,18 @@
                                 <input class="form-control" name="amount" type="text"/>
                             </div>
                         </div>
+                        <?php if($this->session->userdata('category') == 2) { ?>
+                        <div class="form-group">
+                            <label for="account_type" class="control-label col-lg-2">Account Type</label>
+                            <div class="col-lg-10">
+                                  <select class="form-control" name="account_type">
+                                          <option value="1">PF</option>
+                                          <option value="2">Pension</option>
+                                          <option value="3">Salary</option>
+                                  </select>
+                            </div>
+                        </div>
+                      <?php } ?>
                         <div class="form-group">
                             <label for="password" class="control-label col-lg-2">Password</label>
                             <div class="col-lg-10">
