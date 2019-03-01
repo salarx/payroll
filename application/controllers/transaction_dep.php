@@ -1,23 +1,14 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Salary extends CI_Controller {
+class Transaction_dep extends CI_Controller {
 
     function __construct(){
 
         parent::__construct();
     }
 
-    public function update_salary($salary_id){
 
-        $data = array();
-        $data['title'] = "Update Salary";
-        $data['heading'] = "Update Salary Details";
-        $data['result'] = $this->salary_model->fetch_salary_by_id($salary_id);
-        $data['content'] = $this->load->view('update_salary',$data,true);
-        $this->load->view('master',$data);
-    }
-
-    public function add_salary($employee_id){
+    public function add_transaction($employee_id){
 
         $data = array();
         $data['title'] = "Add Salary";
@@ -27,7 +18,7 @@ class Salary extends CI_Controller {
         $this->load->view('master',$data);
     }
 
-    public function add_salary_commit(){
+    public function add_transaction_commit(){
 
         $data = array();
         $data['employee_id'] = $this->input->post('id',true);
@@ -40,7 +31,7 @@ class Salary extends CI_Controller {
         redirect('site/salary');
     }
 
-    public function view_salary($salary_id){
+    public function view_transaction($salary_id){
 
         $data = array();
         $data['title'] = "View Salary";
@@ -48,18 +39,6 @@ class Salary extends CI_Controller {
         $data['result'] = $this->salary_model->fetch_salary_by_id($salary_id);
         $data['content'] = $this->load->view('view_salary',$data,true);
         $this->load->view('master',$data);
-    }
-
-    public function update_salary_commit(){
-
-        $data = array();
-        $salary_id = $this->input->post('id',true);
-        $data['salary_basic'] = $this->input->post('basic',true);
-        $data['salary_overtime'] = $this->input->post('overtime',true);
-        $data['salary_other'] = $this->input->post('other',true);
-        $this->salary_model->update_salary_by_id($salary_id,$data);
-
-        redirect('site/salary');
     }
 
     public function slip($salary_id){

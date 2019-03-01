@@ -1,6 +1,6 @@
 <?php
 
-class Salary_model extends CI_Model{
+class Transaction_model extends CI_Model{
 
     function __construct(){
 

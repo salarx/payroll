@@ -48,7 +48,7 @@
   <br> <br> <br> <br>
 
           <div class="container jumbotron">
-            <form class="login-form form-inline" action="<?php echo base_url(); ?>authentication_login/hod_authentication.html" method="post">
+            <form class="login-form " action="<?php echo base_url(); ?>authentication_login/hod_authentication.html" method="post">
                 <div class="login-wrap">
                     <p class="login-img"><i class="icon_lock_alt"></i></p>
                     <?php
