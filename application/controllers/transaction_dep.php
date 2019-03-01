@@ -56,12 +56,12 @@ class Transaction_dep extends CI_Controller {
         $this->load->view('master',$data);
     }
 
-    public function slip($salary_id){
+    public function slip($transaction_id){
 
         $data = array();
         $data['title'] = "Payment Slip";
         $data['heading'] = "Employee Payment Slip";
-        $data['result'] = $this->salary_model->fetch_salary_by_id($salary_id);
+        $data['result'] = $this->transaction_dep_model->fetch_transaction_by_id($transaction_id);
         $data['content'] = $this->load->view('slip',$data,true);
         $this->load->view('master',$data);
     }
