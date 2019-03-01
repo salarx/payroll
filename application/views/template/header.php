@@ -36,13 +36,13 @@
                 </div>
                 <!--logo start-->
                 <?php if($category==1) { ?>
-                <a href="<?php echo base_url(); ?>site" class="logo"><span style="color: #ffc70d">6 KA</span><span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
+                <a href="<?php echo base_url(); ?> site" class="logo" style="color: #ffc70d">6 KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
                 <?php } ?>
                 <?php if($category==2) { ?>
-                <a href="<?php echo base_url(); ?>site_dep" class="logo"><span style="color: #ffc70d">6 KA</span><span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
+                <a href="<?php echo base_url(); ?>site_dep" class="logo" style="color: #ffc70d">6 KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
                 <?php } ?>
                 <?php if($category==3) { ?>
-                <a href="<?php echo base_url(); ?>site_emp" class="logo"><span style="color: #ffc70d">6 KA</span><span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
+                <a href="<?php echo base_url(); ?>site_emp" class="logo" style="color: #ffc70d">6 KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
                 <?php } ?>
                 <!--logo end-->
 
