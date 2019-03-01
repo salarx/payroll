@@ -1,3 +1,4 @@
+<?php $category=$this->session->userdata('category'); ?>
 <div class="row">
     <div class="col-lg-12">
         <section class="panel">

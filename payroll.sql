@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 01, 2019 at 08:00 AM
--- Server version: 5.7.21
--- PHP Version: 5.6.35
+-- Generation Time: Mar 01, 2019 at 12:28 PM
+-- Server version: 5.7.24
+-- PHP Version: 7.2.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -33,6 +33,13 @@ CREATE TABLE IF NOT EXISTS `account_types` (
   `type_id` int(1) NOT NULL,
   `type_name` varchar(20) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `account_types`
+--
+
+INSERT INTO `account_types` (`type_id`, `type_name`) VALUES
+(1, 'Salary');
 
 -- --------------------------------------------------------
 
@@ -73,19 +80,7 @@ CREATE TABLE IF NOT EXISTS `admin_department_transactions` (
   PRIMARY KEY (`transaction_id`),
   KEY `from_admin` (`from_admin`),
   KEY `to_dep` (`to_dep`)
-) ENGINE=MyISAM AUTO_INCREMENT=1007 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `admin_department_transactions`
---
-
-INSERT INTO `admin_department_transactions` (`from_admin`, `to_dep`, `amount`, `transaction_id`) VALUES
-(1, 1, 0, 1001),
-(1, 1, 0, 1002),
-(1, 2, 2000, 1003),
-(1, 3, 3000, 1004),
-(1, 3, 1000, 1005),
-(1, 2, 1000, 1006);
+) ENGINE=MyISAM AUTO_INCREMENT=1012 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -127,13 +122,13 @@ CREATE TABLE IF NOT EXISTS `department_employee_transactions` (
   `from_dep` int(11) NOT NULL,
   `to_emp` int(11) NOT NULL,
   `amount` int(11) NOT NULL,
-  `transaction_id` int(11) NOT NULL AUTO_INCREMENT,
   `account_type` int(11) NOT NULL,
+  `transaction_id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`transaction_id`),
   KEY `account_type` (`account_type`),
   KEY `from_dep` (`from_dep`),
   KEY `to_emp` (`to_emp`)
-) ENGINE=MyISAM AUTO_INCREMENT=5000 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5002 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 

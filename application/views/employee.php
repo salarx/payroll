@@ -1,3 +1,4 @@
+<?php $category=$this->session->userdata('category'); ?>
 <div class="row">
     <div class="col-lg-12">
         <div class="panel-body">
@@ -29,7 +30,8 @@
                             <td><?php echo $list->dep_name; ?></td>
                             <td>
                                 <a href="<?php echo base_url(); ?>employee/update_employee/<?php echo $list->employee_id; ?>">Edit</a>|
-
+                                <?php if($category!=1){ ?>
+                                <a href="<?php echo base_url(); ?>transaction_dep/add_transaction/<?php echo $list->employee_id; ?>">Pay</a>|<?php } ?>
 								<a href="<?php echo base_url(); ?>employee/delete_employee_commit/<?php echo $list->employee_id; ?>">Delete</a>
                             </td>
                         </tr>

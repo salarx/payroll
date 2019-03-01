@@ -33,5 +33,6 @@
             </div><!--/.info-box-->
         </a>
     </div><!--/.col-->
-    </div>
-    <?php } ?>
+
+   </div>
+<?php } ?>

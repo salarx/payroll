@@ -52,22 +52,25 @@ class Site_dep extends CI_Controller {
         $this->load->view('master',$data);
     }
 
-    public function salary(){
+    public function transactions(){
 
         $data = array();
-        $data["title"] = "Salary";
-        $data["heading"] = "Salary Details";
-        $data["base_url"] = base_url() . "site/salary";
-        $data["total_rows"] = $this->salary_model->record_count();
+        $data["title"] = "Transactions";
+        $data["heading"] = "Transaction Details";
+        $data["base_url"] = base_url() . "site_dep/transactions";
         $data["per_page"] = 10;
         $data["uri_segment"] = 3;
+
         $this->pagination->initialize($data);
         $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
-        $data["results"] = $this->salary_model->fetch_salary($data["per_page"], $page);
+
+        $data["results"] = $this->transaction_dep_model->fetch_transaction($data["per_page"], $page);
         $data["links"] = $this->pagination->create_links();
-        $data["content"] = $this->load->view('salary',$data,true);
+
+        $data["content"] = $this->load->view('transactions_dep',$data,true);
         $this->load->view('master',$data);
     }
+
 
     public function settings(){
 
