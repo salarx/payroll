@@ -11,24 +11,39 @@ class Transaction_dep extends CI_Controller {
     public function add_transaction($employee_id){
 
         $data = array();
-        $data['title'] = "Add Salary";
-        $data['heading'] = "Add Salary Details";
+        $data['title'] = "Add Transaction";
+        $data['heading'] = "Add Transaction Details";
         $data['employee_id'] = $employee_id;
-        $data['content'] = $this->load->view('add_salary',$data,true);
+        $data['content'] = $this->load->view('add_transaction',$data,true);
         $this->load->view('master',$data);
     }
 
     public function add_transaction_commit(){
 
         $data = array();
-        $data['employee_id'] = $this->input->post('id',true);
-        $data['salary_basic'] = $this->input->post('basic',true);
-        $data['salary_overtime'] = $this->input->post('overtime',true);
-        $data['salary_other'] = $this->input->post('other',true);
-        $this->salary_model->save_salary($data);
-        $this->employee_model->update_salary_status($data['employee_id']);
+        $dep_id = $this->session->userdata('flag');
+        $data['from_dep'] = $dep_id;
+        $data['to_emp'] = $this->input->post('id',true);
+        $data['amount'] = $this->input->post('amount',true);
+        $data['account_type'] = 1;
+        $password = hash("SHA512",$this->input->post('password',true));
+        $query = $this->db->get_where('departments',array('dep_id' => $dep_id));
+        $result = $query->row();
 
-        redirect('site/salary');
+        $dep_password = $result->password;
+        $salt = $result->dep_salt;
+
+        $password .= $salt;
+        $dep_password .= $salt;
+
+        if(!strcmp($password,$dep_password)){
+          $this->transaction_dep_model->save_transaction($data);
+          redirect('site_dep/transactions');
+        }
+        else{
+          show_error('Password entered is incorrect');
+        }
+
     }
 
     public function view_transaction($salary_id){
