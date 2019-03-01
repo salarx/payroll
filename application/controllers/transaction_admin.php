@@ -21,11 +21,28 @@ class Transaction_admin extends CI_Controller {
     public function add_transaction_commit(){
 
         $data = array();
-        $data['from_admin'] = $this->session->userdata('flag');
+        $admin_id = $this->session->userdata('flag');
+        $data['from_admin'] = $admin_id;
         $data['to_dep'] = $this->input->post('id',true);
         $data['amount'] = $this->input->post('amount',true);
-        $this->transaction_admin_model->save_transaction($data);
-        redirect('site/transactions');
+        $password = hash("SHA512",$this->input->post('password',true));
+        $query = $this->db->get_where('admin',array('admin_id' => $admin_id));
+        $result = $query->row();
+
+        $admin_password = $result->admin_password;
+        $salt = $result->admin_salt;
+
+        $password .= $salt;
+        $admin_password .= $salt;
+
+        if(!strcmp($password,$admin_password)){
+          $this->transaction_admin_model->save_transaction($data);
+          redirect('site/transactions');
+        }
+        else{
+          show_error('Password entered is incorrect');
+        }
+
     }
 
     public function slip($transaction_id){
