@@ -19,7 +19,8 @@
                               <?php echo $list->employee_name;?>
                             </td>
                             <td>
-                                <a href="<?php echo base_url(); ?>department/update_dep/<?php echo $list->dep_id; ?>">Edit</a>
+                                <a href="<?php echo base_url(); ?>department/update_dep/<?php echo $list->dep_id; ?>">Edit</a> |
+                                <a href="<?php echo base_url(); ?>transaction_admin/add_transaction/<?php echo $list->dep_id; ?>">Pay</a>
                             </td>
                         </tr>
                     <?php } ?>
