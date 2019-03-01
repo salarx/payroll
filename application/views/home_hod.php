@@ -12,8 +12,8 @@
     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
         <a href="<?php echo  base_url(); ?>site_dep/salary.html">
             <div class="info-box blue-bg">
-                <div class="count">Salary</div>
-                <div class="title">Manage salary</div>
+                <div class="count">My Transactions</div>
+                <div class="title">Manage Transactions</div>
             </div><!--/.info-box-->
         </a>
     </div><!--/.col-->

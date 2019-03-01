@@ -9,31 +9,9 @@
         <link rel="shortcut icon" href="<?php echo base_url(); ?>img/abc.jpg">
 
         <title>Login</title>
-        <style>
-        body
-        {
-            background-image: url(img/abc.jpg);
-        }
-        </style>
-        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
+                <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
 
-        <!-- Bootstrap CSS -->
-        <link href="<?php echo base_url(); ?>css/bootstrap.min.css" rel="stylesheet">
-        <!-- bootstrap theme -->
-        <link href="<?php echo base_url(); ?>css/bootstrap-theme.css" rel="stylesheet">
-        <!--external css-->
-        <!-- font icon -->
-        <link href="<?php echo base_url(); ?>css/elegant-icons-style.css" rel="stylesheet" />
-        <link href="<?php echo base_url(); ?>css/font-awesome.css" rel="stylesheet" />
-        <!-- Custom styles -->
-        <link href="<?php echo base_url(); ?>css/style.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>css/style-responsive.css" rel="stylesheet" />
 
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
-        <!--[if lt IE 9]>
-        <script src="<?php echo base_url(); ?>js/html5shiv.js"></script>
-        <script src="<?php echo base_url(); ?>js/respond.min.js"></script>
-        <![endif]-->
     </head>
     <body>
       <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D">
@@ -63,6 +41,7 @@
     </ul>
   </div>
 </nav>
+<br><br><br>
             <div class="container">
             <form class="login-form" action="<?php echo base_url(); ?>authentication_login/emp_authentication.html" method="post">
                 <div class="login-wrap">
@@ -90,16 +69,20 @@
                     ?>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="icon_profile"></i></span>
+                      <label class="mr-sm-2">Username</label>
                         <input type="text" name="username" class="form-control" placeholder="Username" autofocus>
                     </div>
+
                     <div class="input-group">
                         <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+                      <label class="mr-sm-2">Password</label>
                         <input type="password" name="password" class="form-control" placeholder="Password">
                     </div>
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                    <button class="btn btn-lg btn-block" type="submit" style="color: #01013D">Login</button>
                 </div>
             </form>
         </div>
+        <br><br><br><br><br>
         <hr class="my-4">
 
         <footer class="page-footer" style="background:  #01013D; color:white; height: 150px; padding:5px">
