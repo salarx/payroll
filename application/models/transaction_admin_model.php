@@ -7,11 +7,6 @@ class Transaction_admin_model extends CI_Model{
         parent::__construct();
     }
 
-    function record_count() {
-
-        return $this->db->count_all("salary");
-    }
-
     function fetch_transaction($limit, $start) {
 
         $this->db->limit($limit, $start);
