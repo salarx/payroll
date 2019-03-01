@@ -85,10 +85,10 @@ class Site extends CI_Controller {
         $this->pagination->initialize($data);
         $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-        $data["results"] = $this->transaction_model->fetch_transaction($data["per_page"], $page);
+        $data["results"] = $this->transaction_admin_model->fetch_transaction($data["per_page"], $page);
         $data["links"] = $this->pagination->create_links();
 
-        $data["content"] = $this->load->view('transactions',$data,true);
+        $data["content"] = $this->load->view('transactions_admin',$data,true);
         $this->load->view('master',$data);
     }
 

@@ -11,43 +11,31 @@ class Transaction_admin extends CI_Controller {
     public function add_transaction($dep_id){
 
         $data = array();
-        $data['title'] = "Add Salary";
-        $data['heading'] = "Add Salary Details";
-        $data['employee_id'] = $employee_id;
-        $data['content'] = $this->load->view('add_salary',$data,true);
+        $data['title'] = "Add Transaction";
+        $data['heading'] = "Add Transaction Details";
+        $data['dep_id'] = $dep_id;
+        $data['content'] = $this->load->view('add_transaction',$data,true);
         $this->load->view('master',$data);
     }
 
     public function add_transaction_commit(){
 
         $data = array();
-        $data['employee_id'] = $this->input->post('id',true);
-        $data['salary_basic'] = $this->input->post('basic',true);
-        $data['salary_overtime'] = $this->input->post('overtime',true);
-        $data['salary_other'] = $this->input->post('other',true);
-        $this->salary_model->save_salary($data);
-        $this->employee_model->update_salary_status($data['employee_id']);
-
-        redirect('site/salary');
+        $data['from_admin'] = $this->session->userdata('flag');
+        $data['to_dep'] = $this->input->post('id',true);
+        $data['amount'] = $this->input->post('amount',true);
+        $this->transaction_admin_model->save_transaction($data);
+        redirect('site/transactions');
     }
 
-    public function view_transaction($transaction_id){
-
-        $data = array();
-        $data['title'] = "View Salary";
-        $data['heading'] = "View Salary Details";
-        $data['result'] = $this->salary_model->fetch_salary_by_id($salary_id);
-        $data['content'] = $this->load->view('view_salary',$data,true);
-        $this->load->view('master',$data);
-    }
-
-    public function slip($salary_id){
+    public function slip($transaction_id){
 
         $data = array();
         $data['title'] = "Payment Slip";
-        $data['heading'] = "Employee Payment Slip";
-        $data['result'] = $this->salary_model->fetch_salary_by_id($salary_id);
+        $data['heading'] = "Department Payment Slip";
+        $data['result'] = $this->salary_model->fetch_transaction_by_id($transaction_id);
         $data['content'] = $this->load->view('slip',$data,true);
         $this->load->view('master',$data);
+
     }
 }
