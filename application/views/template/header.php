@@ -19,44 +19,28 @@
         <!-- font icon -->
         <link href="<?php echo base_url(); ?>css/elegant-icons-style.css" rel="stylesheet" />
         <link href="<?php echo base_url(); ?>css/font-awesome.min.css" rel="stylesheet" />
-        <!-- full calendar css-->
-        <link href="<?php echo base_url(); ?>assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
-        <link href="<?php echo base_url(); ?>assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
-        <!-- easy pie chart-->
-        <link href="<?php echo base_url(); ?>assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
-        <!-- owl carousel -->
-        <link href="<?php echo base_url(); ?>css/owl.carousel.css" rel="stylesheet" type="text/css">
         <link href="<?php echo base_url(); ?>css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
         <!-- Custom styles -->
-        <link href="<?php echo base_url(); ?>css/fullcalendar.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>css/widgets.css" rel="stylesheet">
         <link href="<?php echo base_url(); ?>css/style.css" rel="stylesheet">
         <link href="<?php echo base_url(); ?>css/style-responsive.css" rel="stylesheet" />
-        <link href="<?php echo base_url(); ?>css/xcharts.min.css" rel=" stylesheet">
         <link href="<?php echo base_url(); ?>css/jquery-ui-1.10.4.min.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
-        <!--[if lt IE 9]>
-          <script src="<?php echo base_url(); ?>js/html5shiv.js"></script>
-          <script src="<?php echo base_url(); ?>js/respond.min.js"></script>
-          <script src="<?php echo base_url(); ?>js/lte-ie7.js"></script>
-        <![endif]-->
-    </head>
+            </head>
 
     <body>
         <section id="container"><!-- container section start -->
-            <header class="header dark-bg">
+            <header class="header dark-bg  style="background:#01013D"">
                 <div class="toggle-nav">
                     <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
                 </div>
                 <!--logo start-->
                 <?php if($category==1) { ?>
-                <a href="<?php echo base_url(); ?>site" class="logo">6KAIZ<span class="lite">ENS</span></a>
+                <a href="<?php echo base_url(); ?>site" class="logo">6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
                 <?php } ?>
                 <?php if($category==2) { ?>
-                <a href="<?php echo base_url(); ?>site_dep" class="logo">6KAIZ<span class="lite">ENS</span></a>
+                <a href="<?php echo base_url(); ?>site_dep" class="logo">6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
                 <?php } ?>
                 <?php if($category==3) { ?>
-                <a href="<?php echo base_url(); ?>site_emp" class="logo">6KAIZ<span class="lite">ENS</span></a>
+                <a href="<?php echo base_url(); ?>site_emp" class="logo">6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
                 <?php } ?>
                 <!--logo end-->
 
@@ -101,7 +85,7 @@
         <aside>
             <div id="sidebar"  class="nav-collapse">
                 <!-- sidebar menu start-->
-                <ul class="sidebar-menu">
+                <ul class="sidebar-menu" style="background:#01013D">
                     <li class="<?php if($title=='Home'){ echo 'active';}?>">
                     <?php if($category==1) { ?>
                         <a href="<?php echo base_url(); ?>site">
@@ -135,13 +119,13 @@
                     </li><?php } ?>
                     <li class="<?php if($title=='Salary'){ echo 'active';}?>">
                     <?php if($category==1) { ?>
-                        <a href="<?php echo base_url(); ?>site/salary.html"><?php } ?>
+                        <a href="<?php echo base_url(); ?>site/transactions.html"><?php } ?>
                         <?php if($category==2) { ?>
-                        <a href="<?php echo base_url(); ?>site_dep/salary.html"><?php } ?>
+                        <a href="<?php echo base_url(); ?>site_dep/transactions.html"><?php } ?>
                         <?php if($category==3) { ?>
-                        <a href="<?php echo base_url(); ?>site_emp/salary.html"><?php } ?>
+                        <a href="<?php echo base_url(); ?>site_emp/transactions.html"><?php } ?>
                             <i class="icon_clipboard"></i>
-                            <span>Salary</span>
+                            <span>My Transaction</span>
                         </a>
                     </li>
                     <li class="<?php if($title=='Settings'){ echo 'active';}?>">
