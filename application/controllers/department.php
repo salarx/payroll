@@ -10,6 +10,7 @@ class Department extends CI_Controller {
     }
 
 
+
     public function update_dep($dep_id){
 
         $data = array();
