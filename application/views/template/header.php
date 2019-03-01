@@ -10,6 +10,8 @@
         <link rel="shortcut icon" href="img/favicon.png">
 
         <title><?php echo $title; ?></title>
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
+
 
         <!-- Bootstrap CSS -->
         <link href="<?php echo base_url(); ?>css/bootstrap.min.css" rel="stylesheet">
@@ -28,19 +30,19 @@
 
     <body>
         <section id="container"><!-- container section start -->
-            <header class="header dark-bg  style="background:#01013D"">
+            <header class="header dark-bg " style="background:#01013D">
                 <div class="toggle-nav">
                     <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
                 </div>
                 <!--logo start-->
                 <?php if($category==1) { ?>
-                <a href="<?php echo base_url(); ?>site" class="logo">6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
+                <a href="<?php echo base_url(); ?>site" class="logo"><span style="color: #ffc70d">6 KA</span><span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
                 <?php } ?>
                 <?php if($category==2) { ?>
-                <a href="<?php echo base_url(); ?>site_dep" class="logo">6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
+                <a href="<?php echo base_url(); ?>site_dep" class="logo"><span style="color: #ffc70d">6 KA</span><span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
                 <?php } ?>
                 <?php if($category==3) { ?>
-                <a href="<?php echo base_url(); ?>site_emp" class="logo">6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
+                <a href="<?php echo base_url(); ?>site_emp" class="logo"><span style="color: #ffc70d">6 KA</span><span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
                 <?php } ?>
                 <!--logo end-->
 
