@@ -46,9 +46,23 @@ class Transaction_dep_model extends CI_Model{
         $this->db->update('departments');
 
         $query = $this->db->get_where('employee',array('employee_id'=>$data['to_emp']));
-        $result=$query->row()->balance_1;
+        if($data['account_type']==1)
+        {
+           $type='balance_1';
+           $result=$query->row()->balance_1;
+        }
+        if($data['account_type']==2)
+        {
+           $type='balance_2';
+           $result=$query->row()->balance_2;
+        }
+        if($data['account_type']==3)
+        {
+           $type='balance_3';
+           $result=$query->row()->balance_3;
+        }
         $result=$result+$data['amount'];
-        $this->db->set('balance_1', $result);
+        $this->db->set($type, $result);
         $this->db->where('employee_id', $data['to_emp']);
         $this->db->update('employee');
 
