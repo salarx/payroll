@@ -16,7 +16,7 @@
             </head>
 
     <body>
-      <div class="container-fluid">
+
         <section id="container"><!-- container section start -->
             <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D; padding:22px">
                 <div class="toggle-nav">
@@ -109,7 +109,7 @@
                         &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
                         &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
                         &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
-                        &nbsp  &nbsp &nbsp  &nbsp &nbsp 
+                        &nbsp  &nbsp &nbsp  &nbsp &nbsp
                     </span>
                 </div>
                 <!-- sidebar menu end-->
@@ -146,7 +146,7 @@
                 <!-- user login dropdown end -->
             </ul>
             <!-- notificatoin dropdown end-->
-        </div>
+        
         <!--sidebar end-->
 </nav>
         <!--main content start-->
