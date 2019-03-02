@@ -14,7 +14,7 @@
                                 <input name="id" type="hidden" value="<?php echo $dep_id; ?>" /><?php } ?>
                                 <?php if($this->session->userdata('category') == 2) { ?>
                                 <input name="id" type="hidden" value="<?php echo $employee_id; ?>" /><?php } ?>
-                                <input class="form-control" name="amount" type="text" required/>
+                                <input class="form-control" name="amount" type="number" min="1" required/>
                             </div>
                         </div>
                         <?php if($this->session->userdata('category') == 2) { ?>
