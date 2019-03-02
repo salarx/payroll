@@ -54,30 +54,34 @@ Not MSME? Click Here
 </nav>
   <br> <br> <br> <br>
           <div class="container ">
+            <div class="row">
+              <div class="column col-lg-6 jumbotron">
+                <center><img src="\payroll\img\logomsme.png"></center>
+              </div>
+
+              <div class="column jumbotron col-lg-6">
             <form class="login-form " action="<?php echo base_url(); ?>authentication_login/msme_authentication.html" method="post">
-                <div class="login-wrap">
-                      <div class="jumbotron">
+                <div>
+  <br><br>
                     <div class="input-group ">
-                        <span class="input-group-addon"><i class="icon_profile"></i></span>
-                        <label class="col-lg-6"> </label>
-                        <label class="mr-sm-2 col-lg-2" style="font-size:18px" align="right"><b>MSME ID</b></label>
-                          &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        <input type="text" name="username" class="form-control col-lg-4" placeholder="Username" autofocus required>
+
+                        <label class="col-lg-5" style="font-size:18px" align="right"><b>MSME ID</b></label>
+&nbsp &nbsp
+                        <input type="text" name="username" class="form-control col-lg-7" placeholder="Username" autofocus required>
                       </div>
                       <br>
 
-                          <div class="input-group form-inline">
-                        <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+                          <div class="input-group ">
 
-                          <label class="col-lg-6"> </label>
-                            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                          <label class="mr-sm-2 col-lg-2" style="font-size:18px" align="right"><b>Password</b></label>
 
-                        <input type="password" name="password" class="form-control col-lg-4" placeholder="Password" required>
+
+                          <label class="mr-sm-2 col-lg-5" style="font-size:18px" align="right"><b>Password</b></label>
+
+                        <input type="password" name="password" class="form-control col-lg-7" placeholder="Password" required>
                     </div>
                     <br>
 
-                    <button class="btn btn-primary btn-lg btn-block col-lg-1 float-right" type="submit">Login</button>
+                    <button class="btn btn-primary btn-lg btn-block col-lg-2 float-right" type="submit">Login</button>
                     <br>
                 </div>
               </div>

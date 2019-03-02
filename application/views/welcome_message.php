@@ -12,21 +12,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D">
 
-	<a class="navbar-brand" href="<?php echo base_url(); ?>" style="color: #FFC70D"><b>6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
+	<a class="navbar-brand"  style="color: #FFC70D"><b>6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarColor01">
 		<b>
-    <ul class="navbar-nav mr-auto nav-pills" style="font-size: 17px">
-      <li class="nav-item active" >
-        <a class="nav-link" href="<?php echo base_url(); ?>">
-						 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-					Home<span class="sr-only">(current)</span></a>
+    <ul class="nav nav-tabs navbar-nav mr-auto nav-pills" style="font-size: 17px" id="list" role="tablist">
+      <li class="nav-item" >
+        <a class="nav-link active" style="color: #ffffff" id="homes" href="#home" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">
+						 &nbsp &nbsp &nbsp &nbsp &nbsp
+					Home</a>
       </li>
+
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" style="color: #ffffff" id="abouts" href="#about" role="tab" data-toggle="tab" aria-controls="about" aria-expanded="true">
 					   &nbsp &nbsp &nbsp &nbsp &nbsp
 					About</a>
       </li>
@@ -44,7 +45,7 @@ LOGIN
 </button>
 <div class="dropdown-menu" aria-labelledby="about-us">
 <a class="dropdown-item" href="<?php echo base_url(); ?>authentication_login/admin_login.html">ADMIN</a>
-<a class="dropdown-item" href="<?php echo base_url(); ?>authentication_login/msme_login.html">MSME</a>
+<a class="dropdown-item" href="<?php echo base_url(); ?>authentication_login/hod_login.html">HOD</a>
 <a class="dropdown-item" href="<?php echo base_url(); ?>authentication_login/emp_login.html">EMPLOYEE</a>
 </div>
 </div>
@@ -52,14 +53,19 @@ LOGIN
 
 </nav>
 
-<div class="jumbotron">
-<h1 style="color: #01013D "> <center> 6 KAIZENS </center></h1><br><br>
-
-
-  <p class="lead">The approach for our project is to create a portal which will comprise of all the details of MSME, their departments and their respective employees. It will contain the details of the payments made to each department and also the salary payments made by each department to the employees. Employees will have their unique ID at the MSME level. Hence, even after shifting to another department, the employee data will be accessible from the company’s database as it will be department independent. Each department will also have their own database which will contain necessary information about the employee, like their PF and Pension accounts, their salaries and any other relevant data which the department requires. Employees will be able to view their past salaries, make rebate/allowance claim. All Employee fund accounts are associated with the Employee ID, and this information is available to their respective department. The salary is given to the employees after deduction, and the deduction data is stored in Department Database and synced with MSME main database.</p>
-	<br><br><br><br>
+<div class="jumbotron tab-content" id="list-contents">
+	<div role="tabpanel" class="tab-pane fade show active" id="home" aria-labelledby="homes">
+<p>abcd</p>
 	</div>
+
+	<div role="tabpanel" class="tab-pane fade show active" id="about" aria-labelledby="abouts">
+		<h1 style="color: #01013D "> <center>6 KAIZENS </center></h1><br><br>
+				  <p class="lead">The approach for our project is to create a portal which will comprise of all the details of MSME, their departments and their respective employees. It will contain the details of the payments made to each department and also the salary payments made by each department to the employees. Employees will have their unique ID at the MSME level. Hence, even after shifting to another department, the employee data will be accessible from the company’s database as it will be department independent. Each department will also have their own database which will contain necessary information about the employee, like their PF and Pension accounts, their salaries and any other relevant data which the department requires. Employees will be able to view their past salaries, make rebate/allowance claim. All Employee fund accounts are associated with the Employee ID, and this information is available to their respective department. The salary is given to the employees after deduction, and the deduction data is stored in Department Database and synced with MSME main database.</p>
+			<br><br>
+	</div>
+	<br><br><br>
 	<hr class="my-4">
+
 
 	<footer class="page-footer" style="background:  #01013D; color:white; height: 150px; padding:5px">
 		<p><center><br>
@@ -71,7 +77,7 @@ LOGIN
 
 
 </div>
-
+</div>
 </body>
 
 <!-- jQuery library -->
