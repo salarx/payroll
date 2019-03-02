@@ -1,7 +1,7 @@
 <link href="<?php echo base_url(); ?>css/elegant-icons-style.css" rel="stylesheet" />
 <div class="container-fluid">
 <div class="jumbotron">
-<br><br><br>
+<br><br><br><br><br>
 <?php $category=$this->session->userdata('category'); ?>
 <?php if($category==2){ ?>
 <div class="row">
@@ -41,6 +41,6 @@
 
 
 <?php } ?>
-<br> <br> <br> <br>
+<br> <br> <br> <br><br><br><br><br><br><br><br><br><br><br>
 </div>
 </div>
