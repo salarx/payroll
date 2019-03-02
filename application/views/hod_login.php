@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
-        <meta name="author" content="GeeksLabs">
-        <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
-        <link rel="shortcut icon" href="<?php echo base_url(); ?>img/abc.jpg">
 
         <title>HOD Login</title>
 
@@ -77,7 +71,7 @@
                         <span class="input-group-addon"><i class="icon_profile"></i></span>
                         <label class="col-lg-6"> </label>
                         <label class="mr-sm-2 col-lg-2" style="font-size:18px" align="right"><b>Username</b></label>
-
+                          &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         <input type="text" name="username" class="form-control col-lg-4" placeholder="Username" autofocus >
                       </div>
                       <br>
@@ -86,8 +80,9 @@
                         <span class="input-group-addon"><i class="icon_key_alt"></i></span>
 
                           <label class="col-lg-6"> </label>
+                            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                           <label class="mr-sm-2 col-lg-2" style="font-size:18px" align="right"><b>Password</b></label>
-
+                          
                         <input type="password" name="password" class="form-control col-lg-4" placeholder="Password">
                     </div>
                     <br>

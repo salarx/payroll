@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					   &nbsp &nbsp &nbsp &nbsp &nbsp
 					About</a>
       </li>
-		<li>15
+		<li>
 		</li>
     </ul>
 	</b>
@@ -52,7 +52,7 @@ LOGIN
 <a class="dropdown-item" href="<?php echo base_url(); ?>authentication_login/hod_login.html">HOD</a>
 <a class="dropdown-item" href="<?php echo base_url(); ?>authentication_login/emp_login.html">EMPLOYEE</a>
 </div>
-</div>s
+</div>
 
 
 </nav>
