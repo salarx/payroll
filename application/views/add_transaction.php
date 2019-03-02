@@ -4,7 +4,7 @@
             <div class="panel-body">
                 <div class="form">
                     <?php if($this->session->userdata('category') == 2) { ?>
-                    <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url(); ?>transaction_dep/add_transaction_commit.html"><?php } ?>
+                    <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url(); ?>transaction_msme/add_transaction_commit.html"><?php } ?>
                         <div class="form-group">
                             <label for="amount" class="control-label col-lg-2">Amount *</label>
                             <div class="col-lg-10">

@@ -5,7 +5,7 @@
             <div class="panel-body">
                 <div class="form">
                     <?php if($category==2){ ?>
-                    <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url(); ?>employee/delete_employee_commit_by_msme.html"><?php } ?>
+                    <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url(); ?>employee/delete_employee_commit.html"><?php } ?>
                     <div class="form-group">
                             <label for="amount" class="control-label col-lg-2">Enter password to confirm deletion</label>
                             <div class="col-lg-10">
