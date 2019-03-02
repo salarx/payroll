@@ -13,13 +13,13 @@
                         <tr>
                             <td>
                                 <p>Employee Id# <?php echo $result->employee_id; ?></p>
-                                <p>Name: <?php echo $result->employee_name; ?></p>
-                                <p>Designation: <?php echo $result->designation; ?></p>
-                                <p>Department: <?php echo $result->dep_name; ?></p>
+                                <p>Name: <?php echo $result->employee_name; ?></p>            
                                 <p>Phone: <?php echo $result->employee_phone; ?></p>
-                                <p>Address: <?php echo $result->employee_address; ?></p>
-                                <p>Payment: <?php echo $result->payment_type; ?></p>
-                                <p>Status: <?php echo $result->status_name; ?></p>
+                                <p>E-Mail: <?php echo $result->employee_email; ?></p>
+                                <p>PF: <?php echo $result->balance_1; ?></p>                                
+                                <p>Pension: <?php echo $result->balance_2; ?></p>
+                                <p>ESI: <?php echo $result->balance_3; ?></p>
+                                <p>MSME: <?php echo $result->employee_msme; ?></p>
                             </td>
                         </tr>
                     </tbody>

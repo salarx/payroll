@@ -7,7 +7,7 @@
 <div class="row">
 
     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <a href="<?php echo  base_url(); ?>site_dep/employee.html">
+        <a href="<?php echo  base_url(); ?>site_msme/employee.html">
         <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
             <i class="icon_id"></i>
           <h4 class="card-title">EMPLOYEES</h4>
@@ -18,7 +18,7 @@
 
 
     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <a href="<?php echo  base_url(); ?>site_dep/transactions.html" >
+        <a href="<?php echo  base_url(); ?>site_msme/transactions.html" >
           <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
             <i class="icon_clipboard"></i>
             <h4 class="card-title">TRANSACTIONS</h4>
@@ -28,7 +28,7 @@
     </div><!--/.col-->
 
     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <a href="<?php echo  base_url(); ?>site_dep/settings.html">
+            <a href="<?php echo  base_url(); ?>site_msme/settings.html">
                 <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
             <i class="icon_cog"></i>
             <h4 class="card-title">SETTINGS</h4>

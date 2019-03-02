@@ -38,28 +38,28 @@ class Authentication_login extends CI_Controller {
             redirect('authentication_login/admin_login');
         }
     }
-    public function hod_login(){
+    public function msme_login(){
 
-      $this->load->view('hod_login');
+      $this->load->view('msme_login');
     }
 
-    public function hod_authentication(){
+    public function msme_authentication(){
 
       $username = $this->input->post('username',true);
-        $password = hash("SHA512",$this->input->post('password',true));
+      $password = hash("SHA512",$this->input->post('password',true));
       $result = $this->department_model->login($username,$password);
       if($result){
         $data['flag'] = $result->dep_id;
         $data['username'] = $result->dep_id;
         $data['category'] = 2;
         $this->session->set_userdata($data);
-        redirect('site_dep');
+        redirect('site_msme');
       }
       else{
       $data = array();
       $data['exception'] = 'Your User Id / Password Invalid!';
       $this->session->set_userdata($data);
-      redirect('authentication_login/hod_login');
+      redirect('authentication_login/msme_login');
       }
     }
     public function emp_login(){

@@ -1,3 +1,7 @@
+<head>
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
+</head>
+<body>
 <?php $category=$this->session->userdata('category'); ?>
 <div class="row">
     <div class="col-lg-12">
@@ -32,7 +36,7 @@
                             <td>
                                 <a href="<?php echo base_url(); ?>employee/update_employee/<?php echo $list->employee_id; ?>">Edit</a>|
                                 <?php if($category!=1){ ?>
-                                <a href="<?php echo base_url(); ?>transaction_dep/add_transaction/<?php echo $list->employee_id; ?>">Pay</a>|<?php } ?>
+                                <a href="<?php echo base_url(); ?>transaction_msme/add_transaction/<?php echo $list->employee_id; ?>">Pay</a>|<?php } ?>
 								<a href="<?php echo base_url(); ?>employee/delete_employee/<?php echo $list->employee_id; ?>">Delete</a>
                             </td>
                         </tr>
@@ -45,3 +49,4 @@
         <div class="text-center"><p><?php echo $links; ?></p></div>
     </div>
 </div>
+</body>

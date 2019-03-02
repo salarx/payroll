@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
 
-        <title>HOD Login</title>
+        <title>MSME Login</title>
 
         <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
 
@@ -29,11 +29,6 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
-						 &nbsp &nbsp &nbsp &nbsp &nbsp
-					Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
 					   &nbsp &nbsp &nbsp &nbsp &nbsp
 					About</a>
       </li>
@@ -47,7 +42,7 @@
 
 	<div class="dropdown">
 <button class="btn btn-warning dropdown-toggle" type="button" id="about-us" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-Not HOD? Click Here
+Not MSME? Click Here
 </button>
 <div class="dropdown-menu" aria-labelledby="about-us">
 <a class="dropdown-item" href="<?php echo base_url(); ?>authentication_login/admin_login.html">ADMIN</a>
@@ -59,13 +54,13 @@ Not HOD? Click Here
 </nav>
   <br> <br> <br> <br>
           <div class="container ">
-            <form class="login-form " action="<?php echo base_url(); ?>authentication_login/hod_authentication.html" method="post">
+            <form class="login-form " action="<?php echo base_url(); ?>authentication_login/msme_authentication.html" method="post">
                 <div class="login-wrap">
                       <div class="jumbotron">
                     <div class="input-group ">
                         <span class="input-group-addon"><i class="icon_profile"></i></span>
                         <label class="col-lg-6"> </label>
-                        <label class="mr-sm-2 col-lg-2" style="font-size:18px" align="right"><b>Department ID</b></label>
+                        <label class="mr-sm-2 col-lg-2" style="font-size:18px" align="right"><b>MSME ID</b></label>
                           &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         <input type="text" name="username" class="form-control col-lg-4" placeholder="Username" autofocus required>
                       </div>

@@ -100,45 +100,21 @@ class Employee extends CI_Controller {
     public function delete_employee_commit(){
 
         $data = array();
-        $admin_id = $this->session->userdata('flag');
+        $msme_id = $this->session->userdata('flag');
         $data['employee_id'] = $this->input->post('id',true);
         $password = hash("SHA512",$this->input->post('password',true));
-        $query = $this->db->get_where('admin',array('admin_id' => $admin_id));
+        $query = $this->db->get_where('msme',array('msme_id' => $msme_id));
         $result = $query->row();
 
-        $admin_password = $result->admin_password;
-        $salt = $result->admin_salt;
+        $msme_password = $result->password;
+        $salt = $result->msme_salt;
 
         $password .= $salt;
-        $admin_password .= $salt;
+        $msme_password .= $salt;
 
-        if(!strcmp($password,$admin_password)){
+        if(!strcmp($password,$msme_password)){
             $this->employee_model->erase_employee($data['employee_id']);
-        redirect('site/employee');
-        }
-        else{
-          show_error('Password entered is incorrect');
-        }
-    }
-    
-    public function delete_employee_commit_by_hod(){
-
-        $data = array();
-        $dep_id = $this->session->userdata('flag');
-        $data['employee_id'] = $this->input->post('id',true);
-        $password = hash("SHA512",$this->input->post('password',true));
-        $query = $this->db->get_where('departments',array('dep_id' => $dep_id));
-        $result = $query->row();
-
-        $dep_password = $result->password;
-        $salt = $result->dep_salt;
-
-        $password .= $salt;
-        $dep_password .= $salt;
-
-        if(!strcmp($password,$dep_password)){
-            $this->employee_model->erase_employee($data['employee_id']);
-        redirect('site_dep/employee');
+        redirect('site_msme/employee');
         }
         else{
           show_error('Password entered is incorrect');
