@@ -121,7 +121,7 @@ class Site extends CI_Controller {
             'cost' => 11,
         ];
         $data['admin_salt'] = password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
-        $data['bank_balance'] = $this->input->post('bank_balance',true);
+        $data['bank_balance'] = 0;
         $this->admin_model->save_admin($data);
 
         redirect('site');

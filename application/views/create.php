@@ -12,10 +12,6 @@
                         <input type="text" name="username" class="form-control" placeholder="Username"/>
                     </div>
                     <div class="form-group has-feedback">
-                        <label for="Bank_Balance">Bank Balance</label>
-                        <input type="text" name="bank_balance" class="form-control" placeholder="Bank Balance"/>
-                    </div>
-                    <div class="form-group has-feedback">
                         <label for="Password">Password</label>
                         <input type="password" name="password" class="form-control" placeholder="Password"/>
                     </div>
