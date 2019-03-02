@@ -65,7 +65,7 @@
 
                     <?php if($category==1) { ?>
                     <span class="<?php if($title=='Department'){ echo 'active';}?> col-lg-1">
-                        <a href="<?php echo base_url(); ?>site/department.html">
+                        <a href="<?php echo base_url(); ?>site/msme.html">
                             <i class="icon_datareport"></i>
                             <span style="font-size:17px"><b>Department</b></span>
                         </a>

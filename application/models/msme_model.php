@@ -26,7 +26,7 @@ class Msme_model extends CI_Model{
     function fetch_msme($limit, $start) {
 
         $this->db->limit($limit, $start);
-        $this->db->get("msme");
+        $query = $this->db->get("msme");
         if ($query->num_rows() > 0) {
 
             foreach ($query->result() as $row) {
