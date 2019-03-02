@@ -42,6 +42,11 @@ class Transaction_admin_model extends CI_Model{
         $query = $this->db->get_where('admin',array('admin_id'=>$data['from_admin']));
         $result=$query->row()->bank_balance;
         $result=$result-$data['amount'];
+        if ($result<0)
+        {
+          show_error("Insufficient funds are present in your account");
+        }
+        else{
         $this->db->set('bank_balance', $result);
         $this->db->where('admin_id', $data['from_admin']);
         $this->db->update('admin');
@@ -52,6 +57,6 @@ class Transaction_admin_model extends CI_Model{
         $this->db->set('bank_balance', $result);
         $this->db->where('dep_id', $data['to_dep']);
         $this->db->update('departments');
-
+      }
     }
 }

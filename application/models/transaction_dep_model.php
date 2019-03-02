@@ -41,6 +41,11 @@ class Transaction_dep_model extends CI_Model{
         $query = $this->db->get_where('departments',array('dep_id'=>$data['from_dep']));
         $result=$query->row()->bank_balance;
         $result=$result-$data['amount'];
+        if($result <0)
+        {
+          show_error("Insufficient funds are present in your account");
+        }
+        else{
         $this->db->set('bank_balance', $result);
         $this->db->where('dep_id', $data['from_dep']);
         $this->db->update('departments');
@@ -65,6 +70,6 @@ class Transaction_dep_model extends CI_Model{
         $this->db->set($type, $result);
         $this->db->where('employee_id', $data['to_emp']);
         $this->db->update('employee');
-
+      }
     }
 }
