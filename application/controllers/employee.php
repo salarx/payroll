@@ -66,15 +66,12 @@ class Employee extends CI_Controller {
 
     public function add_employee_commit(){
         $data = array();
-        $data['payment_id'] = $this->input->post('type',true);
-        $data['status_id'] = $this->input->post('status',true);
         $data['employee_name'] = $this->input->post('name',true);
-        $data['employee_department'] = $this->input->post('department',true);
-        $data['employee_designation'] = $this->input->post('designation',true);
+        $data['employee_msme'] = $this->input->post('msme',true);
         $data['employee_phone'] = $this->input->post('phone',true);
-        $data['employee_address'] = $this->input->post('address',true);
         $data['employee_email'] = $this->input->post('email',true);
         $data['emp_password'] = hash("SHA512",$this->input->post('password',true));
+        $data['basic_salary'] = $this->input->post('salary',true);
         $data['balance_1'] = 0;
         $data['balance_2'] = 0;
         $data['balance_3'] = 0;

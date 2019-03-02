@@ -36,6 +36,12 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="salary" class="control-label col-lg-2">Salary</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" name="salary" required></input>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="password" class="control-label col-lg-2">Password</label>
                             <div class="col-lg-10">
                                 <input class="form-control" type="password" name="password"></input>
