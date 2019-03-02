@@ -10,14 +10,14 @@
 
 
         <link href="<?php echo base_url(); ?>css/elegant-icons-style.css" rel="stylesheet" />
-        <link href="<?php echo base_url(); ?>css/style.css" rel="stylesheet">
+
 
 
             </head>
 
     <body>
         <section id="container"><!-- container section start -->
-            <header class="header dark-bg " style="background:#01013D">
+            <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D">
                 <div class="toggle-nav">
                     <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
                 </div>
@@ -32,50 +32,20 @@
                 <a href="<?php echo base_url(); ?>site_emp" class="logo" style="color: #ffc70d">6 KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
                 <?php } ?>
                 <!--logo end-->
-
+                &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
                 <div class="nav search-row" id="top_menu">
                     <!--  search form start -->
                     <!--  search form end -->
                 </div>
-                <div class="top-nav notification-row">
-                    <!-- notificatoin dropdown start-->
-                    <ul class="nav pull-right top-menu">
-                        <li class="dropdown">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <span class="profile-ava">
-                                    <img alt="avatar" src="<?php echo base_url(); ?>img/avatar1_small.jpg">
-                                </span>
-                                <span class="username"><?php echo $this->session->userdata('username'); ?></span>
-                                <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu extended logout">
 
-                                <?php if($category==1) { ?>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>site/logout.html"><i class="icon_key_alt"></i>Log Out</a>
-                                </li> <?php } ?>
-                                <?php if($category==2) { ?>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>site_dep/logout.html"><i class="icon_key_alt"></i>Log Out</a>
-                                </li> <?php } ?>
-                                <?php if($category==3) { ?>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>site_emp/logout.html"><i class="icon_key_alt"></i>Log Out</a>
-                                </li> <?php } ?>
-                            </ul>
-                        </li>
-                        <!-- user login dropdown end -->
-                    </ul>
-                    <!-- notificatoin dropdown end-->
-                </div>
-            </header>
+
         <!--header end-->
         <!--sidebar start-->
         <aside>
             <div id="sidebar"  class="nav-collapse">
                 <!-- sidebar menu start-->
-                <ul class="sidebar-menu" style="background:#01013D">
-                    <li class="<?php if($title=='Home'){ echo 'active';}?>">
+                <div class="sidebar-menu" style="background:#01013D">
+                    <span class="<?php if($title=='Home'){ echo 'active';}?>">
                     <?php if($category==1) { ?>
                         <a href="<?php echo base_url(); ?>site">
                         <?php } ?>
@@ -88,16 +58,18 @@
                             <i class="icon_house_alt"></i>
                             <span>Home</span>
                         </a>
-                    </li>
+                    </span>
+                    &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
                     <?php if($category==1) { ?>
-                    <li class="<?php if($title=='Department'){ echo 'active';}?>">
+                    <span class="<?php if($title=='Department'){ echo 'active';}?>">
                         <a href="<?php echo base_url(); ?>site/department.html">
                             <i class="icon_datareport"></i>
                             <span>Department</span>
                         </a>
-                    </li><?php } ?>
+                        &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
+                    </span><?php } ?>
                     <?php if($category==1 || $category==2) { ?>
-                    <li class="<?php if($title=='Employee'){ echo 'active';}?>">
+                    <span class="<?php if($title=='Employee'){ echo 'active';}?>">
                     <?php if($category==1) { ?>
                         <a href="<?php echo base_url(); ?>site/employee.html"><?php } ?>
                         <?php if($category==2) { ?>
@@ -105,8 +77,9 @@
                             <i class="icon_id"></i>
                             <span>Employee</span>
                         </a>
-                    </li><?php } ?>
-                    <li class="<?php if($title=='Salary'){ echo 'active';}?>">
+                        &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
+                    </span><?php } ?>
+                    <span class="<?php if($title=='Salary'){ echo 'active';}?>">
                     <?php if($category==1) { ?>
                         <a href="<?php echo base_url(); ?>site/transactions.html"><?php } ?>
                         <?php if($category==2) { ?>
@@ -116,8 +89,9 @@
                             <i class="icon_clipboard"></i>
                             <span>My Transaction</span>
                         </a>
-                    </li>
-                    <li class="<?php if($title=='Settings'){ echo 'active';}?>">
+                          &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
+                    </span>
+                    <span class="<?php if($title=='Settings'){ echo 'active';}?>">
                     <?php if($category==1) { ?>
                         <a href="<?php echo base_url(); ?>site/settings.html"><?php } ?>
                         <?php if($category==2) { ?>
@@ -127,13 +101,113 @@
                             <i class="icon_cog"></i>
                             <span>Settings</span>
                         </a>
-                    </li>
-                </ul>
+                          &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp   &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
+                            &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp   &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp   &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
+                    </span>
+                </div>
                 <!-- sidebar menu end-->
             </div>
         </aside>
-        <!--sidebar end-->
 
+        <div class="top-nav notification-row">
+            <!-- notificatoin dropdown start-->
+            <ul class="nav pull-right top-menu">
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="profile-ava">
+                            <img alt="avatar" src="<?php echo base_url(); ?>img/India.png">
+                        </span>
+                        <span class="username"><?php echo $this->session->userdata('username'); ?></span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu extended logout">
+
+                        <?php if($category==1) { ?>
+                        <li>
+                            <a href="<?php echo base_url(); ?>site/logout.html"><i class="icon_key_alt"></i>Log Out</a>
+                        </li> <?php } ?>
+                        <?php if($category==2) { ?>
+                        <li>
+                            <a href="<?php echo base_url(); ?>site_dep/logout.html"><i class="icon_key_alt"></i>Log Out</a>
+                        </li> <?php } ?>
+                        <?php if($category==3) { ?>
+                        <li>
+                            <a href="<?php echo base_url(); ?>site_emp/logout.html"><i class="icon_key_alt"></i>Log Out</a>
+                        </li> <?php } ?>
+                    </ul>
+                </li>
+                <!-- user login dropdown end -->
+            </ul>
+            <!-- notificatoin dropdown end-->
+        </div>
+        <!--sidebar end-->
+</nav>
         <!--main content start-->
         <section id="main-content">
             <section class="wrapper">
+
+
+              <!-- jQuery library -->
+              <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+              <!-- Popper -->
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+              <!-- Latest compiled and minified Bootstrap JavaScript -->
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+              <!-- Initialize Bootstrap functionality -->
+              <script>
+              // Initialize tooltip component
+              $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+              })
+
+              // Initialize popover component
+              $(function () {
+                $('[data-toggle="popover"]').popover()
+              })
+              </script>
+              <!-- jQuery library -->
+              <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+              <!-- Popper -->
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+              <!-- Latest compiled and minified Bootstrap JavaScript -->
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+              <!-- Initialize Bootstrap functionality -->
+              <script>
+              // Initialize tooltip component
+              $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+              })
+
+              // Initialize popover component
+              $(function () {
+                $('[data-toggle="popover"]').popover()
+              })
+              </script>
+              <!-- jQuery library -->
+              <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+              <!-- Popper -->
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+              <!-- Latest compiled and minified Bootstrap JavaScript -->
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+              <!-- Initialize Bootstrap functionality -->
+              <script>
+              // Initialize tooltip component
+              $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+              })
+
+              // Initialize popover component
+              $(function () {
+                $('[data-toggle="popover"]').popover()
+              })
+              </script>
+</html>
