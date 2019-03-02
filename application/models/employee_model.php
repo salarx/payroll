@@ -67,10 +67,10 @@ class Employee_model extends CI_Model{
             return false;
         }
 
-    function fetch_employee_by_id($employee_id) {
+    function fetch_employee_by_id($emp_id) {
 
         $this->db->join('msme', 'employee.employee_msme = msme.msme_id');
-        $query = $this->db->get_where('employee',array('employee_id'=>$employee_id));
+        $query = $this->db->get_where('employee',array('emp_id'=>$emp_id));
 
         return $query->row();
     }
