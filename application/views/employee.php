@@ -19,8 +19,7 @@
                     <thead>
                         <tr>
                             <th><i class="icon_profile"></i> Full Name</th>
-                            <th><i class="icon_datareport"></i> Designation</th>
-                            <th><i class="icon_datareport_alt"></i> Department</th>
+                            <th><i class="icon_datareport_alt"></i> MSME</th>
                             <th><i class="icon_clipboard"></i> Action</th>
                         </tr>
                     </thead>
@@ -34,9 +33,7 @@
                             <td><?php echo $list->msme_name; ?></td>
                             <td>
                                 <a href="<?php echo base_url(); ?>employee/update_employee/<?php echo $list->emp_id; ?>">Edit</a>|
-                                <?php if($category!=1){ ?>
-                                <a href="<?php echo base_url(); ?>transaction_msme/add_transaction/<?php echo $list->emp_id; ?>">Pay</a>|<?php } ?>
-								<a href="<?php echo base_url(); ?>employee/delete_employee/<?php echo $list->emp_id; ?>">Delete</a>
+								                <a href="<?php echo base_url(); ?>employee/delete_employee/<?php echo $list->emp_id; ?>">Delete</a>
                             </td>
                         </tr>
                     <?php } ?>

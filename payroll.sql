@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 02, 2019 at 09:28 PM
--- Server version: 5.7.21
--- PHP Version: 5.6.35
+-- Generation Time: Mar 02, 2019 at 09:53 PM
+-- Server version: 5.7.24
+-- PHP Version: 7.2.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -52,6 +52,7 @@ INSERT INTO `admin` (`admin_id`, `admin_username`, `admin_password`, `admin_salt
 
 DROP TABLE IF EXISTS `employee`;
 CREATE TABLE IF NOT EXISTS `employee` (
+  `emp_id` int(11) NOT NULL AUTO_INCREMENT,
   `employee_name` varchar(30) NOT NULL,
   `employee_phone` varchar(12) NOT NULL,
   `emp_password` varchar(128) DEFAULT NULL,
@@ -62,16 +63,17 @@ CREATE TABLE IF NOT EXISTS `employee` (
   `balance_3` int(11) NOT NULL,
   `basic_salary` int(11) NOT NULL,
   `employee_msme` int(4) NOT NULL,
-  `emp_id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`emp_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5003 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5005 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `employee`
 --
 
-INSERT INTO `employee` (`employee_name`, `employee_phone`, `emp_password`, `emp_salt`, `employee_email`, `balance_1`, `balance_2`, `balance_3`, `basic_salary`, `employee_msme`, `emp_id`) VALUES
-('Manav Goyal', '8449392445', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$MvPatlvdEKkxbPxp5IW/TOtKnK0u0XGXTCzb0LOxkpIfzNDva5rZ.', '2017138@iiitdmj.ac.in', 0, 0, 0, 2000, 1, 5002);
+INSERT INTO `employee` (`emp_id`, `employee_name`, `employee_phone`, `emp_password`, `emp_salt`, `employee_email`, `balance_1`, `balance_2`, `balance_3`, `basic_salary`, `employee_msme`) VALUES
+(5002, 'Manav Goyal', '8449392445', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$MvPatlvdEKkxbPxp5IW/TOtKnK0u0XGXTCzb0LOxkpIfzNDva5rZ.', '2017138@iiitdmj.ac.in', 0, 0, 0, 2000, 1),
+(5003, 'Mohan Pyaare', '1212121212', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$dck0p4n1X1F6uElvRkaFQepia9c1KD1b.adaHcPvLPSZje1NlQJii', 'abc@xyz.com', 0, 0, 0, 0, 1),
+(5004, 'Rohan Bin', '1231245', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$BIHMkHfyDgzLVKMlR30LR.jF2CSbTt70HQXLLTquwn7AG9w6K5GT.', 'xyz@gmail.com', 0, 0, 0, 500, 4);
 
 -- --------------------------------------------------------
 

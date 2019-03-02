@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Transaction_dep extends CI_Controller {
+class Transaction_msme extends CI_Controller {
 
     function __construct(){
 
@@ -8,12 +8,11 @@ class Transaction_dep extends CI_Controller {
     }
 
 
-    public function add_transaction($employee_id){
+    public function add_transaction(){
 
         $data = array();
         $data['title'] = "Add Transaction";
         $data['heading'] = "Add Transaction Details";
-        $data['employee_id'] = $employee_id;
         $data['content'] = $this->load->view('add_transaction',$data,true);
         $this->load->view('master',$data);
     }

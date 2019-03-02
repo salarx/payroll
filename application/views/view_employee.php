@@ -12,11 +12,11 @@
                     <tbody>
                         <tr>
                             <td>
-                                <p>Employee Id# <?php echo $result->employee_id; ?></p>
-                                <p>Name: <?php echo $result->employee_name; ?></p>            
+                                <p>Employee Id# <?php echo $result->emp_id; ?></p>
+                                <p>Name: <?php echo $result->employee_name; ?></p>
                                 <p>Phone: <?php echo $result->employee_phone; ?></p>
                                 <p>E-Mail: <?php echo $result->employee_email; ?></p>
-                                <p>PF: <?php echo $result->balance_1; ?></p>                                
+                                <p>PF: <?php echo $result->balance_1; ?></p>
                                 <p>Pension: <?php echo $result->balance_2; ?></p>
                                 <p>ESI: <?php echo $result->balance_3; ?></p>
                                 <p>MSME: <?php echo $result->employee_msme; ?></p>

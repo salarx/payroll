@@ -5,8 +5,7 @@
                 <table class="table table-responsive table-striped table-advance table-hover">
                     <thead>
                         <tr>
-                            <th><i class="icon_datareport"></i> Department Name</th>
-                            <th><i class="icon_profile"></i> Head of Department</th>
+                            <th><i class="icon_datareport"></i> MSME Name</th>
                             <th><i class="icon_clipboard"></i> Action</th>
                         </tr>
                     </thead>
@@ -14,14 +13,10 @@
                     <?php foreach($results as $list){ ?>
                         <tr>
                             <td>
-                              <?php echo $list->dep_name;?>
+                              <?php echo $list->msme_name;?>
                             </td>
                             <td>
-                              <?php echo $list->employee_name;?>
-                            </td>
-                            <td>
-                                <a href="<?php echo base_url(); ?>department/update_dep/<?php echo $list->dep_id; ?>">Edit</a> |
-                                <a href="<?php echo base_url(); ?>transaction_admin/add_transaction/<?php echo $list->dep_id; ?>">Pay</a>
+                                <a href="<?php echo base_url(); ?>department/update_dep/<?php echo $list->msme_id; ?>">Edit</a>
                             </td>
                         </tr>
                     <?php } ?>

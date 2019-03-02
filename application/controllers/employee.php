@@ -81,15 +81,15 @@ class Employee extends CI_Controller {
         $data['emp_salt'] = password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
         $this->employee_model->save_employee($data);
 
-        redirect('site/employee');
+        redirect('site_msme/employee');
     }
 
-    public function delete_employee($employee_id){
+    public function delete_employee($emp_id){
 
         $data = array();
         $data['title'] = "Delete Employee";
         $data['heading'] = "Confirm Employee Deletion";
-        $data['employee_id'] = $employee_id;
+        $data['emp_id'] = $emp_id;
         $data['content'] = $this->load->view('delete_employee',$data,true);
         $this->load->view('master',$data);
     }
