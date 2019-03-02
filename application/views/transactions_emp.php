@@ -27,7 +27,9 @@
                   </tbody>
                 <?php } ?>
                 </table>
-                The current account balance is : <?php echo $balance; ?>
+                The PF account balance is : <?php echo $balance_1; ?> <br>
+                The Pension account balance is : <?php echo $balance_2; ?> <br>
+                The Salary account balance is : <?php echo $balance_3; ?> <br>
             </div>
         </section>
         <div class="text-center"><p><?php echo $links; ?></p></div>
