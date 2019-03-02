@@ -7,12 +7,18 @@
         <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
 
 
-
-
+        <link href="<?php echo base_url(); ?>css/bootstrap.min.css" rel="stylesheet">
+        <!-- bootstrap theme -->
+        <link href="<?php echo base_url(); ?>css/bootstrap-theme.css" rel="stylesheet">
+        <!--external css-->
+        <!-- font icon -->
         <link href="<?php echo base_url(); ?>css/elegant-icons-style.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>css/font-awesome.min.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+        <!-- Custom styles -->
         <link href="<?php echo base_url(); ?>css/style.css" rel="stylesheet">
-
-
+        <link href="<?php echo base_url(); ?>css/style-responsive.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>css/jquery-ui-1.10.4.min.css" rel="stylesheet">
             </head>
 
     <body>
