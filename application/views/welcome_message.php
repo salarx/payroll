@@ -58,7 +58,7 @@ LOGIN
 <p align="center"><img src="\payroll\img\logomsme1.png"></p>
 	</div>
 
-	<div role="tabpanel" class="tab-pane fade show active" id="about" aria-labelledby="a">
+	<div role="tabpanel" class="tab-pane fade show" id="about" aria-labelledby="a">
 		<h1 style="color: #01013D "> <center>6 KAIZENS </center></h1><br><br>
 				  <p class="lead">The approach for our project is to create a portal which will comprise of all the details of MSME, their departments and their respective employees. It will contain the details of the payments made to each department and also the salary payments made by each department to the employees. Employees will have their unique ID at the MSME level. Hence, even after shifting to another department, the employee data will be accessible from the company’s database as it will be department independent. Each department will also have their own database which will contain necessary information about the employee, like their PF and Pension accounts, their salaries and any other relevant data which the department requires. Employees will be able to view their past salaries, make rebate/allowance claim. All Employee fund accounts are associated with the Employee ID, and this information is available to their respective department. The salary is given to the employees after deduction, and the deduction data is stored in Department Database and synced with MSME main database.</p>
 			<br><br>
