@@ -29,8 +29,9 @@ class Transaction_admin_model extends CI_Model{
 
     function fetch_transaction_by_id($transaction_id) {
 
-        $this->db->join('employee', 'salary.employee_id = employee.employee_id');
-        $query = $this->db->get_where('salary',array('salary_id'=>$salary_id));
+        $this->db->join('departments', 'admin_department_transactions.to_dep = departments.dep_id');
+        $this->db->join('admin', 'admin_department_transactions.from_admin = admin.admin_id');
+        $query = $this->db->get_where('admin_department_transactions',array('transaction_id'=>$transaction_id));
 
         return $query->row();
     }
