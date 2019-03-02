@@ -16,6 +16,9 @@
                     <tr>
                         <td>Amount: <?php echo $result->amount; ?></td>
                     </tr>
+                    <tr>
+                        <td>Date: <?php echo $result->date; ?></td>
+                    </tr>
                 </table>
             </div>
             <div class="panel-footer"></div>
