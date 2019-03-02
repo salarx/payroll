@@ -48,7 +48,10 @@ class Site_emp extends CI_Controller {
 
         $data["results"] = $this->transaction_emp_model->fetch_transaction($data["per_page"], $page);
         $data["links"] = $this->pagination->create_links();
-
+        $query = $this->db->get_where('employee',array('employee_id'=>$this->session->userdata('flag')));
+        $data['balance_1'] = $query->row()->balance_1;
+        $data['balance_2'] = $query->row()->balance_2;
+        $data['balance_3'] = $query->row()->balance_3;
         $data["content"] = $this->load->view('transactions_emp',$data,true);
         $this->load->view('master',$data);
     }
