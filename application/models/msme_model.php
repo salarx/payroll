@@ -9,15 +9,15 @@ class Msme_model extends CI_Model{
 
     function login($username, $password){
 
-        $query = $this->db->get_where('msme',array('dep_id' => $username));
+        $query = $this->db->get_where('msme',array('msme_id' => $username));
         $result = $query->row();
-        $dep_password = $result->password;
-        $salt = $result->dep_salt;
+        $msme_password = $result->password;
+        $salt = $result->msme_salt;
 
         $password .= $salt;
-        $dep_password .= $salt;
+        $msme_password .= $salt;
 
-        if(!strcmp($password,$dep_password)){
+        if(!strcmp($password,$msme_password)){
 
             return $result;
         }

@@ -2,7 +2,7 @@
 session_start();
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Site_dep extends CI_Controller {
+class Site_msme extends CI_Controller {
 
     function __construct(){
 
@@ -19,7 +19,7 @@ class Site_dep extends CI_Controller {
         $this->session->unset_userdata('username');
         $data['message'] = 'You are successfully logged out';
         $this->session->set_userdata($data);
-        redirect('authentication_login/hod_login',"refresh");
+        redirect('authentication_login/msme_login',"refresh");
     }
 
     public function index(){

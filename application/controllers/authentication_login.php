@@ -47,10 +47,10 @@ class Authentication_login extends CI_Controller {
 
       $username = $this->input->post('username',true);
       $password = hash("SHA512",$this->input->post('password',true));
-      $result = $this->department_model->login($username,$password);
+      $result = $this->msme_model->login($username,$password);
       if($result){
-        $data['flag'] = $result->dep_id;
-        $data['username'] = $result->dep_id;
+        $data['flag'] = $result->msme_id;
+        $data['username'] = $result->msme_id;
         $data['category'] = 2;
         $this->session->set_userdata($data);
         redirect('site_msme');

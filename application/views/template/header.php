@@ -135,7 +135,7 @@
                         </li> <?php } ?>
                         <?php if($category==2) { ?>
                         <li>
-                            <a href="<?php echo base_url(); ?>site_dep/logout.html"  style="font-size:17px" ><i class="icon_key_alt"></i><b>Log Out</b></a>
+                            <a href="<?php echo base_url(); ?>site_msme/logout.html"  style="font-size:17px" ><i class="icon_key_alt"></i><b>Log Out</b></a>
                         </li> <?php } ?>
                         <?php if($category==3) { ?>
                         <li>
@@ -146,7 +146,7 @@
                 <!-- user login dropdown end -->
             </ul>
             <!-- notificatoin dropdown end-->
-        
+
         <!--sidebar end-->
 </nav>
         <!--main content start-->
