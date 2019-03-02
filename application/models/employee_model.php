@@ -69,10 +69,7 @@ class Employee_model extends CI_Model{
 
     function fetch_employee_by_id($employee_id) {
 
-        $this->db->join('payment', 'employee.payment_id = payment.payment_id');
-        $this->db->join('status', 'employee.status_id = status.status_id');
-        $this->db->join('departments', 'employee.employee_department = departments.dep_id');
-        $this->db->join('designation', 'employee.employee_designation = designation.id');
+        $this->db->join('msme', 'employee.employee_msme = msme.msme_id');
         $query = $this->db->get_where('employee',array('employee_id'=>$employee_id));
 
         return $query->row();

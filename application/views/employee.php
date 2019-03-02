@@ -29,15 +29,14 @@
                     <?php foreach($results as $list){ ?>
                         <tr>
                             <td>
-                                <a href="<?php echo base_url(); ?>employee/view_employee/<?php echo $list->employee_id; ?>"><?php echo $list->employee_name; ?></a>
+                                <a href="<?php echo base_url(); ?>employee/view_employee/<?php echo $list->emp_id; ?>"><?php echo $list->employee_name; ?></a>
                             </td>
-                            <td><?php echo $list->designation; ?></td>
-                            <td><?php echo $list->dep_name; ?></td>
+                            <td><?php echo $list->msme_name; ?></td>
                             <td>
-                                <a href="<?php echo base_url(); ?>employee/update_employee/<?php echo $list->employee_id; ?>">Edit</a>|
+                                <a href="<?php echo base_url(); ?>employee/update_employee/<?php echo $list->emp_id; ?>">Edit</a>|
                                 <?php if($category!=1){ ?>
-                                <a href="<?php echo base_url(); ?>transaction_msme/add_transaction/<?php echo $list->employee_id; ?>">Pay</a>|<?php } ?>
-								<a href="<?php echo base_url(); ?>employee/delete_employee/<?php echo $list->employee_id; ?>">Delete</a>
+                                <a href="<?php echo base_url(); ?>transaction_msme/add_transaction/<?php echo $list->emp_id; ?>">Pay</a>|<?php } ?>
+								<a href="<?php echo base_url(); ?>employee/delete_employee/<?php echo $list->emp_id; ?>">Delete</a>
                             </td>
                         </tr>
                     <?php } ?>
