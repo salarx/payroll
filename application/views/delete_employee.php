@@ -9,7 +9,7 @@
                     <div class="form-group">
                             <label for="amount" class="control-label col-lg-2">Enter password to confirm deletion</label>
                             <div class="col-lg-10">
-                                <input name="id" type="hidden" value="<?php echo $employee_id; ?>"/>
+                                <input name="id" type="hidden" value="<?php echo $emp_id; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
