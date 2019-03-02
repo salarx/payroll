@@ -69,7 +69,7 @@ Not Admin? Click Here
                         <label class="col-lg-6"> </label>
                         <label class="mr-sm-2 col-lg-2" style="font-size:18px" align="right"><b>Admin ID</b></label>
                           &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        <input type="text" name="username" class="form-control col-lg-4" placeholder="Username" autofocus >
+                        <input type="text" name="username" class="form-control col-lg-4" placeholder="Username" autofocus required>
                       </div>
                       <br>
 
@@ -79,8 +79,8 @@ Not Admin? Click Here
                           <label class="col-lg-6"> </label>
                             &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                           <label class="mr-sm-2 col-lg-2" style="font-size:18px" align="right"><b>Password</b></label>
-                          
-                        <input type="password" name="password" class="form-control col-lg-4" placeholder="Password">
+
+                        <input type="password" name="password" class="form-control col-lg-4" placeholder="Password" required>
                     </div>
                     <br>
 

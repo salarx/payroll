@@ -23,7 +23,7 @@
                 <form action="<?php echo base_url(); ?>site_emp/reset_password.html" method="post"><?php } ?>
                     <div class="form-group has-feedback">
                         <label for="Password">Password</label>
-                        <input type="password" name="password" class="form-control" placeholder="Password"/>
+                        <input type="password" name="password" class="form-control" placeholder="Password" required/>
                     </div>
                     <div class="row">
                         <div class="col-xs-12">

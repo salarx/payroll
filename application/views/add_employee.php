@@ -41,9 +41,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="phone" class="control-label col-lg-2">Phone <span class="required">*</span></label>
+                            <label for="phone" class="control-label col-lg-2">Phone *</label>
                             <div class="col-lg-10">
-                                <input class="form-control" name="phone" type="text"/>
+                                <input class="form-control" name="phone" maxlength="10" type="text" required/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -53,15 +53,15 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="email" class="control-label col-lg-2">E-mail</label>
+                            <label for="email" class="control-label col-lg-2">E-mail *</label>
                             <div class="col-lg-10">
-                                <textarea class="form-control" name="email"></textarea>
+                                <input class="form-control" name="email" required></input>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="password" class="control-label col-lg-2">Password</label>
                             <div class="col-lg-10">
-                                <textarea class="form-control" name="password"></textarea>
+                                <input class="form-control" type="password" name="password"></input>
                             </div>
                         </div>
                         <div class="form-group">
