@@ -5,7 +5,8 @@
 <?php $category=$this->session->userdata('category'); ?>
 <?php if($category==2){ ?>
 <div class="row">
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <a href="<?php echo  base_url(); ?>site_dep/employee.html">
         <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
             <i class="icon_id"></i>
@@ -14,9 +15,9 @@
     </div><!--/.col-->
     </a>
     </div><!--/.col-->
-    <div class="row">
-      <div class="col-lg-2 col-md-2"></div>
-    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+
+
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <a href="<?php echo  base_url(); ?>site_dep/transactions.html" >
           <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
             <i class="icon_clipboard"></i>
@@ -25,7 +26,8 @@
       </div><!--/.info-box-->
         </a>
     </div><!--/.col-->
-    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <a href="<?php echo  base_url(); ?>site_dep/settings.html">
                 <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
             <i class="icon_cog"></i>
@@ -37,7 +39,7 @@
 
     </div><!--/.col-->
 
-   </div>
+
 <?php } ?>
 <br> <br> <br> <br>
 </div>
