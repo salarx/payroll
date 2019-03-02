@@ -4,7 +4,7 @@
         <meta charset="utf-8">
 
 
-        <title>Login</title>
+        <title>Admin Login</title>
                 <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
 
 
@@ -46,55 +46,36 @@
   </div>
   </nav>
   <br> <br> <br> <br>
-            <div class="container">
-            <form class="login-form" action="<?php echo base_url(); ?>authentication_login/admin_authentication.html" method="post">
-                <div class="login-wrap">
-                    <p class="login-img"><i class="icon_lock_alt"></i></p>
-                    <?php
-                    $exception = $this->session->userdata('exception');
-
-                    if($exception){
-
-                        echo "<div class='alert alert-block alert-danger fade in'><p>";
-                        echo $exception;
-                        echo "</p></div>";
-                        $this->session->unset_userdata('exception');
-                    }
-
-                    $message = $this->session->userdata('message');
-
-                    if($message){
-
-                        echo "<div class='alert alert-success fade in'><p>";
-                        echo $message;
-                        echo "</p></div>";
-                        $this->session->unset_userdata('message');
-                    }
-                    ?>
+  <div class="container ">
+            <form class="login-form " action="<?php echo base_url(); ?>authentication_login/admin_authentication.html" method="post">
+                <div>
                       <div class="jumbotron">
-                        <div class="input-group">
+                    <div class="input-group ">
                         <span class="input-group-addon"><i class="icon_profile"></i></span>
-                          <label class="col-lg-6"> </label>
-                          &nbsp
-                          <label class="mr-sm-2 col-lg-2" align="right" style="font-size:18px"><b>Username </b></label>
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        <input type="text" name="username" align="right" class="form-control col-lg-4 pull-right" placeholder="Username" autofocus >
+                        <label class="col-lg-6"> </label>
+                        <label class="mr-sm-2 col-lg-2" style="font-size:18px" align="right"><b>Admin ID</b></label>
+                          &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        <input type="text" name="username" class="form-control col-lg-4" placeholder="Username" autofocus >
                       </div>
                       <br>
-                        <div class="input-group" >
+
+                          <div class="input-group form-inline">
                         <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-                        <label class="col-lg-6"> </label>
-                        <label class="mr-sm-2 col-lg-2" align="right" style="font-size:18px"><b>Password</b></label>
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        <input type="password" name="password" align="right" class="form-control col-lg-4" placeholder="Password">
+
+                          <label class="col-lg-6"> </label>
+                            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                          <label class="mr-sm-2 col-lg-2" style="font-size:18px" align="right"><b>Password</b></label>
+                          
+                        <input type="password" name="password" class="form-control col-lg-4" placeholder="Password">
                     </div>
                     <br>
+
                     <button class="btn btn-primary btn-lg btn-block col-lg-1 float-right" type="submit">Login</button>
+                    <br>
                 </div>
               </div>
-            </form>
-        </div>
-        <br><br><br><br><br>
+            </form></div>
+<br><br><br><br>
         <hr class="my-4">
 
         <footer class="page-footer" style="background:  #01013D; color:white; height: 150px; padding:5px">
@@ -104,72 +85,5 @@
             Fax Number: 579412562<br>
           </center></p>
         </footer>
-
-
+      </div>
     </body>
-
-
-<!-- jQuery library -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
-<!-- Popper -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
-<!-- Latest compiled and minified Bootstrap JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<!-- Initialize Bootstrap functionality -->
-<script>
-// Initialize tooltip component
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-
-// Initialize popover component
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
-</script>
-<!-- jQuery library -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
-<!-- Popper -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
-<!-- Latest compiled and minified Bootstrap JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<!-- Initialize Bootstrap functionality -->
-<script>
-// Initialize tooltip component
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-
-// Initialize popover component
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
-</script>
-<!-- jQuery library -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
-<!-- Popper -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
-<!-- Latest compiled and minified Bootstrap JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<!-- Initialize Bootstrap functionality -->
-<script>
-// Initialize tooltip component
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-
-// Initialize popover component
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
-</script>
-</html>
