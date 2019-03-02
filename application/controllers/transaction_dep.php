@@ -26,6 +26,7 @@ class Transaction_dep extends CI_Controller {
         $data['to_emp'] = $this->input->post('id',true);
         $data['amount'] = $this->input->post('amount',true);
         $data['account_type'] = $this->input->post('account_type',true);
+        $data['date'] = date('Y-m-d H:i:s');
         $password = hash("SHA512",$this->input->post('password',true));
         $query = $this->db->get_where('departments',array('dep_id' => $dep_id));
         $result = $query->row();

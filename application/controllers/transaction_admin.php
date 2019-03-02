@@ -25,6 +25,7 @@ class Transaction_admin extends CI_Controller {
         $data['from_admin'] = $admin_id;
         $data['to_dep'] = $this->input->post('id',true);
         $data['amount'] = $this->input->post('amount',true);
+        $data['date'] = date('Y-m-d H:i:s');
         $password = hash("SHA512",$this->input->post('password',true));
         $query = $this->db->get_where('admin',array('admin_id' => $admin_id));
         $result = $query->row();
