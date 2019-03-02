@@ -116,4 +116,28 @@ class Employee extends CI_Controller {
           show_error('Password entered is incorrect');
         }
     }
+    
+    public function delete_employee_commit_by_hod(){
+
+        $data = array();
+        $dep_id = $this->session->userdata('flag');
+        $data['employee_id'] = $this->input->post('id',true);
+        $password = hash("SHA512",$this->input->post('password',true));
+        $query = $this->db->get_where('departments',array('dep_id' => $dep_id));
+        $result = $query->row();
+
+        $dep_password = $result->password;
+        $salt = $result->dep_salt;
+
+        $password .= $salt;
+        $dep_password .= $salt;
+
+        if(!strcmp($password,$dep_password)){
+            $this->employee_model->erase_employee($data['employee_id']);
+        redirect('site_dep/employee');
+        }
+        else{
+          show_error('Password entered is incorrect');
+        }
+    }
 }
