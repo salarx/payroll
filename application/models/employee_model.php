@@ -105,15 +105,9 @@ class Employee_model extends CI_Model{
         $this->db->update('employee', $data);
     }
 
-    function update_salary_status($employee_id) {
-
-        $this->db->where('employee_id', $employee_id);
-        $this->db->update('employee', array('employee_salary'=>1));
-    }
-
     function erase_employee($employee_id) {
 
-        
+
             $this->db->delete('employee', array('employee_id' => $employee_id));
     }
 
