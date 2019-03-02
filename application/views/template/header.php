@@ -16,29 +16,32 @@
             </head>
 
     <body>
+      <div class="container-fluid">
         <section id="container"><!-- container section start -->
             <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D">
                 <div class="toggle-nav">
                     <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
                 </div>
                 <!--logo start-->
+                <span>
                 <?php if($category==1) { ?>
-                <a href="<?php echo base_url(); ?>site" class="logo" style="color: #ffc70d">6 KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
+                <a href="<?php echo base_url(); ?>site" class="logo" style="color: #ffc70d; font-size:18px"><b>6KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
                 <?php } ?>
                 <?php if($category==2) { ?>
-                <a href="<?php echo base_url(); ?>site_dep" class="logo" style="color: #ffc70d">6 KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
+                <a href="<?php echo base_url(); ?>site_dep" class="logo" style="color: #ffc70d; font-size:18px"><b>6KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
                 <?php } ?>
                 <?php if($category==3) { ?>
-                <a href="<?php echo base_url(); ?>site_emp" class="logo" style="color: #ffc70d">6 KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></a>
+                <a href="<?php echo base_url(); ?>site_emp" class="logo" style="color: #ffc70d; font-size:18px"><b>6KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
                 <?php } ?>
+              </span>
                 <!--logo end-->
-                &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
+                 &nbsp  &nbsp  &nbsp  &nbsp
                 <div class="nav search-row" id="top_menu">
                     <!--  search form start -->
                     <!--  search form end -->
                 </div>
 
-
+                  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
         <!--header end-->
         <!--sidebar start-->
         <aside>
@@ -56,7 +59,7 @@
                         <a href="<?php echo base_url(); ?>site_emp">
                         <?php } ?>
                             <i class="icon_house_alt"></i>
-                            <span>Home</span>
+                            <span style="font-size:17px"><b>Home</b></span>
                         </a>
                     </span>
                     &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
@@ -64,7 +67,7 @@
                     <span class="<?php if($title=='Department'){ echo 'active';}?>">
                         <a href="<?php echo base_url(); ?>site/department.html">
                             <i class="icon_datareport"></i>
-                            <span>Department</span>
+                            <span style="font-size:17px"><b>Department</b></span>
                         </a>
                         &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
                     </span><?php } ?>
@@ -75,7 +78,7 @@
                         <?php if($category==2) { ?>
                         <a href="<?php echo base_url(); ?>site_dep/employee.html"><?php } ?>
                             <i class="icon_id"></i>
-                            <span>Employee</span>
+                            <span style="font-size:17px"><b>Employee</b></span>
                         </a>
                         &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
                     </span><?php } ?>
@@ -87,7 +90,7 @@
                         <?php if($category==3) { ?>
                         <a href="<?php echo base_url(); ?>site_emp/transactions.html"><?php } ?>
                             <i class="icon_clipboard"></i>
-                            <span>My Transaction</span>
+                            <span style="font-size:17px"><b>My Transaction</b></span>
                         </a>
                           &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
                     </span>
@@ -99,7 +102,7 @@
                         <?php if($category==3) { ?>
                         <a href="<?php echo base_url(); ?>site_emp/settings.html"><?php } ?>
                             <i class="icon_cog"></i>
-                            <span>Settings</span>
+                            <span style="font-size:17px"><b>Settings</b></span>
                         </a>
                           &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp   &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
                             &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp   &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp   &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
@@ -124,15 +127,15 @@
 
                         <?php if($category==1) { ?>
                         <li>
-                            <a href="<?php echo base_url(); ?>site/logout.html"><i class="icon_key_alt"></i>Log Out</a>
+                            <a href="<?php echo base_url(); ?>site/logout.html"  style="font-size:17px"><i class="icon_key_alt"></i><b>Log Out</b></a>
                         </li> <?php } ?>
                         <?php if($category==2) { ?>
                         <li>
-                            <a href="<?php echo base_url(); ?>site_dep/logout.html"><i class="icon_key_alt"></i>Log Out</a>
+                            <a href="<?php echo base_url(); ?>site_dep/logout.html"  style="font-size:17px"><i class="icon_key_alt"></i><b>Log Out</b></a>
                         </li> <?php } ?>
                         <?php if($category==3) { ?>
                         <li>
-                            <a href="<?php echo base_url(); ?>site_emp/logout.html"><i class="icon_key_alt"></i>Log Out</a>
+                            <a href="<?php echo base_url(); ?>site_emp/logout.html" style="font-size:17px"><i class="icon_key_alt"></i><b>Log Out</b></a>
                         </li> <?php } ?>
                     </ul>
                 </li>
@@ -145,6 +148,15 @@
         <!--main content start-->
         <section id="main-content">
             <section class="wrapper">
+            </div>
+
+
+
+
+
+
+
+          </body>
 
 
               <!-- jQuery library -->
