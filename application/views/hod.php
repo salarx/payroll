@@ -7,6 +7,7 @@
                         <tr>
                             <th><i class="icon_datareport"></i> Department Name</th>
                             <th><i class="icon_profile"></i> Head of Department</th>
+                            <th><i class="icon_clipboard"></i> Action</th>
                         </tr>
                     </thead>
                     <tbody>
