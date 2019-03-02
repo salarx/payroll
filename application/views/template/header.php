@@ -28,7 +28,7 @@
                 <a href="<?php echo base_url(); ?>site" class="logo" style="color: #ffc70d; font-size:19px"><b>6 KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
                 <?php } ?>
                 <?php if($category==2) { ?>
-                <a href="<?php echo base_url(); ?>site_dep" class="logo" style="color: #ffc70d; font-size:19px"><b>6KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
+                <a href="<?php echo base_url(); ?>site_msme" class="logo" style="color: #ffc70d; font-size:19px"><b>6KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
                 <?php } ?>
                 <?php if($category==3) { ?>
                 <a href="<?php echo base_url(); ?>site_emp" class="logo" style="color: #ffc70d; font-size:19px"><b>6KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
@@ -53,7 +53,7 @@
                         <a href="<?php echo base_url(); ?>site">
                         <?php } ?>
                         <?php if($category==2) { ?>
-                        <a href="<?php echo base_url(); ?>site_dep">
+                        <a href="<?php echo base_url(); ?>site_msme">
                         <?php } ?>
                         <?php if($category==3) { ?>
                         <a href="<?php echo base_url(); ?>site_emp">
@@ -76,7 +76,7 @@
                     <?php if($category==1) { ?>
                         <a href="<?php echo base_url(); ?>site/employee.html"><?php } ?>
                         <?php if($category==2) { ?>
-                        <a href="<?php echo base_url(); ?>site_dep/employee.html"><?php } ?>
+                        <a href="<?php echo base_url(); ?>site_msme/employee.html"><?php } ?>
                             <i class="icon_id"></i>
                             <span style="font-size:17px"><b>Employee</b></span>
                         </a>
@@ -86,7 +86,7 @@
                     <?php if($category==1) { ?>
                         <a href="<?php echo base_url(); ?>site/transactions.html"><?php } ?>
                         <?php if($category==2) { ?>
-                        <a href="<?php echo base_url(); ?>site_dep/transactions.html"><?php } ?>
+                        <a href="<?php echo base_url(); ?>site_msme/transactions.html"><?php } ?>
                         <?php if($category==3) { ?>
                         <a href="<?php echo base_url(); ?>site_emp/transactions.html"><?php } ?>
                             <i class="icon_clipboard"></i>
@@ -98,7 +98,7 @@
                     <?php if($category==1) { ?>
                         <a href="<?php echo base_url(); ?>site/settings.html"><?php } ?>
                         <?php if($category==2) { ?>
-                        <a href="<?php echo base_url(); ?>site_dep/settings.html"><?php } ?>
+                        <a href="<?php echo base_url(); ?>site_msme/settings.html"><?php } ?>
                         <?php if($category==3) { ?>
                         <a href="<?php echo base_url(); ?>site_emp/settings.html"><?php } ?>
                             <i class="icon_cog"></i>

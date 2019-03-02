@@ -81,7 +81,7 @@ class Employee extends CI_Controller {
         $data['emp_salt'] = password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
         $this->employee_model->save_employee($data);
 
-        redirect('site/employee');
+        redirect('site_msme/employee');
     }
 
     public function delete_employee($employee_id){

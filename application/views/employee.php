@@ -19,7 +19,6 @@
                     <thead>
                         <tr>
                             <th><i class="icon_profile"></i> Full Name</th>
-                            <th><i class="icon_datareport"></i> Designation</th>
                             <th><i class="icon_datareport_alt"></i> Department</th>
                             <th><i class="icon_clipboard"></i> Action</th>
                         </tr>
