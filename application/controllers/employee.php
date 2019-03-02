@@ -98,7 +98,7 @@ class Employee extends CI_Controller {
 
         $data = array();
         $msme_id = $this->session->userdata('flag');
-        $data['employee_id'] = $this->input->post('id',true);
+        $data['emp_id'] = $this->input->post('id',true);
         $password = hash("SHA512",$this->input->post('password',true));
         $query = $this->db->get_where('msme',array('msme_id' => $msme_id));
         $result = $query->row();
@@ -110,7 +110,7 @@ class Employee extends CI_Controller {
         $msme_password .= $salt;
 
         if(!strcmp($password,$msme_password)){
-            $this->employee_model->erase_employee($data['employee_id']);
+            $this->employee_model->erase_employee($data['emp_id']);
         redirect('site_msme/employee');
         }
         else{

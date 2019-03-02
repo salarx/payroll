@@ -96,7 +96,7 @@ class Employee_model extends CI_Model{
 
     function update_employee_by_id($employee_id,$data) {
 
-        $this->db->where('employee_id', $employee_id);
+        $this->db->where('emp_id', $employee_id);
         $this->db->update('employee', $data);
     }
 
