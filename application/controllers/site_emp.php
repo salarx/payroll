@@ -17,16 +17,7 @@ class Site_emp extends CI_Controller {
     }
 
     public function logout(){
-
-        $this->session->unset_userdata('flag');
-        $this->session->unset_userdata('username');
-        $data['message'] = 'You are successfully logged out';
-        $this->session->set_userdata($data);
-        redirect('authentication_login/emp_login',"refresh");
-    }
-
-    public function index(){
-
+        
         $data = array();
         $data['title'] = "Home";
         $data['heading'] = "Main Menu";

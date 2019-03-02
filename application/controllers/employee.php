@@ -80,11 +80,37 @@ class Employee extends CI_Controller {
         redirect('site/employee');
     }
 
-    public function delete_employee_commit($employee_id){
+    public function delete_employee($employee_id){
 
-        $this->db->delete('employee', array('employee_id' => $employee_id));
-		    $this->salary_model->delete_salary_by_id($employee_id);
+        $data = array();
+        $data['title'] = "Delete Employee";
+        $data['heading'] = "Confirm Employee Deletion";
+        $data['employee_id'] = $employee_id;
+        $data['content'] = $this->load->view('delete_employee',$data,true);
+        $this->load->view('master',$data);
+    }
 
+    public function delete_employee_commit(){
+
+        $data = array();
+        $admin_id = $this->session->userdata('flag');
+        $data['employee_id'] = $this->input->post('id',true);
+        $password = hash("SHA512",$this->input->post('password',true));
+        $query = $this->db->get_where('admin',array('admin_id' => $admin_id));
+        $result = $query->row();
+
+        $admin_password = $result->admin_password;
+        $salt = $result->admin_salt;
+
+        $password .= $salt;
+        $admin_password .= $salt;
+
+        if(!strcmp($password,$admin_password)){
+            $this->employee_model->erase_employee($data['employee_id']);
         redirect('site/employee');
+        }
+        else{
+          show_error('Password entered is incorrect');
+        }
     }
 }
