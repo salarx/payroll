@@ -50,10 +50,10 @@ class Employee_model extends CI_Model{
     }
 
 
-    function fetch_employee_by_dep_id($limit, $start,$dep_id) {
+    function fetch_employee_by_msme_id($limit, $start,$msme_id) {
 
         $this->db->limit($limit, $start);
-        $this->db->join('departments', 'employee.employee_department = departments.dep_id');
+        $this->db->join('msme', 'employee.employee_department = departments.dep_id');
         $this->db->join('designation', 'employee.employee_designation = designation.id');
         $query = $this->db->get_where('employee',array('employee_department'=>$dep_id));
         if ($query->num_rows() > 0) {
@@ -106,7 +106,6 @@ class Employee_model extends CI_Model{
     }
 
     function erase_employee($employee_id) {
-
 
             $this->db->delete('employee', array('employee_id' => $employee_id));
     }

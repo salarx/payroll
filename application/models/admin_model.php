@@ -18,15 +18,4 @@ class Admin_model extends CI_Model{
             return $result;
         }
     }
-
-    function save_admin($data) {
-
-        $this->db->insert('admin', $data);
-    }
-
-    function update_password_by_id($admin_id,$data) {
-
-        $this->db->where('admin_id', $admin_id);
-        $this->db->update('admin', $data);
-    }
 }
