@@ -11,7 +11,7 @@
     <body>
         <div class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D; padding:17px; font-size: 17px">
+        <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D">
 
         	<a class="navbar-brand" href="<?php echo base_url(); ?>" style="color: #FFC70D"><b>6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,8 @@
 
 
     <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav mr-auto" >
+    <b>
+      <ul class="navbar-nav mr-auto nav-pills" style="font-size: 17px">
         <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url(); ?>">
           &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -37,6 +38,7 @@
             <b>About</b></a>
         </li>
       </ul>
+      </b>
     </div>
   </nav>
   <br> <br> <br> <br>
