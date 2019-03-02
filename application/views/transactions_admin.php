@@ -16,6 +16,7 @@
                             <th><i class="icon_clipboard"></i> Action</th>
                         </tr>
                     </thead>
+                    <?php if(is_array($results)){ ?>
                     <tbody>
                     <?php foreach($results as $list){ ?>
                         <tr>
@@ -29,8 +30,10 @@
                             </td>
                         </tr>
                     <?php } ?>
+                  </tbody>
+                <?php } ?>
                 </table>
-
+                The current account balance is : <?php echo $balance; ?>
             </div>
         </section>
         <div class="text-center"><p><?php echo $links; ?></p></div>

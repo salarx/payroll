@@ -33,7 +33,7 @@
                                 <a href="<?php echo base_url(); ?>employee/update_employee/<?php echo $list->employee_id; ?>">Edit</a>|
                                 <?php if($category!=1){ ?>
                                 <a href="<?php echo base_url(); ?>transaction_dep/add_transaction/<?php echo $list->employee_id; ?>">Pay</a>|<?php } ?>
-								<a href="<?php echo base_url(); ?>employee/delete_employee_commit/<?php echo $list->employee_id; ?>">Delete</a>
+								<a href="<?php echo base_url(); ?>employee/delete_employee/<?php echo $list->employee_id; ?>">Delete</a>
                             </td>
                         </tr>
                     <?php } ?>
