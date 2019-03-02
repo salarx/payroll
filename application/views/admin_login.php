@@ -18,7 +18,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D; padding:17px; font-size: 17px">
 
-        <a class="navbar-brand" href="<?php echo base_url(); ?>" style="color: #FFC70D"><b>6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
+        <a class="navbar-brand" href="<?php echo base_url(); ?>" style="color: #FFC70D"><b>6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -45,7 +45,7 @@
   </div>
 </nav>
 <br><br><br><br>
-            <div class="container jumbotron">
+            <div class="container">
             <form class="login-form" action="<?php echo base_url(); ?>authentication_login/admin_authentication.html" method="post">
                 <div class="login-wrap">
                     <p class="login-img"><i class="icon_lock_alt"></i></p>
@@ -70,24 +70,26 @@
                         $this->session->unset_userdata('message');
                     }
                     ?>
-                    <div class="input-group form-inline">
+                      <div class="jumbotron">
+                        <div class="input-group">
                         <span class="input-group-addon"><i class="icon_profile"></i></span>
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        <label class="mr-sm-2" style="font-size:18px"><b>Username</b></label>
-                        &nbsp &nbsp &nbsp &nbsp
-
-                        <input type="text" name="username" class="form-control" placeholder="Username" autofocus >
-
+                          <label class="col-lg-6"> </label>
+                          <label class="mr-sm-2 col-lg-2" align="right" style="font-size:18px"><b>Username </b></label>
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        <input type="text" name="username" align="right" class="form-control col-lg-4 pull-right" placeholder="Username" autofocus >
+                      </div>
+                      <br>
+                        <div class="input-group" >
                         <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        <label class="mr-sm-2" style="font-size:18px"><b>Password</b></label>
-                        &nbsp &nbsp &nbsp &nbsp
-                        <input type="password" name="password" class="form-control" placeholder="Password">
+                        <label class="col-lg-6"> </label>
+                        <label class="mr-sm-2 col-lg-2" align="right" style="font-size:18px"><b>Password</b></label>
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        <input type="password" name="password" align="right" class="form-control col-lg-4" placeholder="Password">
                     </div>
-                    <br>
-
+                    <br><br>
                     <button class="btn btn-primary btn-lg btn-block col-lg-1 float-right" type="submit">Login</button>
                 </div>
+              </div>
             </form>
         </div>
         <br><br><br><br><br>
