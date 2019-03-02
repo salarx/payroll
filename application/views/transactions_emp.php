@@ -5,7 +5,7 @@
                 <table class="table table-responsive table-striped table-advance table-hover">
                     <thead>
                         <tr>
-                            <th><i class="icon_profile"></i> Departmen</th>
+                            <th><i class="icon_profile"></i> Department</th>
                             <th><i class="icon_balance"></i> Amount</th>
                             <th><i class="icon_clipboard"></i> Action</th>
                         </tr>
