@@ -8,7 +8,10 @@
                         <td>Transaction ID: #<?php echo $result->transaction_id; ?></td>
                     </tr>
                     <tr>
-                        <td>Departmnet Name: <?php echo $result->dep_name; ?></td>
+                        <td>Admin Name: <?php echo $result->admin_username; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Department Name: <?php echo $result->dep_name; ?></td>
                     </tr>
                     <tr>
                         <td>Amount: <?php echo $result->amount; ?></td>
