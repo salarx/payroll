@@ -1,30 +1,44 @@
+<link href="<?php echo base_url(); ?>css/elegant-icons-style.css" rel="stylesheet" />
+<div class="container-fluid">
+<div class="jumbotron">
+<br><br><br>
 <?php $category=$this->session->userdata('category'); ?>
 <?php if($category==2){ ?>
 <div class="row">
     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
         <a href="<?php echo  base_url(); ?>site_dep/employee.html">
-            <div class="info-box blue-bg">
-                <div class="count">Employee</div>
-                <div class="title">Manage employee</div>
-            </div><!--/.info-box-->
+        <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
+            <i class="icon_id"></i>
+          <h4 class="card-title">EMPLOYEES</h4>
+          <p class="card-text">Manage Employees</p><!--/.info-box-->
+    </div><!--/.col-->
+    </a>
+    </div><!--/.col-->
+    <div class="row">
+      <div class="col-lg-2 col-md-2"></div>
+    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+        <a href="<?php echo  base_url(); ?>site_dep/transactions.html" >
+          <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
+            <i class="icon_clipboard"></i>
+            <h4 class="card-title">TRANSACTIONS</h4>
+            <p class="card-text">Manage Transaction</p><!--/.info-box-->
+      </div><!--/.info-box-->
         </a>
     </div><!--/.col-->
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-        <a href="<?php echo  base_url(); ?>site_dep/transactions.html">
-            <div class="info-box blue-bg">
-                <div class="count">My Transactions</div>
-                <div class="title">Manage Transactions</div>
-            </div><!--/.info-box-->
+    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+            <a href="<?php echo  base_url(); ?>site_dep/settings.html">
+                <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
+            <i class="icon_cog"></i>
+            <h4 class="card-title">SETTINGS</h4>
+            <p class="card-text">Manage Settings</p><!--/.info-box-->
+      <!--/.info-box-->
+      </div>
         </a>
-    </div><!--/.col-->
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-        <a href="<?php echo  base_url(); ?>sit_dep/settings.html">
-            <div class="info-box blue-bg">
-                <div class="count">Settings</div>
-                <div class="title">Manage settings</div>
-            </div><!--/.info-box-->
-        </a>
+
     </div><!--/.col-->
 
    </div>
 <?php } ?>
+<br> <br> <br> <br>
+</div>
+</div>
