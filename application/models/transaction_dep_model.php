@@ -7,11 +7,6 @@ class Transaction_dep_model extends CI_Model{
         parent::__construct();
     }
 
-    function record_count() {
-
-        return $this->db->count_all("salary");
-    }
-
     function fetch_transaction($limit, $start) {
 
         $this->db->limit($limit, $start);
@@ -34,9 +29,9 @@ class Transaction_dep_model extends CI_Model{
 
     function fetch_transaction_by_id($transaction_id) {
 
-        $this->db->join('employee', 'salary.employee_id = employee.employee_id');
-        $query = $this->db->get_where('salary',array('salary_id'=>$salary_id));
-
+        $this->db->join('employee', 'department_employee_transactions.to_emp = employee.employee_id');
+        $this->db->join('account_types', 'account_types.type_id = department_employee_transactions.account_type');
+        $query = $this->db->get_where('department_employee_transactions',array('transaction_id'=>$transaction_id));
         return $query->row();
     }
 
@@ -51,9 +46,23 @@ class Transaction_dep_model extends CI_Model{
         $this->db->update('departments');
 
         $query = $this->db->get_where('employee',array('employee_id'=>$data['to_emp']));
-        $result=$query->row()->balance_1;
+        if($data['account_type']==1)
+        {
+           $type='balance_1';
+           $result=$query->row()->balance_1;
+        }
+        if($data['account_type']==2)
+        {
+           $type='balance_2';
+           $result=$query->row()->balance_2;
+        }
+        if($data['account_type']==3)
+        {
+           $type='balance_3';
+           $result=$query->row()->balance_3;
+        }
         $result=$result+$data['amount'];
-        $this->db->set('balance_1', $result);
+        $this->db->set($type, $result);
         $this->db->where('employee_id', $data['to_emp']);
         $this->db->update('employee');
 

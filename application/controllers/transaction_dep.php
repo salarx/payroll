@@ -25,7 +25,7 @@ class Transaction_dep extends CI_Controller {
         $data['from_dep'] = $dep_id;
         $data['to_emp'] = $this->input->post('id',true);
         $data['amount'] = $this->input->post('amount',true);
-        $data['account_type'] = 1;
+        $data['account_type'] = $this->input->post('account_type',true);
         $password = hash("SHA512",$this->input->post('password',true));
         $query = $this->db->get_where('departments',array('dep_id' => $dep_id));
         $result = $query->row();
@@ -56,12 +56,12 @@ class Transaction_dep extends CI_Controller {
         $this->load->view('master',$data);
     }
 
-    public function slip($salary_id){
+    public function slip($transaction_id){
 
         $data = array();
         $data['title'] = "Payment Slip";
         $data['heading'] = "Employee Payment Slip";
-        $data['result'] = $this->salary_model->fetch_salary_by_id($salary_id);
+        $data['result'] = $this->transaction_dep_model->fetch_transaction_by_id($transaction_id);
         $data['content'] = $this->load->view('slip',$data,true);
         $this->load->view('master',$data);
     }

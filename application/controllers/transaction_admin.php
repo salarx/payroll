@@ -50,7 +50,7 @@ class Transaction_admin extends CI_Controller {
         $data = array();
         $data['title'] = "Payment Slip";
         $data['heading'] = "Department Payment Slip";
-        $data['result'] = $this->salary_model->fetch_transaction_by_id($transaction_id);
+        $data['result'] = $this->transaction_admin_model->fetch_transaction_by_id($transaction_id);
         $data['content'] = $this->load->view('slip',$data,true);
         $this->load->view('master',$data);
 
