@@ -1,12 +1,18 @@
+<head>
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
+</head>
+<body>
 <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-5">
         <section class="panel">
-            <div class="panel-body">
-                <table class="table table-responsive table-striped table-advance table-hover">
+            <div class="container">
+
+                    <table class="table table-responsive table-bordered table-striped table-advance table-hover">
                     <thead>
-                        <tr>
+                        <tr class="table-warning" style="font-size:14px">
                             <th><i class="icon_profile"></i> Admin</th>
                             <th><i class="icon_balance"></i> Amount</th>
+
                             <th><i class="icon_bag"></i> Department Name</th>
                             <th><i class="icon_clipboard"></i> Action</th>
                         </tr>
@@ -25,8 +31,10 @@
                         </tr>
                     <?php } ?>
                 </table>
+
             </div>
         </section>
         <div class="text-center"><p><?php echo $links; ?></p></div>
     </div>
 </div>
+</body>

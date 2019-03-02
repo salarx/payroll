@@ -47,7 +47,7 @@
   </nav>
   <br> <br> <br> <br>
 
-          <div class="container jumbotron">
+          <div class="container ">
             <form class="login-form " action="<?php echo base_url(); ?>authentication_login/hod_authentication.html" method="post">
                 <div class="login-wrap">
                     <p class="login-img"><i class="icon_lock_alt"></i></p>
@@ -72,24 +72,30 @@
                         $this->session->unset_userdata('message');
                     }
                     ?>
+                      <div class="jumbotron">
                     <div class="input-group form-inline">
                         <span class="input-group-addon"><i class="icon_profile"></i></span>
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        <label class="mr-sm-2" style="font-size:18px"><b>Username</b></label>
-                        &nbsp &nbsp &nbsp &nbsp
+                        <label class="col-lg-6"> </label>
+                        <label class="mr-sm-2 col-lg-2" style="font-size:18px" align="right"><b>Username</b></label>
 
-                        <input type="text" name="username" class="form-control" placeholder="Username" autofocus >
+                        <input type="text" name="username" class="form-control col-lg-4" placeholder="Username" autofocus >
+                      </div>
+                      <br>
 
+                          <div class="input-group form-inline">
                         <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        <label class="mr-sm-2" style="font-size:18px"><b>Password</b></label>
-                        &nbsp &nbsp &nbsp &nbsp
-                        <input type="password" name="password" class="form-control" placeholder="Password">
+
+                          <label class="col-lg-6"> </label>
+                          <label class="mr-sm-2 col-lg-2" style="font-size:18px" align="right"><b>Password</b></label>
+
+                        <input type="password" name="password" class="form-control col-lg-4" placeholder="Password">
                     </div>
                     <br>
 
                     <button class="btn btn-primary btn-lg btn-block col-lg-1 float-right" type="submit">Login</button>
+                    <br>
                 </div>
+              </div>
             </form>
 </div>
 <br><br><br><br>
