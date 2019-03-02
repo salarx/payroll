@@ -11,6 +11,7 @@
                                 <input class="form-control" name="name" type="text" value="<?php echo $result->employee_name; ?>" />
                             </div>
                         </div>
+                        <if <?php if($this->session->userdata('category') != 2) { ?>
                         <div class="form-group">
                             <label for="department" class="control-label col-lg-2">Department</label>
                             <div class="col-lg-10">
@@ -49,6 +50,7 @@
                                 </select>
                             </div>
                         </div>
+                      <?php } ?>
                         <div class="form-group">
                             <label for="designation" class="control-label col-lg-2">Designation</label>
                             <div class="col-lg-10">
