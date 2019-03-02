@@ -57,7 +57,7 @@ class Site_msme extends CI_Controller {
         $data = array();
         $data["title"] = "Transactions";
         $data["heading"] = "Transaction Details";
-        $data["base_url"] = base_url() . "site_dep/transactions";
+        $data["base_url"] = base_url() . "site_msme/transactions";
         $data["per_page"] = 10;
         $data["uri_segment"] = 3;
 
@@ -66,11 +66,8 @@ class Site_msme extends CI_Controller {
 
         $data["results"] = $this->transaction_dep_model->fetch_transaction($data["per_page"], $page);
         $data["links"] = $this->pagination->create_links();
-        $query = $this->db->get_where('departments',array('dep_id'=>$this->session->userdata('flag')));
-        $account_balance = $query->row()->bank_balance;
-        $data['balance'] = $account_balance;
-
-        $data["content"] = $this->load->view('transactions_dep',$data,true);
+        $query = $this->db->get_where('msme',array('msme_id'=>$this->session->userdata('flag')));
+        $data["content"] = $this->load->view('transactions_msme',$data,true);
         $this->load->view('master',$data);
     }
 
