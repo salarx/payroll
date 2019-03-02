@@ -9,9 +9,9 @@
     <div class="col-lg-5 col-md-3 col-sm-12 col-xs-12">
         <a href="<?php echo  base_url(); ?>site/employee.html">
         <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
-            <i class="icon_id"></i>
-          <h4 class="card-title">EMPLOYEES</h4>
-          <p class="card-text">Manage Employees</p><!--/.info-box-->
+           <i class="icon_id"></i>
+        <center>   <h4 class="card-title">EMPLOYEES</h4>
+          <p class="card-text">Manage Employees</p></center><!--/.info-box-->
     </div><!--/.col-->
     </a>
     </div>
@@ -21,8 +21,8 @@
          <a href="<?php echo  base_url(); ?>site/department.html">
            <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
              <i class="icon_datareport"></i>
-             <h4 class="card-title">HOD</h4>
-             <p class="card-text">Manage HOD</p><!--/.info-box-->
+          <center>   <h4 class="card-title">HOD</h4>
+             <p class="card-text">Manage HOD</p></center><!--/.info-box-->
        </div><!--/.info-box-->
         </a>
       </div>
@@ -36,8 +36,8 @@
         <a href="<?php echo  base_url(); ?>site/transactions.html" >
           <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
             <i class="icon_clipboard"></i>
-            <h4 class="card-title">TRANSACTIONS</h4>
-            <p class="card-text">Manage Transaction</p><!--/.info-box-->
+          <center>  <h4 class="card-title">TRANSACTIONS</h4>
+            <p class="card-text">Manage Transaction</p></center><!--/.info-box-->
       </div><!--/.info-box-->
         </a>
     </div><!--/.col-->
@@ -45,8 +45,8 @@
             <a href="<?php echo  base_url(); ?>site/settings.html">
                 <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
             <i class="icon_cog"></i>
-            <h4 class="card-title">SETTINGS</h4>
-            <p class="card-text">Manage Settings</p><!--/.info-box-->
+            <center><h4 class="card-title">SETTINGS</h4>
+            <p class="card-text">Manage Settings</p></center><!--/.info-box-->
       <!--/.info-box-->
       </div>
         </a>

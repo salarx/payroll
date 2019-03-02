@@ -109,16 +109,16 @@
                         &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
                         &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
                         &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
-
+                        &nbsp  &nbsp &nbsp  &nbsp &nbsp 
                     </span>
                 </div>
                 <!-- sidebar menu end-->
             </div>
         </aside>
 
-        <div class="top-nav notification-row col-lg-2">
+        <div class="top-nav notification-row col-lg-2" >
             <!-- notificatoin dropdown start-->
-            <ul class="nav pull-right top-menu">
+            <ul class="nav top-menu">
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <span class="profile-ava">
@@ -127,7 +127,7 @@
                         <span class="username"><?php echo $this->session->userdata('username'); ?></span>
                         <b class="caret"></b>
                     </a>
-                    <ul class="dropdown-menu extended logout">
+                    <ul class="dropdown-menu extended logout mr-auto">
 
                         <?php if($category==1) { ?>
                         <li>
@@ -139,7 +139,7 @@
                         </li> <?php } ?>
                         <?php if($category==3) { ?>
                         <li>
-                            <a href="<?php echo base_url(); ?>site_emp/logout.html" style="font-size:17px" "><i class="icon_key_alt"></i><b>Log Out</b></a>
+                            <a href="<?php echo base_url(); ?>site_emp/logout.html" style="font-size:17px"><i class="icon_key_alt"></i><b>Log Out</b></a>
                         </li> <?php } ?>
                     </ul>
                 </li>
