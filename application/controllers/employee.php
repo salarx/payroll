@@ -71,6 +71,9 @@ class Employee extends CI_Controller {
         $data['employee_address'] = $this->input->post('address',true);
         $data['employee_email'] = $this->input->post('email',true);
         $data['emp_password'] = hash("SHA512",$this->input->post('password',true));
+        $data['balance_1'] = 0;
+        $data['balance_2'] = 0;
+        $data['balance_3'] = 0;
         $options = [
             'cost' => 11,
         ];

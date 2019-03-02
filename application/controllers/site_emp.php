@@ -17,7 +17,16 @@ class Site_emp extends CI_Controller {
     }
 
     public function logout(){
-        
+
+        $this->session->unset_userdata('flag');
+        $this->session->unset_userdata('username');
+        $data['message'] = 'You are successfully logged out';
+        $this->session->set_userdata($data);
+        redirect('authentication_login/emp_login',"refresh");
+    }
+
+    public function index(){
+
         $data = array();
         $data['title'] = "Home";
         $data['heading'] = "Main Menu";
@@ -26,7 +35,7 @@ class Site_emp extends CI_Controller {
     }
 
     public function salary(){
-if($this->session->userdata('category')==3){
+
         $data = array();
         $data["title"] = "Salary";
         $data["heading"] = "Salary Details";
@@ -42,7 +51,7 @@ if($this->session->userdata('category')==3){
         $data["links"] = $this->pagination->create_links();
 
         $data["content"] = $this->load->view('salary',$data,true);
-        $this->load->view('master',$data);}
+        $this->load->view('master',$data);
     }
 
     public function settings(){
