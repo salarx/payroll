@@ -2,6 +2,7 @@
     <div class="col-lg-12">
         <section class="panel">
             <div class="panel-body">
+              <a href = "<?php echo base_url(); ?>transaction_msme/add_transaction">Add</a>
                 <table class="table table-responsive table-striped table-advance table-hover">
                     <thead>
                         <tr>
