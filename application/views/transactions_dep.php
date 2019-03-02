@@ -28,6 +28,7 @@
                   </tbody>
                 <?php } ?>
                 </table>
+                The current account balance is : <?php echo $balance; ?>
             </div>
         </section>
         <div class="text-center"><p><?php echo $links; ?></p></div>

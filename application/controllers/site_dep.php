@@ -66,6 +66,9 @@ class Site_dep extends CI_Controller {
 
         $data["results"] = $this->transaction_dep_model->fetch_transaction($data["per_page"], $page);
         $data["links"] = $this->pagination->create_links();
+        $query = $this->db->get_where('departments',array('dep_id'=>$this->session->userdata('flag')));
+        $account_balance = $query->row()->bank_balance;
+        $data['balance'] = $account_balance;
 
         $data["content"] = $this->load->view('transactions_dep',$data,true);
         $this->load->view('master',$data);
