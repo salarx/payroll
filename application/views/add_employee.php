@@ -12,31 +12,14 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="department" class="control-label col-lg-2">Department</label>
+                            <label for="msme" class="control-label col-lg-2">MSME</label>
                             <div class="col-lg-10">
-                                <select class="form-control" name="department">
-                                        <option value="1">Production</option>
-                                        <option value="2" >Research and Development</option>
-                                        <option value="3">Marketing</option>
-                                        <option value="4">Purchasing</option>
-                                        <option value="5">Human Resource Management</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="designation" class="control-label col-lg-2">Designation</label>
-                            <div class="col-lg-10">
-                                <select class="form-control" name="designation">
-                                        <option value="1">Business Analyst</option>
-                                        <option value="2" >Software Engineer</option>
-                                        <option value="3">System Analyst</option>
-                                        <option value="4">Programmer Analyst</option>
-                                        <option value="5">Senior Software Engineer</option>
-                                        <option value="6">Project Lead</option>
-                                        <option value="7">Project Manager</option>
-                                        <option value="8">Program Manager</option>
-                                        <option value="9">Architect</option>
-                                        <option value="10">Technical Specialist</option>
+                                <select class="form-control" name="msme">
+                                        <option value="1">MSME1</option>
+                                        <option value="2">MSME2</option>
+                                        <option value="3">MSME3</option>
+                                        <option value="4">MSME4</option>
+                                        <option value="5">MSME5</option>
                                 </select>
                             </div>
                         </div>
@@ -44,12 +27,6 @@
                             <label for="phone" class="control-label col-lg-2">Phone *</label>
                             <div class="col-lg-10">
                                 <input class="form-control" name="phone" maxlength="10" type="text" required/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="address" class="control-label col-lg-2">Address</label>
-                            <div class="col-lg-10">
-                                <textarea class="form-control" name="address"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -62,26 +39,6 @@
                             <label for="password" class="control-label col-lg-2">Password</label>
                             <div class="col-lg-10">
                                 <input class="form-control" type="password" name="password"></input>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="type" class="control-label col-lg-2">Payment Type</label>
-                            <div class="col-lg-10">
-                                <select class="form-control" name="type">
-                                        <option value="1">Hourly</option>
-                                        <option value="2" >Contractual</option>
-                                        <option value="3">Daily</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="status" class="control-label col-lg-2">Payment Status</label>
-                            <div class="col-lg-10">
-                                <select class="form-control" name="status">
-                                    <option value="1">Permanent</option>
-                                    <option value="2">Temporary</option>
-                                    <option value="3">Probation</option>
-                                </select>
                             </div>
                         </div>
                         <div class="form-group">
