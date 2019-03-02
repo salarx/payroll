@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 02, 2019 at 07:40 PM
+-- Generation Time: Mar 02, 2019 at 09:28 PM
 -- Server version: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -47,33 +47,11 @@ INSERT INTO `admin` (`admin_id`, `admin_username`, `admin_password`, `admin_salt
 -- --------------------------------------------------------
 
 --
--- Table structure for table `department`
---
-
-DROP TABLE IF EXISTS `department`;
-CREATE TABLE IF NOT EXISTS `department` (
-  `type_id` int(1) NOT NULL,
-  `type_name` varchar(20) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `department`
---
-
-INSERT INTO `department` (`type_id`, `type_name`) VALUES
-(1, 'PF'),
-(2, 'Pension'),
-(3, 'Salary');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `employee`
 --
 
 DROP TABLE IF EXISTS `employee`;
 CREATE TABLE IF NOT EXISTS `employee` (
-  `employee_id` int(11) NOT NULL AUTO_INCREMENT,
   `employee_name` varchar(30) NOT NULL,
   `employee_phone` varchar(12) NOT NULL,
   `emp_password` varchar(128) DEFAULT NULL,
@@ -84,8 +62,16 @@ CREATE TABLE IF NOT EXISTS `employee` (
   `balance_3` int(11) NOT NULL,
   `basic_salary` int(11) NOT NULL,
   `employee_msme` int(4) NOT NULL,
-  PRIMARY KEY (`employee_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=utf8;
+  `emp_id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`emp_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5003 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `employee`
+--
+
+INSERT INTO `employee` (`employee_name`, `employee_phone`, `emp_password`, `emp_salt`, `employee_email`, `balance_1`, `balance_2`, `balance_3`, `basic_salary`, `employee_msme`, `emp_id`) VALUES
+('Manav Goyal', '8449392445', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$MvPatlvdEKkxbPxp5IW/TOtKnK0u0XGXTCzb0LOxkpIfzNDva5rZ.', '2017138@iiitdmj.ac.in', 0, 0, 0, 2000, 1, 5002);
 
 -- --------------------------------------------------------
 
@@ -99,7 +85,6 @@ CREATE TABLE IF NOT EXISTS `msme` (
   `msme_name` text NOT NULL,
   `password` varchar(128) DEFAULT NULL,
   `msme_salt` varchar(60) NOT NULL,
-  `bank_balance` int(11) NOT NULL,
   PRIMARY KEY (`msme_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -107,12 +92,12 @@ CREATE TABLE IF NOT EXISTS `msme` (
 -- Dumping data for table `msme`
 --
 
-INSERT INTO `msme` (`msme_id`, `msme_name`, `password`, `msme_salt`, `bank_balance`) VALUES
-(1, 'Production', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$PNZM1BgRbNRHQuOhloeYku49Bl1auOuY47y2IOs2sv9UFGUyjgRMC', 1000),
-(2, 'Research and Development', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$EgX1KfMdkC574CvzhXIyi.K7tyUWQnvypYTsCpxSOEDLqjGtrdmX2', 0),
-(3, 'Marketing', 'cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e', '$2y$11$VznRZIF.wL4wPeuVGQvRA.U3O2XbU3/IAJgDb/N.sud3Mjx5NYpJW', 0),
-(4, 'Purchasing', 'cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e', '$2y$11$Zl5MwEjsyEjHGFNSn2vCEunoqWcD8k4YAojRzmrMAk.POtSZT85z.', 0),
-(5, 'Human Resource', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$UNkGVKILmNjXkacgM/L3be7uEtfK59p1Y7r1rWKRgXutk.d0E.6xy', 0);
+INSERT INTO `msme` (`msme_id`, `msme_name`, `password`, `msme_salt`) VALUES
+(1, 'MSME1', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$PNZM1BgRbNRHQuOhloeYku49Bl1auOuY47y2IOs2sv9UFGUyjgRMC'),
+(2, 'MSME2', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$EgX1KfMdkC574CvzhXIyi.K7tyUWQnvypYTsCpxSOEDLqjGtrdmX2'),
+(3, 'MSME3', 'cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e', '$2y$11$VznRZIF.wL4wPeuVGQvRA.U3O2XbU3/IAJgDb/N.sud3Mjx5NYpJW'),
+(4, 'MSME4', 'cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e', '$2y$11$Zl5MwEjsyEjHGFNSn2vCEunoqWcD8k4YAojRzmrMAk.POtSZT85z.'),
+(5, 'MSME5', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$UNkGVKILmNjXkacgM/L3be7uEtfK59p1Y7r1rWKRgXutk.d0E.6xy');
 
 -- --------------------------------------------------------
 
