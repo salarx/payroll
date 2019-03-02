@@ -12,7 +12,7 @@ class Transaction_admin_model extends CI_Model{
         $this->db->limit($limit, $start);
         $this->db->join('admin', 'admin.admin_id = admin_department_transactions.from_admin');
         $this->db->join('departments', 'departments.dep_id = admin_department_transactions.to_dep');
-        $query = $this->db->get("admin_department_transactions");
+        $query = $this->db->get_where("admin_department_transactions",array('admin_id'=>$this->session->userdata('flag')));
 
         if ($query->num_rows() > 0) {
 
