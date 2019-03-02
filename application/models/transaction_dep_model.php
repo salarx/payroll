@@ -12,7 +12,7 @@ class Transaction_dep_model extends CI_Model{
         $this->db->limit($limit, $start);
         $this->db->join('departments', 'departments.dep_id = department_employee_transactions.from_dep');
         $this->db->join('employee', 'employee.employee_id = department_employee_transactions.to_emp');
-        $query = $this->db->get("department_employee_transactions");
+        $query = $this->db->get_where('department_employee_transactions',array('from_dep'=>$this->session->useradata('flag')));
 
         if ($query->num_rows() > 0) {
 
