@@ -17,7 +17,7 @@
                         <td>Amount: <?php echo $result->amount; ?></td>
                     </tr>
                     <tr>
-                        <td>Date: <?php echo $result->date; ?></td>
+                        <td>Date and Time: <?php echo $result->date; ?></td>
                     </tr>
                 </table>
             </div>

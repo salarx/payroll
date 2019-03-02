@@ -3,10 +3,9 @@
 </head>
 <body>
 <div class="row">
-    <div class="col-lg-5">
+    <div class="col-lg-3.5">
         <section class="panel">
             <div class="container">
-
                     <table class="table table-responsive table-bordered table-striped table-advance table-hover">
                     <thead>
                         <tr class="table-warning" style="font-size:14px">
