@@ -12,11 +12,11 @@
                         <tr class="table-warning" style="font-size:14px">
                             <th><i class="icon_profile"></i> Admin</th>
                             <th><i class="icon_balance"></i> Amount</th>
-
                             <th><i class="icon_bag"></i> Department Name</th>
                             <th><i class="icon_clipboard"></i> Action</th>
                         </tr>
                     </thead>
+                    <?php if(is_array($results)){ ?>
                     <tbody>
                     <?php foreach($results as $list){ ?>
                         <tr>
@@ -30,8 +30,10 @@
                             </td>
                         </tr>
                     <?php } ?>
+                  </tbody>
+                <?php } ?>
                 </table>
-
+                The current account balance is : <?php echo $balance; ?>
             </div>
         </section>
         <div class="text-center"><p><?php echo $links; ?></p></div>
