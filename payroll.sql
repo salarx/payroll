@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 01, 2019 at 12:28 PM
--- Server version: 5.7.24
--- PHP Version: 7.2.14
+-- Generation Time: Mar 02, 2019 at 11:38 AM
+-- Server version: 5.7.21
+-- PHP Version: 5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -39,7 +39,9 @@ CREATE TABLE IF NOT EXISTS `account_types` (
 --
 
 INSERT INTO `account_types` (`type_id`, `type_name`) VALUES
-(1, 'Salary');
+(1, 'PF'),
+(2, 'Pension'),
+(3, 'Salary');
 
 -- --------------------------------------------------------
 
@@ -55,15 +57,20 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `admin_salt` varchar(60) NOT NULL,
   `bank_balance` int(11) NOT NULL,
   PRIMARY KEY (`admin_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`admin_id`, `admin_username`, `admin_password`, `admin_salt`, `bank_balance`) VALUES
-(1, 'admin', 'c7ad44cbad762a5da0a452f9e854fdc1e0e7a52a38015f23f3eab1d80b931dd472634dfac71cd34ebc35d16ab7fb8a90c81f975113d6c7538dc69dd8de9077ec', '$2y$11$72pLW2ECNjPQOMTGXV1v/.vQ0e8Ln8VgIruW3wn59j81.dHjWQ/T.', 100000),
-(2, 'merababy', '05ec7b787a9ec3560b31d701a0b425b86f283983b17da63065284c0bfdca3a84311ca6f14641a693e046d20fe454c92ef3a8edc9e887757399c7347175cdd713', '$2y$11$DEdhgv1NltvvyttHWRWGFu66CW0fe0vi/one2LYDhhY396laZDiS6', 0);
+(1, 'admin', 'c7ad44cbad762a5da0a452f9e854fdc1e0e7a52a38015f23f3eab1d80b931dd472634dfac71cd34ebc35d16ab7fb8a90c81f975113d6c7538dc69dd8de9077ec', '$2y$11$inIkikGsZ.kucjbYtXN5qef4w0CkSfEPHNQ1GXZHhX3qxIwvcC2Ji', 80000),
+(2, 'merababy', '05ec7b787a9ec3560b31d701a0b425b86f283983b17da63065284c0bfdca3a84311ca6f14641a693e046d20fe454c92ef3a8edc9e887757399c7347175cdd713', '$2y$11$DEdhgv1NltvvyttHWRWGFu66CW0fe0vi/one2LYDhhY396laZDiS6', 0),
+(3, 'kartik.laad', '838ea72b938c20fdf6a7f970d9c22f864ee2621ed4eee7aae66c470b9fb2311f96cce01088ae86267422b776ed1e2bb67904837e703433a18fb21abca52e264e', '$2y$11$ke9A4RB.JInUanMjqumYa.8vYG/QHF2MEUyjAQT7yNZpPCr.gsH6a', -95500),
+(4, 'aman', '813db7fa66134df5295d98c5abbf90ff7206d68f3372a25138ee9c2bbb4c96d22f978ffd3da550f8dc38a15e106bec5266f91bc8447241b79e4ae0ce9fb8ff88', '$2y$11$MKD51S2y/AiQ.MNSIqq7Fu27JjnHmRPZb9SvxwnF4BYETTasUH4fK', 100000000),
+(5, 'kartik.laad', '740879064bb7029fb66d7f22533ebf9b73f66b8c5a86e90088b390287ee5e5daa153242eaf5cccf6b9de38eb9f817dfc55321bef8c99134e34f1d3b5485c6faf', '$2y$11$ocdgoDLNKu4v9BRzh1dZ2.R8XfTSlJ9Y/0N4fT0DcJFTACGzuvJyS', 500000),
+(6, 'kartik.laad', '838ea72b938c20fdf6a7f970d9c22f864ee2621ed4eee7aae66c470b9fb2311f96cce01088ae86267422b776ed1e2bb67904837e703433a18fb21abca52e264e', '$2y$11$sZDzifXtmbNbD2iJJWdxZ..Ihvvlbxgs4GBifaih9yIM7p3HYaM66', 500000),
+(7, 'kartik.laad', '740879064bb7029fb66d7f22533ebf9b73f66b8c5a86e90088b390287ee5e5daa153242eaf5cccf6b9de38eb9f817dfc55321bef8c99134e34f1d3b5485c6faf', '$2y$11$3zJohfA6zszc9hYcRBrSl.I.vr44F1SSrGOlJ8MHK35fbkR2oGv9y', 500000);
 
 -- --------------------------------------------------------
 
@@ -80,7 +87,22 @@ CREATE TABLE IF NOT EXISTS `admin_department_transactions` (
   PRIMARY KEY (`transaction_id`),
   KEY `from_admin` (`from_admin`),
   KEY `to_dep` (`to_dep`)
-) ENGINE=MyISAM AUTO_INCREMENT=1012 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=1021 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin_department_transactions`
+--
+
+INSERT INTO `admin_department_transactions` (`from_admin`, `to_dep`, `amount`, `transaction_id`) VALUES
+(1, 1, 5000, 1012),
+(1, 3, 5000, 1013),
+(1, 1, 10000, 1014),
+(3, 3, 500, 1015),
+(3, 3, 600000, 1016),
+(3, 3, -5000, 1017),
+(2, 2, 5000, 1018),
+(2, 2, 2000, 1019),
+(2, 2, 2000, 1020);
 
 -- --------------------------------------------------------
 
@@ -105,11 +127,11 @@ CREATE TABLE IF NOT EXISTS `departments` (
 --
 
 INSERT INTO `departments` (`dep_id`, `dep_name`, `password`, `dep_salt`, `emp_id`, `bank_balance`) VALUES
-(1, 'Production', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$27yhrM05NDQnO1TdDZcY2OAw7StvLytOOrhh0358wPjEIwHFRfU02', 102, 0),
-(2, 'Research and Development', '', '', 103, 0),
-(3, 'Marketing', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$zvDcukZH7pPgME0u0fDmreNJIExSasdMCwmwT2ds2TbUR66/S56Lu', 104, 0),
+(1, 'Production', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$PNZM1BgRbNRHQuOhloeYku49Bl1auOuY47y2IOs2sv9UFGUyjgRMC', 107, 15000),
+(2, 'Research and Development', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$EgX1KfMdkC574CvzhXIyi.K7tyUWQnvypYTsCpxSOEDLqjGtrdmX2', NULL, -3000),
+(3, 'Marketing', 'cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e', '$2y$11$VznRZIF.wL4wPeuVGQvRA.U3O2XbU3/IAJgDb/N.sud3Mjx5NYpJW', NULL, 606500),
 (4, 'Purchasing', 'cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e', '$2y$11$Zl5MwEjsyEjHGFNSn2vCEunoqWcD8k4YAojRzmrMAk.POtSZT85z.', NULL, 0),
-(5, 'Human Resource Management', NULL, '', NULL, 0);
+(5, 'Human Resource', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$UNkGVKILmNjXkacgM/L3be7uEtfK59p1Y7r1rWKRgXutk.d0E.6xy', 109, -2000);
 
 -- --------------------------------------------------------
 
@@ -128,7 +150,17 @@ CREATE TABLE IF NOT EXISTS `department_employee_transactions` (
   KEY `account_type` (`account_type`),
   KEY `from_dep` (`from_dep`),
   KEY `to_emp` (`to_emp`)
-) ENGINE=MyISAM AUTO_INCREMENT=5002 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5008 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `department_employee_transactions`
+--
+
+INSERT INTO `department_employee_transactions` (`from_dep`, `to_emp`, `amount`, `account_type`, `transaction_id`) VALUES
+(3, 104, 2000, 2, 5004),
+(2, 103, 1000, 1, 5005),
+(2, 103, 2000, 3, 5006),
+(5, 109, 2000, 1, 5007);
 
 -- --------------------------------------------------------
 
@@ -186,18 +218,15 @@ CREATE TABLE IF NOT EXISTS `employee` (
   KEY `payment_id` (`payment_id`),
   KEY `employee_department` (`employee_department`),
   KEY `employee_designation` (`employee_designation`)
-) ENGINE=InnoDB AUTO_INCREMENT=107 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `employee`
 --
 
 INSERT INTO `employee` (`employee_id`, `payment_id`, `status_id`, `employee_name`, `employee_department`, `employee_designation`, `employee_phone`, `employee_address`, `emp_password`, `emp_salt`, `employee_email`, `balance_1`, `balance_2`, `balance_3`) VALUES
-(102, 1, 1, 'Manav Goyal', 1, 1, '+91-84493924', 'sfb', 'asd123', '', NULL, 0, 0, 0),
-(103, 1, 1, 'Sahil Kumar', 2, 1, '+91-94670173', 'PDPM IIITDMJ', 'sahil', '', 'salarx.gm@gmail.com', 0, 0, 0),
-(104, 1, 1, 'Harshit', 3, 1, '9694445402', 'PDPM IIITDMJ', '', '', '2017222@iiitdmj.ac.in', 0, 0, 0),
-(105, 2, 1, 'Aman', 5, 8, 'number', 'A201', 'ffe55fac4119143ad22e3f4927211f82b65e7609fc90960ba6ba526723c1b7fd38d2348706cd4f7845e155c59e1184c2cef228afaadd7c9029d0760d14475cde', '$2y$11$M4jVz6qWU45lmPnoVGUIL.gYb8nxeFexQWjXvcxvfIYYwBb2fP17.', 'singhal.com', 0, 0, 0),
-(106, 1, 1, 'Kartik', 2, 6, '9897654907', 'PDPM', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$D0whJ0YDUKQ8a3t8hCybKOGgnk7rXsdeu9tdj98zPwPYUWF7Gzxc6', '2017120@iiitdmj.ac.in', 0, 0, 0);
+(107, 1, 1, 'Palak', 1, 1, '9897453456', 'PDPM', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$/blQxXumRInrFxYPiDZf6.7o.29ETJi23wzK/ScrN9R.WDusXf0VW', 'PALAK@gmail.com', 0, 0, 0),
+(109, 2, 3, 'Aman Singhal', 5, 8, '9068868054', 'A201', '85908fadb11ce2e59035db5e8eb90d930ad07f0ff86013c6799c862d9638b2ec3434066a19a331b718c7b19927d3f4f71e12a358131864f42ac51936435e474f', '$2y$11$.uLtA1bU/KNCgNA808bwzeXwL5JRDHxisOTX5bO5BHS0pH3fHO3d6', 'singhal.aman9@gmail.com', 2000, 0, 0);
 
 -- --------------------------------------------------------
 
