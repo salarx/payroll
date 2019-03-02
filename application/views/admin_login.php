@@ -29,16 +29,6 @@
 						 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 					Home<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-						 &nbsp &nbsp &nbsp &nbsp &nbsp
-					Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-					   &nbsp &nbsp &nbsp &nbsp &nbsp
-					About</a>
-      </li>
 		<li>
 		</li>
     </ul>
