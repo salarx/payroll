@@ -19,27 +19,29 @@
           </button>
 
 
-    <div class="collapse navbar-collapse" id="navbarColor01">
-    <b>
-      <ul class="navbar-nav mr-auto nav-pills" style="font-size: 17px">
-        <li class="nav-item active">
+          <div class="collapse navbar-collapse" id="navbarColor01">
+		<b>
+    <ul class="navbar-nav mr-auto nav-pills" style="font-size: 17px">
+      <li class="nav-item active" >
         <a class="nav-link" href="<?php echo base_url(); ?>">
-          &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-          <b>Home</b><span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            &nbsp &nbsp &nbsp &nbsp &nbsp
-            <b>Features</b></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            &nbsp &nbsp &nbsp &nbsp &nbsp
-            <b>About</b></a>
-        </li>
-      </ul>
-      </b>
-    </div>
+						 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+						 &nbsp &nbsp &nbsp &nbsp &nbsp
+					Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+					   &nbsp &nbsp &nbsp &nbsp &nbsp
+					About</a>
+      </li>
+		<li>
+		</li>
+    </ul>
+	</b>
+  </div>
   </nav>
   <br> <br> <br> <br>
 
@@ -93,8 +95,7 @@
                     <br>
                 </div>
               </div>
-            </form>
-</div>
+            </form></div>
 <br><br><br><br>
         <hr class="my-4">
 

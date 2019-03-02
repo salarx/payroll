@@ -8,39 +8,44 @@
                 <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
 
 
-    </head>
+
+                </head>
     <body>
-      <div class="container-fluid">
+        <div class="container-fluid">
 
-      <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D; padding:17px; font-size: 17px">
+        <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D">
 
-        <a class="navbar-brand" href="<?php echo base_url(); ?>" style="color: #FFC70D"><b>6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b> </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        	<a class="navbar-brand" href="<?php echo base_url(); ?>" style="color: #FFC70D"><b>6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
 
-  <div class="collapse navbar-collapse" id="navbarColor01">
-    <ul class="navbar-nav mr-auto" >
-      <li class="nav-item active">
-      <a class="nav-link" href="<?php echo base_url(); ?>">
-        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-        <b>Home</b><span class="sr-only">(current)</span></a>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+		<b>
+    <ul class="navbar-nav mr-auto nav-pills" style="font-size: 17px">
+      <li class="nav-item active" >
+        <a class="nav-link" href="<?php echo base_url(); ?>">
+						 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
-          &nbsp &nbsp &nbsp &nbsp &nbsp
-          <b>Features</b></a>
+						 &nbsp &nbsp &nbsp &nbsp &nbsp
+					Features</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
-          &nbsp &nbsp &nbsp &nbsp &nbsp
-          <b>About</b></a>
+					   &nbsp &nbsp &nbsp &nbsp &nbsp
+					About</a>
       </li>
+		<li>
+		</li>
     </ul>
+	</b>
   </div>
-</nav>
-<br><br><br><br>
+  </nav>
+  <br> <br> <br> <br>
             <div class="container">
             <form class="login-form" action="<?php echo base_url(); ?>authentication_login/admin_authentication.html" method="post">
                 <div class="login-wrap">
