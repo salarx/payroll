@@ -35,7 +35,7 @@
     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
         <a href="<?php echo  base_url(); ?>site/transactions.html" >
           <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
-            <i class="icon_clipboard"></i> 
+            <i class="icon_clipboard"></i>
             <h4 class="card-title">TRANSACTIONS</h4>
             <p class="card-text">Manage Transaction</p><!--/.info-box-->
       </div><!--/.info-box-->
