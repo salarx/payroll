@@ -12,7 +12,6 @@
                         <tr class="table-warning" style="font-size:14px">
                             <th><i class="icon_profile"></i> Admin</th>
                             <th><i class="icon_balance"></i> Amount</th>
-
                             <th><i class="icon_bag"></i> Department Name</th>
                             <th><i class="icon_clipboard"></i> Action</th>
                         </tr>

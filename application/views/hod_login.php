@@ -73,7 +73,7 @@
                     }
                     ?>
                       <div class="jumbotron">
-                    <div class="input-group form-inline">
+                    <div class="input-group ">
                         <span class="input-group-addon"><i class="icon_profile"></i></span>
                         <label class="col-lg-6"> </label>
                         <label class="mr-sm-2 col-lg-2" style="font-size:18px" align="right"><b>Username</b></label>

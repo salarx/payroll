@@ -9,8 +9,7 @@
             </div><!--/.info-box-->
         </a>
     </div><!--/.col-->
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-        <a href="<?php echo  base_url(); ?>site/department.html">
+         <a href="<?php echo  base_url(); ?>site/department.html">
             <div class="info-box blue-bg">
                 <div class="count">HOD</div>
                 <div class="title">Manage HOD</div>
