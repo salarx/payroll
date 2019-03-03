@@ -11,7 +11,7 @@
         <a href="<?php echo  base_url(); ?>site_emp/transactions.html" >
           <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
             <i class="icon_clipboard"></i>
-          <center>  <h4 class="card-title">TRANSACTIONS</h4>
+          <center>  <h4 class="card-title">Bank Balance</h4>
             <p class="card-text">Manage Transaction</p></center><!--/.info-box-->
       </div><!--/.info-box-->
         </a>
