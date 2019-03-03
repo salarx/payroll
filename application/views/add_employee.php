@@ -48,6 +48,7 @@
                                 <button class="btn btn-primary" type="submit">Add</button>
                             </div>
                         </div>
+                        <a class="" href="<?php echo base_url(); ?>employee/fetch_employee_with_null.html">Click here to fetch unlisted Employees</a>
                     </form>
                 </div>
             </div>
