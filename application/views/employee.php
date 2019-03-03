@@ -5,14 +5,7 @@
 <br><br>
 <?php $category=$this->session->userdata('category'); ?>
 <div class="container">
-<div class="row">
-  <label class="col-lg-4"></label>
-    <div class="column">
-              <div class="panel-body">
-        <center>   <a href="<?php echo base_url(); ?>employee/add_employee/" ><button type="button" class=" btn btn-warning btn-lg">+</button></a>
-   <b>  ADD EMPLOYEE</b>      </center></div>
-<br><br> </div>
-</div>
+
 <br>
 <div class="row">
   <div class="column col-lg-4"></div>
