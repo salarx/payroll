@@ -9,7 +9,7 @@ class Site_msme extends CI_Controller {
         parent::__construct();
         $flag = $this->session->userdata('flag');
         if($flag == NULL){
-            redirect('authentication_login/hod_login','refresh');
+            redirect('authentication_login/msme_login','refresh');
         }
     }
 
