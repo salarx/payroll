@@ -9,7 +9,7 @@ class Employee_model extends CI_Model{
 
     function login($username, $password){
 
-        $query = $this->db->get_where('employee',array('employee_id' => $username));
+        $query = $this->db->get_where('employee',array('emp_id' => $username));
         $result = $query->row();
         $emp_password = $result->emp_password;
         $salt = $result->emp_salt;

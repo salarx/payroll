@@ -5,12 +5,7 @@
                 <div class="form">
                     <?php if($this->session->userdata('category') == 2) { ?>
                     <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url(); ?>transaction_msme/add_transaction_commit.html"><?php } ?>
-                        <div class="form-group">
-                            <label for="amount" class="control-label col-lg-2">Amount *</label>
-                            <div class="col-lg-10">
-                                <input class="form-control" name="amount" type="number" min="1" required/>
-                            </div>
-                        </div>
+                        Amount : <?php echo $amount; ?>
                         <?php if($this->session->userdata('category') == 2) { ?>
                         <div class="form-group">
                             <label for="password" class="control-label col-lg-2">Password *</label>

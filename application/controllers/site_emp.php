@@ -35,25 +35,13 @@ class Site_emp extends CI_Controller {
     }
 
     public function transactions(){
-
-        $data = array();
-        $data["title"] = "Salary";
-        $data["heading"] = "Salary Details";
-        $data["base_url"] = base_url() . "site_emp/transactions";
-        $data["per_page"] = 20;
-        $data["uri_segment"] = 3;
-
-        $this->pagination->initialize($data);
-        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
-
-        $data["results"] = $this->transaction_emp_model->fetch_transaction($data["per_page"], $page);
-        $data["links"] = $this->pagination->create_links();
-        $query = $this->db->get_where('employee',array('employee_id'=>$this->session->userdata('flag')));
-        $data['balance_1'] = $query->row()->balance_1;
-        $data['balance_2'] = $query->row()->balance_2;
-        $data['balance_3'] = $query->row()->balance_3;
-        $data["content"] = $this->load->view('transactions_emp',$data,true);
-        $this->load->view('master',$data);
+              $data = array();
+              $data['title'] = "Account Details";
+              $data['heading'] = "Employee Account Details";
+              $query = $this->db->get_where('employee',array('emp_id'=>$this->session->userdata('flag')));
+              $data['result']  = $query->row();
+              $data['content'] = $this->load->view('slip',$data,true);
+              $this->load->view('master',$data);
     }
 
     public function settings(){

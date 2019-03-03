@@ -13,6 +13,16 @@ class Transaction_msme extends CI_Controller {
         $data = array();
         $data['title'] = "Add Transaction";
         $data['heading'] = "Add Transaction Details";
+        $msme_id = $this->session->userdata('flag');
+        $query = $this->db->get_where("employee",array("employee_msme"=>$msme_id));
+        $amount = 0;
+        foreach ($query->result() as $row){
+              $x=$row->basic_salary;
+              $y=0.88*$x;
+              $z=98.25*$y;
+              $amount = $amount + 0.1567*$x + 0.0833*$x + 0.065*$y;
+        }
+        $data['amount'] = $amount;
         $data['content'] = $this->load->view('add_transaction',$data,true);
         $this->load->view('master',$data);
     }
