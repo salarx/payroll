@@ -11,7 +11,7 @@
         <section class="panel">
             <div class="panel-body">
               <a href = "<?php echo base_url(); ?>transaction_msme/add_transaction"align="right"><button type="button" class=" btn btn-warning btn-lg">+</button></a>
-                <b>  ADD MSME</b> <br><br><br> <table class="table table-responsive text-center table-bordered table-striped table-advance table-hover">
+                <b>  Add Transaction</b> <br><br><br> <table class="table table-responsive text-center table-bordered table-striped table-advance table-hover">
                   <br><br>  <thead>
                         <tr>
                             <th><i class="icon_profile"></i><b> MSME</b></th>

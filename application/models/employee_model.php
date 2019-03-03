@@ -32,7 +32,7 @@ class Employee_model extends CI_Model{
 
         $this->db->limit($limit, $start);
 
-        $this->db->join('msme', 'employee.employee_msme = msme.msme_id');
+        $this->db->join('msme', 'employee.employee_msme = msme.msme_id','left');
         $query = $this->db->get("employee");
 
         if ($query->num_rows() > 0) {

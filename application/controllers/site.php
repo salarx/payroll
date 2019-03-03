@@ -38,7 +38,7 @@ class Site extends CI_Controller {
         $data["title"] = "Employee";
         $data["heading"] = "Employee Details";
         $data["base_url"] = base_url() . "site/employee";
-        $data["per_page"] = 10;
+        $data["per_page"] = 20;
         $data["uri_segment"] = 3;
 
         $this->pagination->initialize($data);
