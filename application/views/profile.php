@@ -19,7 +19,7 @@
     <?php if($category==1) { ?>
         <a href="<?php echo  base_url(); ?>site/reset.html"><?php } ?>
         <?php if($category==2) { ?>
-        <a href="<?php echo  base_url(); ?>site_dep/reset.html"><?php } ?>
+        <a href="<?php echo  base_url(); ?>site_msme/reset.html"><?php } ?>
         <?php if($category==3) { ?>
         <a href="<?php echo  base_url(); ?>site_emp/reset.html"><?php } ?>
           <div class="card card-body" style="max-width: 15rem; background: #080076; color: #ffffff; padding: 30px; font-size: 20px">

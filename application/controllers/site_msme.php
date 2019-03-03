@@ -85,7 +85,7 @@ class Site_msme extends CI_Controller {
 
         $data = array();
         $data['title'] = "Reset Password";
-        $data['heading'] = "Reset HOD Password";
+        $data['heading'] = "Reset MSME Password";
         $data['content'] = $this->load->view('reset',$data,true);
         $this->load->view('master',$data);
     }
@@ -98,8 +98,8 @@ class Site_msme extends CI_Controller {
         $options = [
             'cost' => 11,
         ];
-        $data['dep_salt'] = password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
-        $this->department_model->update_dep_by_id($dep_id,$data);
-        redirect('site_dep');
+        $data['msme_salt'] = password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
+        $this->msme_model->update_msme_by_id($msme_id,$data);
+        redirect('site_msme');
     }
 }
