@@ -8,7 +8,7 @@
           <br><br>  <div class="panel-body">
                 <table class="table table-responsive text-center table-striped table-hover table-bordered">
                     <tr>
-                        <td>MSME Name:</td> <td col-span=2"><?php echo $result->msme_name; ?></td>
+                        <td>MSME Name:</td> <td> col-span=2"><?php echo $result->msme_name; ?></td>
                     </tr>
                     <tr>
                         <td>Transaction Id :</td> <td  col-span=2>#<?php echo $result->transaction_id; ?></td>
