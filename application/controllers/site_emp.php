@@ -69,7 +69,7 @@ class Site_emp extends CI_Controller {
 
         $data = array();
         $data['title'] = "Reset Password";
-        $data['heading'] = "Reset HOD Password";
+        $data['heading'] = "Reset MSME Password";
         $data['content'] = $this->load->view('reset',$data,true);
         $this->load->view('master',$data);
     }
