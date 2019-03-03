@@ -75,8 +75,8 @@ class Authentication_login extends CI_Controller {
 
         if($result){
 
-            $data['flag'] = $result->employee_id;
-            $data['username'] = $result->employee_id;
+            $data['flag'] = $result->emp_id;
+            $data['username'] = $result->emp_id;
             $data['category'] = 3;
             $this->session->set_userdata($data);
 
