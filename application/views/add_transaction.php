@@ -29,5 +29,19 @@
             </div>
         </section>
     </div>
+
+
 </div>
+
+<br><br><br><br><br>
+<hr class="my-4">
+
+
+<footer class="page-footer" style="background:  #01013D; color:white; height: 150px; padding:5px">
+  <p><center><br>
+    Contact Us: 1234567890<br>
+    Email: 6kaizens@gmail.com<br>
+    Fax Number: 579412562<br>
+  </center></p>
+</footer>
 </div>

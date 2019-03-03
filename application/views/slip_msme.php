@@ -8,13 +8,13 @@
           <br><br>  <div class="panel-body">
                 <table class="table table-responsive text-center table-striped table-hover table-bordered">
                     <tr>
-                        <td>MSME Name:</td><td><?php echo $result->msme_name; ?></td>
+                        <td>MSME Name:</td> <td col-span=2"><?php echo $result->msme_name; ?></td>
                     </tr>
                     <tr>
-                        <td>Transaction Id :</td> <td>#<?php echo $result->transaction_id; ?></td>
+                        <td>Transaction Id :</td> <td  col-span=2>#<?php echo $result->transaction_id; ?></td>
                     </tr>
                     <tr>
-                        <td>Amount :</td> <td><?php echo $result->amount; ?></td>
+                        <td>Amount :</td> <td col-span=2><?php echo $result->amount; ?></td>
                     </tr>
 
                 </table>
@@ -22,5 +22,18 @@
             <div class="panel-footer"></div>
         </section>
     </div>
+
+
 </div>
+<br><br><br><br><br>
+<hr class="my-4">
+
+
+<footer class="page-footer" style="background:  #01013D; color:white; height: 150px; padding:5px">
+  <p><center><br>
+    Contact Us: 1234567890<br>
+    Email: 6kaizens@gmail.com<br>
+    Fax Number: 579412562<br>
+  </center></p>
+</footer>
 </div>
