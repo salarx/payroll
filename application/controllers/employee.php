@@ -108,4 +108,9 @@ class Employee extends CI_Controller {
           show_error('Password entered is incorrect');
         }
     }
+
+    public function fetch_null-employees(){
+
+
+    }
 }
