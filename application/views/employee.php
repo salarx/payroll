@@ -6,11 +6,12 @@
 <?php $category=$this->session->userdata('category'); ?>
 <div class="container">
 <div class="row">
-    <div class="col-lg-12">
-        <div class="panel-body">
-          <b>  ADD EMPLOYEE</b>  <a href="<?php echo base_url(); ?>employee/add_employee/" align="right"><button type="button" class=" btn btn-warning btn-lg">+</button></a>
-        </div>
-    </div>
+  <label class="col-lg-4"></label>
+    <div class="column">
+              <div class="panel-body">
+        <center>   <a href="<?php echo base_url(); ?>employee/add_employee/" ><button type="button" class=" btn btn-warning btn-lg">+</button></a>
+   <b>  ADD EMPLOYEE</b>      </center></div>
+<br><br> </div>
 </div>
 <br>
 <div class="row">
