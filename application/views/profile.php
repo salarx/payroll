@@ -11,7 +11,7 @@
 
         </a>
     </div> <?php } ?><!--/.col-->
-&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+
     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
     <?php if($category==1) { ?>
         <a href="<?php echo  base_url(); ?>site/reset.html"><?php } ?>
@@ -19,9 +19,11 @@
         <a href="<?php echo  base_url(); ?>site_msme/reset.html"><?php } ?>
         <?php if($category==3) { ?>
         <a href="<?php echo  base_url(); ?>site_emp/reset.html"><?php } ?>
+          <div class="row">
+            <label class="col-lg-3"></label>
           <div class="card card-body" style="max-width: 15rem; background: #080076; color: #ffffff; padding: 30px; font-size: 20px">
                 <i class="fa fa-clipboard"></i>
-                <div class="title"><center>Reset Password</center></div>
+                <div class="title"><center>Reset Password</center></div></div>
             </div><!--/.info-box-->
         </a>
     </div><!--/.col-->
