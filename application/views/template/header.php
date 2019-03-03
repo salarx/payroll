@@ -120,9 +120,10 @@
             <!-- notificatoin dropdown start-->
             <ul class="nav top-menu">
                 <li class="dropdown">
+
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <span class="profile-ava">
-                            <img alt="avatar" src="<?php echo base_url(); ?>img/India.png">
+                     <img alt="avatar" src="<?php echo base_url(); ?>img/India.png">
                         </span>
                         <span class="username"><?php echo $this->session->userdata('username'); ?></span>
                         <b class="caret"></b>
