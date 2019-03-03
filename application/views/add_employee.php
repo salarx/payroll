@@ -20,21 +20,22 @@
                         <div class="form-group">
                             <label for="email" class="control-label col-lg-2">E-mail *</label>
                             <div class="col-lg-10">
-                                <input class="form-control" name="email" required></input>
+                                <input class="form-control" name="email" required type="email"></input>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="salary" class="control-label col-lg-2">Salary</label>
                             <div class="col-lg-10">
-                                <input class="form-control" name="salary" required></input>
+                                <input class="form-control" name="salary" required type="number"></input>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="password" class="control-label col-lg-3">Password (at least 8 or more characters)</label>
+                            <label for="password" class="control-label col-lg-5"><b>Password (A lowercase letter a capital (uppercase) letter and a number. Minimum 8 characters)</b></label>
                             <div class="col-lg-10">
                                 <input class="form-control" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></input>
                             </div>
                         </div>
+
                         <div class="form-group">
                             <div class="col-lg-offset-2 col-lg-10">
                                 <button class="btn btn-primary" type="submit">Add</button>
