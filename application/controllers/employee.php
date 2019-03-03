@@ -110,7 +110,7 @@ class Employee extends CI_Controller {
     }
     public function fetch_employee_with_null(){
       $query = $this->db->get_where('employee',array("employee_msme"=>NULL));
-      $data["result"] = $query->row();
+      $data["results"] = $query->row();
       $data["content"] = $this->load->view('null_employee');
       $this->load->view("master",$data);
     }
