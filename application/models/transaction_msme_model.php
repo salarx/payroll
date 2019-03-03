@@ -29,7 +29,7 @@ class Transaction_msme_model extends CI_Model{
     function fetch_transaction_by_id($transaction_id) {
 
         $this->db->join('msme', 'msme.msme_id = msme_emp_transactions.from_msme');
-        $query = $this->db->get_where('msme_emp_transactions.from_msme',array('transaction_id'=>$transaction_id));
+        $query = $this->db->get_where('msme_emp_transactions',array('transaction_id'=>$transaction_id));
         return $query->row();
     }
 

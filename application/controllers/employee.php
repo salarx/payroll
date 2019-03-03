@@ -56,7 +56,13 @@ class Employee extends CI_Controller {
         $data['employee_phone'] = $this->input->post('phone',true);
         $data['employee_email'] = $this->input->post('email',true);
         $data['emp_password'] = hash("SHA512",$this->input->post('password',true));
-        $data['basic_salary'] = $this->input->post('salary',true);
+        if($this->input->post('salary',true))
+        {
+          $data['basic_salary'] = $this->input->post('salary',true);
+        }
+        else{
+            $data['basic_salary'] = 0;
+        }
         $data['balance_1'] = 0;
         $data['balance_2'] = 0;
         $data['balance_3'] = 0;

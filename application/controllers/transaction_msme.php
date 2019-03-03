@@ -70,7 +70,7 @@ class Transaction_msme extends CI_Controller {
         $data['title'] = "Payment Slip";
         $data['heading'] = "Employee Payment Slip";
         $data['result'] = $this->transaction_msme_model->fetch_transaction_by_id($transaction_id);
-        $data['content'] = $this->load->view('slip',$data,true);
+        $data['content'] = $this->load->view('slip_msme',$data,true);
         $this->load->view('master',$data);
     }
 }
