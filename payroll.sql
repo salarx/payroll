@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 02, 2019 at 09:53 PM
+-- Generation Time: Mar 03, 2019 at 04:53 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.14
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `admin_password` varchar(128) NOT NULL,
   `admin_salt` varchar(60) NOT NULL,
   PRIMARY KEY (`admin_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `admin`
@@ -62,18 +62,19 @@ CREATE TABLE IF NOT EXISTS `employee` (
   `balance_2` int(11) NOT NULL,
   `balance_3` int(11) NOT NULL,
   `basic_salary` int(11) NOT NULL,
-  `employee_msme` int(4) NOT NULL,
+  `employee_msme` int(4) DEFAULT NULL,
   PRIMARY KEY (`emp_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5005 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5006 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `employee`
 --
 
 INSERT INTO `employee` (`emp_id`, `employee_name`, `employee_phone`, `emp_password`, `emp_salt`, `employee_email`, `balance_1`, `balance_2`, `balance_3`, `basic_salary`, `employee_msme`) VALUES
-(5002, 'Manav Goyal', '8449392445', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$MvPatlvdEKkxbPxp5IW/TOtKnK0u0XGXTCzb0LOxkpIfzNDva5rZ.', '2017138@iiitdmj.ac.in', 0, 0, 0, 2000, 1),
-(5003, 'Mohan Pyaare', '1212121212', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$dck0p4n1X1F6uElvRkaFQepia9c1KD1b.adaHcPvLPSZje1NlQJii', 'abc@xyz.com', 0, 0, 0, 0, 1),
-(5004, 'Rohan Bin', '1231245', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$BIHMkHfyDgzLVKMlR30LR.jF2CSbTt70HQXLLTquwn7AG9w6K5GT.', 'xyz@gmail.com', 0, 0, 0, 500, 4);
+(5002, 'Manav Goyal', '8449392445', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$MvPatlvdEKkxbPxp5IW/TOtKnK0u0XGXTCzb0LOxkpIfzNDva5rZ.', '2017138@iiitdmj.ac.in', 0, 0, 0, 2000, NULL),
+(5003, 'Mohan Pyaare', '1212121212', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$dck0p4n1X1F6uElvRkaFQepia9c1KD1b.adaHcPvLPSZje1NlQJii', 'abc@xyz.com', 0, 0, 0, 0, NULL),
+(5004, 'Rohan Bin', '1231245', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$BIHMkHfyDgzLVKMlR30LR.jF2CSbTt70HQXLLTquwn7AG9w6K5GT.', 'xyz@gmail.com', 0, 0, 0, 500, 4),
+(5005, 'Harshit Garg', '1234567890', '81fbf929a6196fae3564d34457b0f2f74345786f9fc3a762039f57e8d47f5f8a612e61a96f33ee165414de36e7ab0d2615667a7636ae5d598b5afb25ce87c0b4', '$2y$11$eKbVYvN61RY241YM/gsiQuAj1B69vXyubukB.VXEgEZAudJfZJ1c2', '1', 784, 417, 286, 5000, 1);
 
 -- --------------------------------------------------------
 
@@ -111,11 +112,18 @@ DROP TABLE IF EXISTS `msme_emp_transactions`;
 CREATE TABLE IF NOT EXISTS `msme_emp_transactions` (
   `from_msme` int(11) NOT NULL,
   `amount` int(11) NOT NULL,
-  `transaction_id` int(11) NOT NULL AUTO_INCREMENT,
   `date` datetime NOT NULL,
+  `transaction_id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`transaction_id`),
   KEY `from_dep` (`from_msme`)
-) ENGINE=MyISAM AUTO_INCREMENT=5008 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5009 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `msme_emp_transactions`
+--
+
+INSERT INTO `msme_emp_transactions` (`from_msme`, `amount`, `date`, `transaction_id`) VALUES
+(1, 1486, '2019-03-03 04:18:52', 5008);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
