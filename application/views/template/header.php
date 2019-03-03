@@ -94,7 +94,7 @@
               </ul>
           	</b>
               
-              <div class="dropdown">  
+              <div class="dropdown ml-auto">  
             
 <button class="btn btn-warning dropdown-toggle" type="button" id="about-us" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 <?php echo $this->session->userdata('username'); ?>&nbsp &nbsp &nbsp &nbsp &nbsp<img alt="avatar" src="<?php echo base_url(); ?>img/India.png">
