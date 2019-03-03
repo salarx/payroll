@@ -6,7 +6,7 @@
     <div class="col-lg-12">
         <section class="panel">
             <div class="panel-body">
-              <h3><center><b><u> ADD MSME</u></b></center></h3><br><br>
+              <h3><center><b><u> ADD &nbsp MSME</u></b></center></h3><br><br>
                 <div class="form">
                     <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url(); ?>msme/add_msme_commit.html">
                         <div class="form-group input-group">
