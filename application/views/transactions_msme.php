@@ -6,6 +6,7 @@
 <?php $category=$this->session->userdata('category'); ?>
 <div class="container">
 <div class="row">
+  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
   <label class="col-lg-4"></label>
     <div class="column">
         <section class="panel">
