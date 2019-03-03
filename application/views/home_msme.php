@@ -5,8 +5,8 @@
 <?php $category=$this->session->userdata('category'); ?>
 <?php if($category==2){ ?>
 <div class="row">
-
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+<label class="col-lg-2"></label>
+    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
         <a href="<?php echo  base_url(); ?>site_msme/employee.html">
         <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
             <i class="icon_id"></i>
@@ -17,7 +17,7 @@
     </div><!--/.col-->
 
 
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
         <a href="<?php echo  base_url(); ?>site_msme/transactions.html" >
           <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
             <i class="icon_clipboard"></i>
@@ -27,17 +27,7 @@
         </a>
     </div><!--/.col-->
 
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <a href="<?php echo  base_url(); ?>site_msme/settings.html">
-                <div class="card card-body" style="max-width: 20rem; background: #080076; color: #ffffff">
-            <i class="icon_cog"></i>
-            <h4 class="card-title">SETTINGS</h4>
-            <p class="card-text">Manage Settings</p><!--/.info-box-->
-      <!--/.info-box-->
-      </div>
-        </a>
 
-    </div><!--/.col-->
 
 
 <?php } ?>

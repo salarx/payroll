@@ -40,7 +40,7 @@ class Site_emp extends CI_Controller {
               $data['heading'] = "Employee Account Details";
               $query = $this->db->get_where('employee',array('emp_id'=>$this->session->userdata('flag')));
               $data['result']  = $query->row();
-              $data['content'] = $this->load->view('slip',$data,true);
+              $data['content'] = $this->load->view('slip_emp',$data,true);
               $this->load->view('master',$data);
     }
 

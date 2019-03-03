@@ -68,7 +68,7 @@ class Site extends CI_Controller {
 
         $data["links"] = $this->pagination->create_links();
 
-        $data["content"] = $this->load->view('hod',$data,true);
+        $data["content"] = $this->load->view('msme',$data,true);
         $this->load->view('master',$data);
     }
 

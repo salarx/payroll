@@ -6,11 +6,12 @@
 <?php $category=$this->session->userdata('category'); ?>
 <div class="container">
 <div class="row">
-    <div class="col-lg-12">
-        <div class="panel-body">
-          <b>  ADD EMPLOYEE</b>  <a href="<?php echo base_url(); ?>employee/add_employee/" align="right"><button type="button" class=" btn btn-warning btn-lg">+</button></a>
-        </div>
-    </div>
+  <label class="col-lg-4"></label>
+    <div class="column">
+              <div class="panel-body">
+        <center>   <a href="<?php echo base_url(); ?>employee/add_employee/" ><button type="button" class=" btn btn-warning btn-lg">+</button></a>
+   <b>  ADD EMPLOYEE</b>      </center></div>
+<br><br> </div>
 </div>
 <br>
 <div class="row">
@@ -23,7 +24,6 @@
                         <tr>
                             <th><i class="icon_profile"></i><b> Full Name</b></th>
                             <th><i class="icon_datareport_alt"></i><b> MSME</b></th>
-                            <th><i class="icon_clipboard"></i> <b>Action</b></th>
                         </tr>
                     </thead>
                     <?php if(is_array($results)){ ?>
@@ -35,8 +35,10 @@
                             </td>
                             <td><?php echo $list->msme_name; ?></td>
                             <td>
+                              <?php if($category==2){ ?>
                                 <a href="<?php echo base_url(); ?>employee/update_employee/<?php echo $list->emp_id; ?>">Edit</a>|
 								                <a href="<?php echo base_url(); ?>employee/delete_employee/<?php echo $list->emp_id; ?>">Delete</a>
+                              <?php } ?>
                             </td>
                         </tr>
                     <?php } ?>

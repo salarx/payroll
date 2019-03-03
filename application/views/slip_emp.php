@@ -5,19 +5,19 @@
             <div class="panel-body">
                 <table class="table">
                     <tr>
-                        <td>Transaction ID: #<?php echo $result->transaction_id; ?></td>
+                        <td>Employee Name:<?php echo $result->employee_name; ?></td>
                     </tr>
                     <tr>
-                        <td>Employee Name: <?php echo $result->dep_name; ?></td>
+                        <td>Pension: <?php echo $result->balance_2; ?></td>
                     </tr>
                     <tr>
-                        <td>Account Type: <?php echo $result->type_name; ?></td>
+                        <td>PF: <?php echo $result->balance_1; ?></td>
                     </tr>
                     <tr>
-                        <td>Amount: <?php echo $result->amount; ?></td>
+                        <td>ESI: <?php echo $result->balance_3; ?></td>
                     </tr>
                     <tr>
-                        <td>Date and Time: <?php echo $result->date; ?></td>
+                        <td>Basic Salary: <?php echo $result->basic_salary; ?></td>
                     </tr>
                 </table>
             </div>
