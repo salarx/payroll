@@ -131,15 +131,15 @@
 
                         <?php if($category==1) { ?>
                         <li>
-                            <a href="<?php echo base_url(); ?>site/logout.html"  style="font-size:17px"><i class="icon_key_alt"></i><b>Log Out</b></a>
+                            <a href="<?php echo base_url(); ?>site/logout.html"  style="font-size:17px"><b><center>Log Out</center></b></a>
                         </li> <?php } ?>
                         <?php if($category==2) { ?>
                         <li>
-                            <a href="<?php echo base_url(); ?>site_msme/logout.html"  style="font-size:17px" ><i class="icon_key_alt"></i><b>Log Out</b></a>
+                            <a href="<?php echo base_url(); ?>site_msme/logout.html"  style="font-size:17px" ><b><center>Log Out</center></b></a>
                         </li> <?php } ?>
                         <?php if($category==3) { ?>
                         <li>
-                            <a href="<?php echo base_url(); ?>site_emp/logout.html" style="font-size:17px"><i class="icon_key_alt"></i><b>Log Out</b></a>
+                            <a href="<?php echo base_url(); ?>site_emp/logout.html" style="font-size:17px"><b><center>Log Out</center></b></a>
                         </li> <?php } ?>
                     </ul>
                 </li>
