@@ -30,9 +30,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="password" class="control-label col-lg-2">Password</label>
+                            <label for="password" class="control-label col-lg-3">Password (at least 8 or more characters)</label>
                             <div class="col-lg-10">
-                                <input class="form-control" type="password" name="password"></input>
+                                <input class="form-control" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></input>
                             </div>
                         </div>
                         <div class="form-group">
