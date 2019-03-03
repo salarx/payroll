@@ -25,7 +25,7 @@
                           <tr>      <td>Pension:</td> <td><?php echo $result->balance_2; ?></td></tr>
                           <tr>      <td>ESI:</td> <td><?php echo $result->balance_3; ?></td></tr>
                           <tr>      <td>MSME:</td> <td><?php echo $result->employee_msme; ?></td></tr>
-
+                            <tr>    <td>Salary:</td> <td><?php echo $result->basic_salary; ?></td></tr>
 
                     </tbody>
                 </table>
