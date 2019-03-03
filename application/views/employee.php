@@ -8,7 +8,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="panel-body">
-              <a href="<?php echo base_url(); ?>employee/add_employee/" align="right"><button type="button" class=" btn btn-warning btn-lg">+</button></a>
+          <b>  ADD EMPLOYEE</b>  <a href="<?php echo base_url(); ?>employee/add_employee/" align="right"><button type="button" class=" btn btn-warning btn-lg">+</button></a>
         </div>
     </div>
 </div>

@@ -1,8 +1,24 @@
+<head>
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
+</head>
+<body>
+<br><br>
+<div class="container ">
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="panel-body">
+            <b>  ADD MSME</b>  <a href="<?php echo base_url(); ?>employee/add_employee/" align="right"><button type="button" class=" btn btn-warning btn-lg">+</button></a>
+          </div>
+      </div>
+  </div>
+  <br>
 <div class="row">
-    <div class="col-lg-12">
+
+        <div class="column col-lg-4"></div>
+          <div class="column">
         <section class="panel">
             <div class="panel-body">
-                <table class="table table-responsive table-striped table-advance table-hover">
+                <table class="table table-responsive table-bordered table-striped text-center table-advance table-hover">
                     <thead>
                         <tr>
                             <th><i class="icon_datareport"></i> MSME Name</th>
@@ -26,3 +42,5 @@
         <div class="text-center"><p><?php echo $links; ?></p></div>
     </div>
 </div>
+</div>
+</body>
