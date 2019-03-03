@@ -20,7 +20,7 @@
                             </td>
                             <td><?php echo $list->amount; ?></td>
                             <td>
-                                <a href="<?php echo base_url(); ?>transaction_dep/slip/<?php echo $list->transaction_id; ?>">View Slip</a>
+                                <a href="<?php echo base_url(); ?>transaction_msme/slip/<?php echo $list->transaction_id; ?>">View Slip</a>
                             </td>
                         </tr>
                     <?php } ?>

@@ -35,20 +35,22 @@ class Transaction_dep_model extends CI_Model{
 
     function save_transaction($data) {
 
-        $this->db->insert('department_employee_transactions', $data);
-        $query = $this->db->get_where('departments',array('dep_id'=>$data['from_dep']));
+        $this->db->insert('msme_emp_transactions', $data);
+
+
+        $query = $this->db->get_where('msme',array('msme_id'=>$data['from_msme']));
         $result=$query->row()->bank_balance;
         $result=$result-$data['amount'];
         if($result <0)
         {
           show_error("Insufficient funds are present in your account");
         }
-        else{
+    
         $this->db->set('bank_balance', $result);
         $this->db->where('dep_id', $data['from_dep']);
         $this->db->update('departments');
 
-        $query = $this->db->get_where('employee',array('employee_id'=>$data['to_emp']));
+        $query = $this->db->get_where('employee',array('employ_id'=>$data['to_emp']));
         if($data['account_type']==1)
         {
            $type='balance_1';
@@ -68,6 +70,24 @@ class Transaction_dep_model extends CI_Model{
         $this->db->set($type, $result);
         $this->db->where('employee_id', $data['to_emp']);
         $this->db->update('employee');
-      }
+
+        $this->db->join('msme', 'employee.employee_msme = msme.msme_id');
+        $query = $this->db->get_where('msme',array('msme_id'=>$data['from_msme']));
+        if ($query->num_rows() > 0) {
+
+            foreach ($query->result() as $row) {
+
+                $data[] = $row;
+                $x=$row->basic_salary;
+                $y=0.88*$x;
+                $z=98.25*$y;
+
+            }
+
+            $data['pf'] = 0.1567*$x;
+            $data['pension'] = 0.0833*$x;
+            $data['esi'] = 0.0175*(.88*$x)+0.0475*(0.88*$x);
+                }
+    
     }
 }

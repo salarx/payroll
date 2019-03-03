@@ -30,25 +30,23 @@ class Transaction_msme extends CI_Controller {
     public function add_transaction_commit(){
 
         $data = array();
-        $dep_id = $this->session->userdata('flag');
-        $data['from_dep'] = $dep_id;
-        $data['to_emp'] = $this->input->post('id',true);
+        $msme_id = $this->session->userdata('flag');
+        $data['from_msme'] = $msme_id;
         $data['amount'] = $this->input->post('amount',true);
-        $data['account_type'] = $this->input->post('account_type',true);
         $data['date'] = date('Y-m-d H:i:s');
         $password = hash("SHA512",$this->input->post('password',true));
-        $query = $this->db->get_where('departments',array('dep_id' => $dep_id));
+        $query = $this->db->get_where('msme',array('msme_id' => $msme_id));
         $result = $query->row();
 
-        $dep_password = $result->password;
-        $salt = $result->dep_salt;
+        $msme_password = $result->password;
+        $salt = $result->msme_salt;
 
         $password .= $salt;
-        $dep_password .= $salt;
+        $msme_password .= $salt;
 
-        if(!strcmp($password,$dep_password)){
-          $this->transaction_dep_model->save_transaction($data);
-          redirect('site_dep/transactions');
+        if(!strcmp($password,$msme_password)){
+          $this->transaction_msme_model->save_transaction($data);
+          redirect('site_msme/transactions');
         }
         else{
           show_error('Password entered is incorrect');
@@ -71,7 +69,7 @@ class Transaction_msme extends CI_Controller {
         $data = array();
         $data['title'] = "Payment Slip";
         $data['heading'] = "Employee Payment Slip";
-        $data['result'] = $this->transaction_dep_model->fetch_transaction_by_id($transaction_id);
+        $data['result'] = $this->transaction_msme_model->fetch_transaction_by_id($transaction_id);
         $data['content'] = $this->load->view('slip',$data,true);
         $this->load->view('master',$data);
     }

@@ -64,7 +64,7 @@ class Site_msme extends CI_Controller {
         $this->pagination->initialize($data);
         $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-        $data["results"] = $this->transaction_dep_model->fetch_transaction($data["per_page"], $page);
+        $data["results"] = $this->transaction_msme_model->fetch_transaction($data["per_page"], $page);
         $data["links"] = $this->pagination->create_links();
         $query = $this->db->get_where('msme',array('msme_id'=>$this->session->userdata('flag')));
         $data["content"] = $this->load->view('transactions_msme',$data,true);
