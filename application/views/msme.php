@@ -22,7 +22,7 @@
                     <thead>
                         <tr>
                             <th><i class="icon_datareport"></i> MSME Name</th>
-                            <th><i class="icon_clipboard"></i> Action</th>
+                            <th><i class="icon_clipboard"></i> MSME ID</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -32,7 +32,7 @@
                               <?php echo $list->msme_name;?>
                             </td>
                             <td>
-                                <a href="<?php echo base_url(); ?>department/update_dep/<?php echo $list->msme_id; ?>">Edit</a>
+                                <?php echo $list->msme_id;?>
                             </td>
                         </tr>
                     <?php } ?>
