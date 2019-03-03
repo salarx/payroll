@@ -14,7 +14,7 @@
                         <div class="form-group">
                             <label for="phone" class="control-label col-lg-2">Phone *</label>
                             <div class="col-lg-10">
-                                <input class="form-control" name="phone" maxlength="10" minlength="10" type="text" required/>
+                                <input class="form-control" name="phone" maxlength="10" type="text" required/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -30,9 +30,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="password" class="control-label col-lg-5"><b>Password (A lowercase letter a capital (uppercase) letter and a number.)</b></label>
+                            <label for="password" class="control-label col-lg-5"><b>Password (A lowercase letter a capital (uppercase) letter and a number. Minimum 8 characters)</b></label>
                             <div class="col-lg-10">
-                                <input class="form-control" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" maxlength="10" required></input>
+                                <input class="form-control" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required></input>
                             </div>
                         </div>
 
