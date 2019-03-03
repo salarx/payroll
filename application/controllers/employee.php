@@ -109,9 +109,21 @@ class Employee extends CI_Controller {
         }
     }
     public function fetch_employee_with_null(){
-      $query = $this->db->get_where('employee',array("employee_msme"=>NULL));
-      $data["results"] = $query->row();
-      $data["content"] = $this->load->view('null_employee');
-      $this->load->view("master",$data);
-    }
+
+        $data = array();
+        $msme_id = $this->session->userdata('flag');
+        $data["title"] = "Employee";
+        $data["heading"] = "Employee Details";
+        $data["base_url"] = base_url() . "employee/fetch_employee_with_null";
+        $data["per_page"] = 20;
+        $data["uri_segment"] = 3;
+
+        $this->pagination->initialize($data);
+        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+        $this->db->where('employee_msme IS NULL',null,false);
+        $q = $this->db->get('employee');
+        $data["results"] = $q->result();
+        $data["content"] = $this->load->view('employee1',$data,true);
+        $this->load->view('master',$data);
+}
 }
