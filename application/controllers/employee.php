@@ -126,4 +126,10 @@ class Employee extends CI_Controller {
         $data["content"] = $this->load->view('employee1',$data,true);
         $this->load->view('master',$data);
 }
+   public function update_employee_by_msme($emp_id){
+     $data = array();
+     $data['employee_msme'] = $this->session->userdata('flag');
+     $this->employee_model->update_employee_by_id($emp_id,$data);
+     redirect('site_msme/employee');
+   }
 }

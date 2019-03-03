@@ -31,7 +31,7 @@
                               <a><?php echo $list->employee_name; ?></a>
                           </td>
                           <td>
-                            <a>Add</a>
+                            <a href="<?php echo base_url(); ?>employee/update_employee_by_msme/<?php echo $list->emp_id; ?>"> Add </a>
                         </td>
                         </tr>
                     <?php } ?>
