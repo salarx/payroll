@@ -17,12 +17,12 @@ class Employee extends CI_Controller {
         $this->load->view('master',$data);
     }
 
-    public function update_employee($employee_id){
+    public function update_employee($emp_id){
 
         $data = array();
         $data['title'] = "Update Employee";
         $data['heading'] = "Update Employee Details";
-        $data['result'] = $this->employee_model->fetch_employee_by_id($employee_id);
+        $data['result'] = $this->employee_model->fetch_employee_by_id($emp_id);
         $data['content'] = $this->load->view('update_employee',$data,true);
         $this->load->view('master',$data);
     }
@@ -35,8 +35,8 @@ class Employee extends CI_Controller {
         $data['employee_msme'] = $this->session->userdata('flag');
         $data['employee_email'] = $this->input->post('email',true);
         $data['employee_phone'] = $this->input->post('phone',true);
-        $this->employee_model->update_employee_by_id($employee_id,$data);
-        redirect('site/employee');
+        $this->employee_model->update_employee_by_id($emp_id,$data);
+        redirect('site_msme/employee');
     }
 
 

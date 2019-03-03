@@ -34,7 +34,7 @@ class Site_msme extends CI_Controller {
     public function employee(){
 
         $data = array();
-        $dep_id = $this->session->userdata('username');
+        $msme_id = $this->session->userdata('flag');
         $data["title"] = "Employee";
         $data["heading"] = "Employee Details";
         $data["base_url"] = base_url() . "site_msme/employee";
@@ -44,7 +44,7 @@ class Site_msme extends CI_Controller {
         $this->pagination->initialize($data);
         $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-        $data["results"] = $this->employee_model->fetch_employee_by_msme_id($data["per_page"], $page,$dep_id);
+        $data["results"] = $this->employee_model->fetch_employee_by_msme_id($data["per_page"], $page,$msme_id);
 
         $data["links"] = $this->pagination->create_links();
 
