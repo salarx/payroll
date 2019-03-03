@@ -30,29 +30,14 @@ class Employee extends CI_Controller {
     public function update_employee_commit(){
 
         $data = array();
-        $employee_id = $this->input->post('id',true);
-        $data['payment_id'] = $this->input->post('type',true);
-        $data['status_id'] = $this->input->post('status',true);
+        $emp_id = $this->input->post('id',true);
         $data['employee_name'] = $this->input->post('name',true);
-        $data['employee_department'] = $this->input->post('department',true);
-        $query1 = $this->db->get_where("employee",array('employee_id'=>$employee_id));
-        $employee_department = $query1->row()->employee_department;
-        $query2 = $this->db->get_where("departments",array('emp_id'=>$employee_id));
-        if($employee_department != $data['employee_department'])
-        {
-          if($query2->num_rows() !=0)
-          {
-            show_error("This employee is HOD of another department. You cannot shift him to another department.");
-          }
-        }
-        else{
-        $data['employee_designation'] = $this->input->post('designation',true);
+        $data['employee_msme'] = $this->session->userdata('flag');
+        $data['employee_email'] = $this->input->post('email',true);
         $data['employee_phone'] = $this->input->post('phone',true);
-        $data['employee_address'] = $this->input->post('address',true);
         $this->employee_model->update_employee_by_id($employee_id,$data);
-
         redirect('site/employee');
-    }}
+    }
 
 
     public function add_employee(){
