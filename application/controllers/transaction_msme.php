@@ -38,13 +38,13 @@ class Transaction_msme extends CI_Controller {
         $query = $this->db->get_where('msme',array('msme_id' => $msme_id));
         $result = $query->row();
 
-        $msme_password = $result->password;
-        $salt = $result->msme_salt;
+        $transaction_pass = $result->transaction_pass;
+        $salt = $result->transaction_salt;
 
         $password .= $salt;
-        $msme_password .= $salt;
+        $transaction_pass.= $salt;
 
-        if(!strcmp($password,$msme_password)){
+        if(!strcmp($password,$transaction_pass)){
           $this->transaction_msme_model->save_transaction($data);
           redirect('site_msme/transactions');
         }
