@@ -67,7 +67,7 @@
                     <span class="<?php if($title=='Department'){ echo 'active';}?> col-lg-1">
                         <a href="<?php echo base_url(); ?>site/msme.html">
                             <i class="icon_datareport"></i>
-                            <span style="font-size:17px"><b>Department</b></span>
+                            <span style="font-size:17px"><b>MSME</b></span>
                         </a>
 
                     </span><?php } ?>
@@ -82,27 +82,25 @@
                         </a>
 
                     </span><?php } ?>
-                    <span class="<?php if($title=='Salary'){ echo 'active';}?> col-lg-1">
-                    <?php if($category==1) { ?>
-                        <a href="<?php echo base_url(); ?>site/transactions.html"><?php } ?>
+                    <span class="<?php if($title=='Salary'){ echo 'active';}?> col-lg-1">                    
                         <?php if($category==2) { ?>
                         <a href="<?php echo base_url(); ?>site_msme/transactions.html"><?php } ?>
                         <?php if($category==3) { ?>
                         <a href="<?php echo base_url(); ?>site_emp/transactions.html"><?php } ?>
+                        <?php if($category!=1) { ?>
                             <i class="icon_clipboard"></i>
-                            <span style="font-size:17px"><b>My Transaction</b></span>
+                            <span style="font-size:17px"><b>My Transaction</b></span><?php } ?>
                         </a>
 
                     </span>
                     <span class="<?php if($title=='Settings'){ echo 'active';}?> col-lg-1">
-                    <?php if($category==1) { ?>
-                        <a href="<?php echo base_url(); ?>site/settings.html"><?php } ?>
                         <?php if($category==2) { ?>
                         <a href="<?php echo base_url(); ?>site_msme/settings.html"><?php } ?>
                         <?php if($category==3) { ?>
                         <a href="<?php echo base_url(); ?>site_emp/settings.html"><?php } ?>
+                        <?php if($category!=1) { ?>
                             <i class="icon_cog"></i>
-                            <span style="font-size:17px"><b>Settings</b></span>
+                            <span style="font-size:17px"><b>Settings</b></span><?php } ?>
                         </a>
                         &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp   &nbsp
                         &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
