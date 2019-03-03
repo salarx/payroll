@@ -16,144 +16,102 @@
             </head>
 
     <body>
-
-        <section id="container"><!-- container section start -->
-            <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D; padding:22px">
-                <div class="toggle-nav">
-                    <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
-                </div>
+    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D">
                 <!--logo start-->
-                <span class="col-lg-2">
+                
                 <?php if($category==1) { ?>
-                <a href="<?php echo base_url(); ?>site" class="logo" style="color: #ffc70d; font-size:19px"><b>6 KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
+                <a class="navbar-brand" "<?php echo base_url(); ?>site" style="color: #FFC70D"><b>6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
                 <?php } ?>
                 <?php if($category==2) { ?>
-                <a href="<?php echo base_url(); ?>site_msme" class="logo" style="color: #ffc70d; font-size:19px"><b>6KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
-                <?php } ?>
+                  <a class="navbar-brand" "<?php echo base_url(); ?>site_msme" style="color: #FFC70D"><b>6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
+                  <?php } ?>
                 <?php if($category==3) { ?>
-                <a href="<?php echo base_url(); ?>site_emp" class="logo" style="color: #ffc70d; font-size:19px"><b>6KA<span class="lite" style="color: #ffffff">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
-                <?php } ?>
-              </span>
-                <!--logo end-->
+                  <a class="navbar-brand" "<?php echo base_url(); ?>site_emp" style="color: #FFC70D"><b>6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
+                  <?php } ?>
 
-                <div class="nav search-row" id="top_menu">
-                    <!--  search form start -->
-                    <!--  search form end -->
-                </div>
-
-
-        <!--header end-->
-        <!--sidebar start-->
-        <aside>
-            <div id="sidebar"  class="nav-collapse">
-                <!-- sidebar menu start-->
-                <div class="sidebar-menu" style="background:#01013D">
-                    <span class="<?php if($title=='Home'){ echo 'active';}?> col-lg-1">
-                    <?php if($category==1) { ?>
-                        <a href="<?php echo base_url(); ?>site">
-                        <?php } ?>
-                        <?php if($category==2) { ?>
-                        <a href="<?php echo base_url(); ?>site_msme">
-                        <?php } ?>
+                  <div class="collapse navbar-collapse" id="navbarColor01">
+          		<b>
+              <ul class="navbar-nav mr-auto nav-pills" style="font-size: 17px">
+                <li class="nav-item active" >
+                <?php if($category==1) { ?>
+                  <a class="nav-link" href="<?php echo base_url(); ?>site">
+          						 &nbsp &nbsp &nbsp &nbsp &nbsp
+          					Home<span class="sr-only">(current)</span></a><?php } ?>
+                    <?php if($category==2) { ?>
+                      <a class="nav-link" href="<?php echo base_url(); ?>site_msme">
+              						 &nbsp &nbsp &nbsp &nbsp &nbsp
+              					Home<span class="sr-only">(current)</span></a><?php } ?>
                         <?php if($category==3) { ?>
-                        <a href="<?php echo base_url(); ?>site_emp">
-                        <?php } ?>
-                            <i class="icon_house_alt"></i>
-                            <span style="font-size:17px"><b>Home</b></span>
-                        </a>
-                    </span>
+                          <a class="nav-link" href="<?php echo base_url(); ?>site_emp">
+                  						 &nbsp &nbsp &nbsp &nbsp &nbsp
+                  					Home<span class="sr-only">(current)</span></a><?php } ?>
+                </li>
+          		<li  class="nav-item">
+                <?php if($category==1) { ?>
+                  <a class="nav-link" href="<?php echo base_url(); ?>site/msme.html">
+                       &nbsp &nbsp &nbsp &nbsp &nbsp
+                    MSME</a><?php } ?>
 
-                    <?php if($category==1) { ?>
-                    <span class="<?php if($title=='Department'){ echo 'active';}?> col-lg-1">
-                        <a href="<?php echo base_url(); ?>site/msme.html">
-                            <i class="icon_datareport"></i>
-                            <span style="font-size:17px"><b>MSME</b></span>
-                        </a>
+          		</li>
+              <li  class="nav-item">
+                <?php if($category==1) { ?>
+                  <a class="nav-link" href="<?php echo base_url(); ?>site/employee.html">
+                       &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Employee</a><?php } ?>
+                    <?php if($category==2) { ?>
+                      <a class="nav-link" href="<?php echo base_url(); ?>site_msme/employee.html">
+                           &nbsp &nbsp &nbsp &nbsp &nbsp
+                        Employee</a><?php } ?>
 
-                    </span><?php } ?>
-                    <?php if($category==1 || $category==2) { ?>
-                    <span class="<?php if($title=='Employee'){ echo 'active';}?> col-lg-1">
-                    <?php if($category==1) { ?>
-                        <a href="<?php echo base_url(); ?>site/employee.html"><?php } ?>
-                        <?php if($category==2) { ?>
-                        <a href="<?php echo base_url(); ?>site_msme/employee.html"><?php } ?>
-                            <i class="icon_id"></i>
-                            <span style="font-size:17px"><b>Employee</b></span>
-                        </a>
+          		</li>
+                  <?php if($category!=1) { ?>
+              <li  class="nav-item">
+                <?php if($category==2) { ?>
+                  <a class="nav-link" href="<?php echo base_url(); ?>site_msme/transactions.html">
+                       &nbsp &nbsp &nbsp &nbsp &nbsp
+                    My Transactions</a><?php } ?>
+                    <?php if($category==3) { ?>
+                      <a class="nav-link" href="<?php echo base_url(); ?>site_emp/transactions.html">
+                           &nbsp &nbsp &nbsp &nbsp &nbsp
+                        My Transactions</a><?php } ?>
 
-                    </span><?php } ?>
-                    <span class="<?php if($title=='Salary'){ echo 'active';}?> col-lg-1">                    
-                        <?php if($category==2) { ?>
-                        <a href="<?php echo base_url(); ?>site_msme/transactions.html"><?php } ?>
-                        <?php if($category==3) { ?>
-                        <a href="<?php echo base_url(); ?>site_emp/transactions.html"><?php } ?>
-                        <?php if($category!=1) { ?>
-                            <i class="icon_clipboard"></i>
-                            <span style="font-size:17px"><b>My Transaction</b></span><?php } ?>
-                        </a>
+          		</li>
+                  <?php } ?>
+                  <?php if($category!=1) { ?>
+              <li  class="nav-item">
+                <?php if($category==2) { ?>
+                  <a class="nav-link" href="<?php echo base_url(); ?>site_msme/settings.html">
+                       &nbsp &nbsp &nbsp &nbsp &nbsp
+                    Settings</a><?php } ?>
+                    <?php if($category==3) { ?>
+                      <a class="nav-link" href="<?php echo base_url(); ?>site_emp/settings.html">
+                           &nbsp &nbsp &nbsp &nbsp &nbsp
+                        Settings</a><?php } ?>
 
-                    </span>
-                    <span class="<?php if($title=='Settings'){ echo 'active';}?> col-lg-1">
-                        <?php if($category==2) { ?>
-                        <a href="<?php echo base_url(); ?>site_msme/settings.html"><?php } ?>
-                        <?php if($category==3) { ?>
-                        <a href="<?php echo base_url(); ?>site_emp/settings.html"><?php } ?>
-                        <?php if($category!=1) { ?>
-                            <i class="icon_cog"></i>
-                            <span style="font-size:17px"><b>Settings</b></span><?php } ?>
-                        </a>
-                        &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp   &nbsp
-                        &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
-                        &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
-                        &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
-                        &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
-                        &nbsp  &nbsp &nbsp  &nbsp &nbsp
-                    </span>
-                </div>
-                <!-- sidebar menu end-->
-            </div>
-        </aside>
-
-        <div class="top-nav notification-row col-lg-2" >
-            <!-- notificatoin dropdown start-->
-            <ul class="nav top-menu">
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                        <span class="profile-ava">
-                            <img alt="avatar" src="<?php echo base_url(); ?>img/India.png">
-                        </span>
-                        <span class="username"><?php echo $this->session->userdata('username'); ?></span>
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu extended logout mr-auto">
+          		</li>
+                  <?php } ?>
+              </ul>
+          	</b>
+              
+              <div class="dropdown">  
+            <?php echo $this->session->userdata('username'); ?>    
+<button class="btn btn-warning dropdown-toggle" type="button" id="about-us" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<?php echo $this->session->userdata('username'); ?>&nbsp &nbsp &nbsp &nbsp &nbsp<img alt="avatar" src="<?php echo base_url(); ?>img/India.png">
+</button>
+                                                <div class="dropdown-menu" aria-labelledby="about-us">
 
                         <?php if($category==1) { ?>
-                        <li>
-                            <a href="<?php echo base_url(); ?>site/logout.html"  style="font-size:17px"><b><center>Log Out</center></b></a>
-                        </li> <?php } ?>
+                            <a class="dropdown-item" href="<?php echo base_url(); ?>site/logout.html">Logout</a> <?php } ?>
                         <?php if($category==2) { ?>
-                        <li>
-                            <a href="<?php echo base_url(); ?>site_msme/logout.html"  style="font-size:17px" ><b><center>Log Out</center></b></a>
-                        </li> <?php } ?>
+                            <a class="dropdown-item" href="<?php echo base_url(); ?>site_msme/logout.html">Logout</a> <?php } ?>
                         <?php if($category==3) { ?>
-                        <li>
-                            <a href="<?php echo base_url(); ?>site_emp/logout.html" style="font-size:17px"><b><center>Log Out</center></b></a>
-                        </li> <?php } ?>
-                    </ul>
-                </li>
-                <!-- user login dropdown end -->
-            </ul>
-            <!-- notificatoin dropdown end-->
-
-        <!--sidebar end-->
-</nav>
-        <!--main content start-->
-        <section id="main-content">
-            <section class="wrapper">
-            </div>
-
-
-          </body>
+                            <a class="dropdown-item" href="<?php echo base_url(); ?>site_emp/logout.html">Logout</a> <?php } ?>
+                            </div>
+                    
+                    </div></div>
+              </nav>
+            </div>          </body>
 
 
               <!-- jQuery library -->
