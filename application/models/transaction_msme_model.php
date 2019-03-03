@@ -36,58 +36,23 @@ class Transaction_dep_model extends CI_Model{
     function save_transaction($data) {
 
         $this->db->insert('msme_emp_transactions', $data);
-
-
-        $query = $this->db->get_where('msme',array('msme_id'=>$data['from_msme']));
-        $result=$query->row()->bank_balance;
-        $result=$result-$data['amount'];
-        if($result <0)
-        {
-          show_error("Insufficient funds are present in your account");
-        }
-    
-        $this->db->set('bank_balance', $result);
-        $this->db->where('dep_id', $data['from_dep']);
-        $this->db->update('departments');
-
-        $query = $this->db->get_where('employee',array('employ_id'=>$data['to_emp']));
-        if($data['account_type']==1)
-        {
-           $type='balance_1';
-           $result=$query->row()->balance_1;
-        }
-        if($data['account_type']==2)
-        {
-           $type='balance_2';
-           $result=$query->row()->balance_2;
-        }
-        if($data['account_type']==3)
-        {
-           $type='balance_3';
-           $result=$query->row()->balance_3;
-        }
-        $result=$result+$data['amount'];
-        $this->db->set($type, $result);
-        $this->db->where('employee_id', $data['to_emp']);
-        $this->db->update('employee');
-
         $this->db->join('msme', 'employee.employee_msme = msme.msme_id');
         $query = $this->db->get_where('msme',array('msme_id'=>$data['from_msme']));
         if ($query->num_rows() > 0) {
 
             foreach ($query->result() as $row) {
 
-                $data[] = $row;
+                $data = [];
+                $emp_id = $row->emp_id;
                 $x=$row->basic_salary;
                 $y=0.88*$x;
                 $z=98.25*$y;
-
+                $data['balance_1'] = $row->balance_1+ 0.1567*$x;
+                $data['balance_2'] = $row->balance_2+ 0.0833*$x;
+                $data['balance_3'] = $row->balance_3+ 0.0175*$y+ 0.0475*$y;
+                $this->employee_model->update_employee_by_id($emp_id,$data);
             }
-
-            $data['pf'] = 0.1567*$x;
-            $data['pension'] = 0.0833*$x;
-            $data['esi'] = 0.0175*(.88*$x)+0.0475*(0.88*$x);
                 }
-    
+
     }
 }
