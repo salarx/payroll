@@ -108,16 +108,10 @@ class Employee extends CI_Controller {
           show_error('Password entered is incorrect');
         }
     }
-<<<<<<< HEAD
-    function fetch_employee_with_null(){
+    public function fetch_employee_with_null(){
       $query = $this->db->get_where('employee',array("employee_msme"=>NULL));
       $data['result'] = $query->row();
-      $this->load->view('null_employee');
-=======
-
-    public function fetch_null-employees(){
-
-
->>>>>>> 9e9bc8fd5ea6b99f032e430f13d0bd8dde95fce2
+      $data["content"] = $this->load->view('null_employee');
+      $this->load->view("master");
     }
 }
