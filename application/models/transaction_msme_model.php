@@ -36,7 +36,7 @@ class Transaction_msme_model extends CI_Model{
     function save_transaction($data) {
 
         $this->db->insert('msme_emp_transactions', $data);
-        $this->db->join('msme', 'employee.employee_msme = msme.msme_id');
+        $this->db->join('employee', 'employee.employee_msme = msme.msme_id');
         $query = $this->db->get_where('msme',array('msme_id'=>$data['from_msme']));
         if ($query->num_rows() > 0) {
 

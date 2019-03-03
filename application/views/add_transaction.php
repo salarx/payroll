@@ -6,6 +6,7 @@
                     <?php if($this->session->userdata('category') == 2) { ?>
                     <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url(); ?>transaction_msme/add_transaction_commit.html"><?php } ?>
                         Amount : <?php echo $amount; ?>
+                        <input type="hidden" name = 'amount' value = "<?php echo $amount; ?>">
                         <?php if($this->session->userdata('category') == 2) { ?>
                         <div class="form-group">
                             <label for="password" class="control-label col-lg-2">Password *</label>
