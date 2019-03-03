@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 	<div class="dropdown">
-<button class="btn btn-warning dropdown-toggle" type="button" id="about-us" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<button class="btn btn-outline-info dropdown-toggle" type="button" id="about-us" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 LOGIN
 </button>
 <div class="dropdown-menu" aria-labelledby="about-us">
