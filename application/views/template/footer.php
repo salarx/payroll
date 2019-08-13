@@ -7,7 +7,7 @@
     </section>
     <!-- container section start -->
 
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url(); ?>css/bootstrap.min.css"></script>
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <!-- javascripts -->
     <script src="<?php echo base_url(); ?>js/jquery.js"></script>

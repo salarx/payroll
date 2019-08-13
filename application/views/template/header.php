@@ -4,7 +4,7 @@
     <head>
 
         <title><?php echo $title; ?></title>
-        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
+        <link href="<?php echo base_url(); ?>css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
 
 
 
@@ -19,7 +19,7 @@
     <div class="container-fluid">
 <nav class="navbar navbar-expand-lg navbar-dark " style="background: #01013D">
                 <!--logo start-->
-                
+
                 <?php if($category==1) { ?>
                 <a class="navbar-brand" "<?php echo base_url(); ?>site" style="color: #FFC70D"><b>6 KA<span class="lite" style="color: white">IZ</span><span class="lite" style="color: #76FF0D">ENS</span></b></a>
                 <?php } ?>
@@ -93,9 +93,9 @@
                   <?php } ?>
               </ul>
           	</b>
-              
-              <div class="dropdown ml-auto">  
-            
+
+              <div class="dropdown ml-auto">
+
 <button class="btn btn-outline-info dropdown-toggle" type="button" id="about-us" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 <b><?php echo $this->session->userdata('username'); ?></b>&nbsp &nbsp &nbsp &nbsp &nbsp<img alt="avatar" src="<?php echo base_url(); ?>img/India.png">
 </button>
@@ -108,7 +108,7 @@
                         <?php if($category==3) { ?>
                             <a class="dropdown-item" href="<?php echo base_url(); ?>site_emp/logout.html">Logout</a> <?php } ?>
                             </div>
-                    
+
                     </div></div>
               </nav>
             </div>          </body>
